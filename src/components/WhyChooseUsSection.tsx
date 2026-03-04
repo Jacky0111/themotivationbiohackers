@@ -17,7 +17,7 @@ const WhyChooseUsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-5xl text-center text-ivory mb-20"
+          className="font-heading text-4xl md:text-5xl text-center text-foreground mb-20"
         >
           Why Choose Us
         </motion.h2>

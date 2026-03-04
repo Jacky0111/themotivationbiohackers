@@ -3,14 +3,14 @@ import { Phone, Mail, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 px-6 bg-charcoal">
+    <section id="contact" className="py-24 px-6 bg-secondary">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-5xl text-ivory mb-16"
+          className="font-heading text-4xl md:text-5xl text-foreground mb-16"
         >
           Get In Touch
         </motion.h2>
