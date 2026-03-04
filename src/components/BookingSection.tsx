@@ -18,7 +18,7 @@ const BookingSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-5xl text-ivory mb-4"
+          className="font-heading text-4xl md:text-5xl text-foreground mb-4"
         >
           Begin Your Longevity Journey
         </motion.h2>

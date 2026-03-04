@@ -39,14 +39,14 @@ const ServicesSection = () => {
   const [activeService, setActiveService] = useState<number | null>(null);
 
   return (
-    <section id="services" className="py-32 px-6 bg-charcoal">
+    <section id="services" className="py-32 px-6 bg-secondary">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-5xl text-center text-ivory mb-20"
+          className="font-heading text-4xl md:text-5xl text-center text-foreground mb-20"
         >
           Signature Services
         </motion.h2>
@@ -62,7 +62,7 @@ const ServicesSection = () => {
               onClick={() => setActiveService(i)}
               className="group cursor-pointer p-8 border border-border bg-card hover:border-primary/40 hover:shadow-[0_0_30px_-10px_hsl(var(--bronze)/0.2)] transition-all duration-500"
             >
-              <h3 className="font-heading text-lg text-ivory mb-3 group-hover:text-primary transition-colors">
+              <h3 className="font-heading text-lg text-foreground mb-3 group-hover:text-primary transition-colors">
                 {s.title}
               </h3>
               <p className="text-muted-foreground text-sm font-body leading-relaxed mb-4">
@@ -99,7 +99,7 @@ const ServicesSection = () => {
               >
                 <X size={20} />
               </button>
-              <h3 className="font-heading text-2xl text-ivory mb-4">
+              <h3 className="font-heading text-2xl text-foreground mb-4">
                 {services[activeService].title}
               </h3>
               <p className="text-foreground/70 font-body text-sm leading-relaxed">
