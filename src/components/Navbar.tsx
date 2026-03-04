@@ -46,7 +46,7 @@ const Navbar = () => {
 
           {/* Center logo */}
           <a href="#" className="flex-shrink-0">
-            <img alt="The Motivation Biohackers" className="h-8 md:h-10 w-auto" src="/lovable-uploads/e7747d05-cd4f-44f9-a4cb-c583df2cd5a0.png" />
+            <img alt="The Motivation Biohackers" className="h-8 md:h-10 w-auto object-cover" src="/lovable-uploads/e7747d05-cd4f-44f9-a4cb-c583df2cd5a0.png" />
           </a>
 
           {/* Right nav links */}
