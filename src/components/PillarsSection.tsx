@@ -28,7 +28,7 @@ const PillarsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-5xl text-center text-foreground mb-20"
+          className="font-heading text-4xl md:text-5xl text-center text-ivory mb-20"
         >
           Our Core Pillars
         </motion.h2>
@@ -46,7 +46,7 @@ const PillarsSection = () => {
               <div className="inline-flex items-center justify-center w-12 h-12 mb-6 border border-primary/30 group-hover:border-primary group-hover:bg-primary/10 transition-all duration-500">
                 <p.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-heading text-xl text-foreground mb-3">{p.title}</h3>
+              <h3 className="font-heading text-xl text-ivory mb-3">{p.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed font-body">
                 {p.desc}
               </p>

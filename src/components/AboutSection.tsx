@@ -12,7 +12,7 @@ const AboutSection = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${silkTexture})` }}
       />
-      <div className="absolute inset-0 bg-background/70" />
+      <div className="absolute inset-0 bg-background/60" />
 
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto py-32">
         <motion.h2
@@ -20,7 +20,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1 }}
-          className="font-heading text-5xl md:text-7xl text-foreground mb-6"
+          className="font-heading text-5xl md:text-7xl text-ivory mb-6"
         >
           About Us
         </motion.h2>
@@ -30,7 +30,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-lg md:text-xl font-body font-medium text-foreground mb-6"
+          className="text-lg md:text-xl font-body font-medium text-ivory mb-6"
         >
           Welcome to{" "}
           <span className="font-heading italic">The Motivation Biohackers</span>{" "}

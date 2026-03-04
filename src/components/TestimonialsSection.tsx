@@ -27,14 +27,14 @@ const TestimonialsSection = () => {
   const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonials" className="py-32 px-6 bg-secondary">
+    <section id="testimonials" className="py-32 px-6 bg-charcoal">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-5xl text-foreground mb-20"
+          className="font-heading text-4xl md:text-5xl text-ivory mb-20"
         >
           Testimonials
         </motion.h2>
@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
               transition={{ duration: 0.5 }}
               className="max-w-2xl"
             >
-              <p className="font-heading italic text-xl md:text-2xl text-foreground/90 leading-relaxed mb-8">
+              <p className="font-heading italic text-xl md:text-2xl text-ivory/90 leading-relaxed mb-8">
                 "{testimonials[current].quote}"
               </p>
               <p className="text-primary text-sm tracking-[0.15em] font-body">

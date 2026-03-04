@@ -6,41 +6,41 @@
 
 @layer base {
   :root {
-    --background: 35 30% 93%;
-    --foreground: 25 20% 20%;
+    --background: 0 0% 4%;
+    --foreground: 40 20% 90%;
 
-    --card: 35 25% 89%;
-    --card-foreground: 25 20% 20%;
+    --card: 0 0% 7%;
+    --card-foreground: 40 20% 90%;
 
-    --popover: 35 25% 89%;
-    --popover-foreground: 25 20% 20%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 40 20% 90%;
 
-    --primary: 28 35% 42%;
-    --primary-foreground: 35 30% 96%;
+    --primary: 32 40% 45%;
+    --primary-foreground: 40 20% 95%;
 
-    --secondary: 33 20% 82%;
-    --secondary-foreground: 25 20% 25%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 40 20% 85%;
 
-    --muted: 33 18% 85%;
-    --muted-foreground: 25 12% 45%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 40 10% 55%;
 
-    --accent: 20 25% 65%;
-    --accent-foreground: 25 20% 15%;
+    --accent: 32 35% 38%;
+    --accent-foreground: 40 20% 95%;
 
-    --destructive: 0 65% 55%;
-    --destructive-foreground: 35 30% 96%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 33 15% 80%;
-    --input: 33 15% 80%;
-    --ring: 28 35% 42%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 32 40% 45%;
 
     --radius: 0.25rem;
 
-    --bronze: 28 35% 42%;
-    --bronze-light: 28 40% 55%;
-    --bronze-dark: 28 25% 30%;
-    --ivory: 35 30% 96%;
-    --charcoal: 33 15% 85%;
+    --bronze: 32 40% 45%;
+    --bronze-light: 32 50% 60%;
+    --bronze-dark: 32 30% 30%;
+    --ivory: 40 30% 92%;
+    --charcoal: 0 0% 8%;
 
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
@@ -84,7 +84,7 @@
   inset: -200%;
   width: 400%;
   height: 400%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   animation: grain 8s steps(10) infinite;
   pointer-events: none;
   z-index: 1;
@@ -103,6 +103,6 @@ html {
   background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--bronze) / 0.5);
+  background: hsl(var(--bronze) / 0.4);
   border-radius: 3px;
 }

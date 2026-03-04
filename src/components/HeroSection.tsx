@@ -8,7 +8,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] text-foreground mb-8"
+          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.1] text-ivory mb-8"
         >
           Elevate Your Well-Being
           <br />
