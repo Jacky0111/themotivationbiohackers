@@ -5,7 +5,7 @@ const advantages = [
   "Personalised treatment plans",
   "Non-invasive technologies",
   "Medical-grade supplementation",
-  "Continuous monitoring",
+  "Continuous monitoring & optimisation",
 ];
 
 const WhyChooseUsSection = () => {

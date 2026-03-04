@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import tmLogo from "@/assets/tm-logo.png";
 
 const navLinks = [
   { label: "SERVICES", href: "#services" },
@@ -44,9 +45,8 @@ const Navbar = () => {
           </div>
 
           {/* Center logo */}
-          <a href="#" className="font-heading text-lg md:text-xl italic tracking-wide text-foreground">
-            <span className="italic">The</span>{" "}
-            <span className="font-semibold italic">Motivation Biohackers</span>
+          <a href="#" className="flex-shrink-0">
+            <img src={tmLogo} alt="The Motivation Biohackers" className="h-8 md:h-10 w-auto" />
           </a>
 
           {/* Right nav links */}

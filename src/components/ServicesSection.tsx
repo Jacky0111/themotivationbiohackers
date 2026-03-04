@@ -19,9 +19,14 @@ const services = [
     detail: "Our evidence-based detox protocols target accumulated toxins at the cellular level, supporting mitochondrial function and restoring your body's natural detoxification pathways for sustained vitality.",
   },
   {
-    title: "Hormonal Optimisation",
-    summary: "Precision hormone balancing for peak performance.",
-    detail: "Through comprehensive hormonal profiling and bioidentical protocols, we restore optimal hormonal balance—enhancing energy, cognition, sleep quality, and overall metabolic performance.",
+    title: "Epigenetic Screening",
+    summary: "Unlock insights from your gene expression patterns.",
+    detail: "Epigenetic screening analyses how lifestyle, environment, and nutrition influence your gene expression—enabling us to design precision interventions that optimise cellular function and slow biological aging.",
+  },
+  {
+    title: "DNA Screening",
+    summary: "Comprehensive genetic profiling for personalised health.",
+    detail: "Our advanced DNA screening maps your genetic blueprint to identify predispositions, nutrient needs, and metabolic pathways—forming the foundation of a truly personalised longevity strategy.",
   },
   {
     title: "Preventive Longevity Programs",
