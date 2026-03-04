@@ -7,7 +7,7 @@ const BookingSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Would integrate with booking system
-    window.open(`https://wa.me/60123456789?text=Hi, I'm ${formData.name}. I'd like to book a consultation.`, "_blank");
+    window.open(`https://wa.me/601121172728?text=Hi, I'm ${formData.name}. I'd like to book a consultation.`, "_blank");
   };
 
   return (
@@ -79,7 +79,7 @@ const BookingSection = () => {
 
         <div className="mt-8 flex items-center justify-center gap-6">
           <a
-            href="https://wa.me/60123456789"
+            href="https://wa.me/601121172728"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs tracking-[0.15em] text-primary hover:text-bronze-light transition-colors font-body"

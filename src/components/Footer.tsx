@@ -1,12 +1,12 @@
+import tmLogo from "@/assets/tm-logo.png";
+
 const Footer = () => {
   return (
     <footer className="py-16 px-6 border-t border-border bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <p className="font-heading italic text-lg text-ivory mb-4">
-              The Motivation Biohackers
-            </p>
+            <img src={tmLogo} alt="The Motivation Biohackers" className="h-8 w-auto mb-4 opacity-70" />
             <p className="text-muted-foreground text-xs leading-relaxed font-body">
               Elevating well-being through science
               <br />& holistic care. Malaysia.
@@ -15,8 +15,8 @@ const Footer = () => {
 
           <div>
             <p className="text-xs tracking-[0.2em] text-foreground/60 mb-4 font-body">CONTACT</p>
-            <p className="text-muted-foreground text-sm font-body">info@motivationbiohackers.com</p>
-            <p className="text-muted-foreground text-sm font-body mt-1">+60 12-345 6789</p>
+            <a href="mailto:themotivation0207@gmail.com" className="text-muted-foreground text-sm font-body hover:text-primary transition-colors block">themotivation0207@gmail.com</a>
+            <a href="tel:+601121172728" className="text-muted-foreground text-sm font-body mt-1 hover:text-primary transition-colors block">011-2117 2728</a>
           </div>
 
           <div>
@@ -41,9 +41,14 @@ const Footer = () => {
           <p className="text-muted-foreground text-xs font-body">
             © 2026 The Motivation Biohackers. All rights reserved.
           </p>
-          <a href="#" className="text-muted-foreground text-xs hover:text-foreground transition-colors font-body">
-            Privacy Policy
-          </a>
+          <div className="flex gap-6">
+            <a href="#" className="text-muted-foreground text-xs hover:text-foreground transition-colors font-body">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-muted-foreground text-xs hover:text-foreground transition-colors font-body">
+              Terms & Conditions
+            </a>
+          </div>
         </div>
       </div>
     </footer>

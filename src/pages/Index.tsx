@@ -6,7 +6,9 @@ import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingSection from "@/components/BookingSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -19,7 +21,9 @@ const Index = () => {
       <WhyChooseUsSection />
       <TestimonialsSection />
       <BookingSection />
+      <ContactSection />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
