@@ -1,14 +1,25 @@
 import { motion } from "framer-motion";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden grain-overlay bg-background">
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background with slow zoom */}
+      <div className="absolute inset-0">
+        <img
+          src={heroBg}
+          alt="Yoga at sunrise"
+          className="w-full h-full object-cover animate-slow-zoom"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+      </div>
+
+      <div className="relative z-10 text-center px-6 max-w-site mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.1] text-ivory mb-8"
+          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[80px] leading-[1.1] text-white mb-8 tracking-[0.02em]"
         >
           Elevate Your Well-Being
           <br />
@@ -19,7 +30,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="text-base md:text-lg tracking-[0.3em] text-foreground/70 mb-12 font-body"
+          className="text-base md:text-lg tracking-[0.3em] text-white/70 mb-12 font-body"
         >
           Functional · Regenerative · Longevity
         </motion.p>
@@ -31,26 +42,18 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#booking"
-            className="px-8 py-3.5 bg-primary text-primary-foreground text-sm tracking-[0.15em] hover:bg-bronze-light transition-colors duration-300"
+            href="#services"
+            className="px-7 py-3 bg-primary text-primary-foreground rounded-full text-sm font-body font-medium hover:bg-accent transition-colors duration-300 shadow-lg"
           >
-            BOOK CONSULTATION
+            Explore Services
           </a>
           <a
-            href="#services"
-            className="px-8 py-3.5 border border-foreground/25 text-foreground text-sm tracking-[0.15em] hover:border-primary hover:text-primary transition-colors duration-300"
+            href="#booking"
+            className="px-7 py-3 border border-white/40 text-white rounded-full text-sm font-body hover:bg-white/10 transition-colors duration-300"
           >
-            EXPLORE SERVICES
+            Book Consultation
           </a>
         </motion.div>
-
-        {/* Vertical line accent */}
-        <motion.div
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ duration: 1.2, delay: 1.4 }}
-          className="w-px h-16 bg-foreground/20 mx-auto mt-16 origin-top"
-        />
       </div>
     </section>
   );

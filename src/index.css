@@ -6,41 +6,38 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 40 20% 90%;
+    --background: 36 18% 95%;
+    --foreground: 0 0% 11%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 40 20% 90%;
+    --card: 36 20% 92%;
+    --card-foreground: 0 0% 11%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 40 20% 90%;
+    --popover: 36 18% 95%;
+    --popover-foreground: 0 0% 11%;
 
-    --primary: 32 40% 45%;
-    --primary-foreground: 40 20% 95%;
+    --primary: 197 62% 46%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 40 20% 85%;
+    --secondary: 36 20% 92%;
+    --secondary-foreground: 0 0% 11%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 40 10% 55%;
+    --muted: 36 15% 88%;
+    --muted-foreground: 0 0% 42%;
 
-    --accent: 32 35% 38%;
-    --accent-foreground: 40 20% 95%;
+    --accent: 192 57% 27%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 16%;
-    --input: 0 0% 16%;
-    --ring: 32 40% 45%;
+    --border: 36 12% 84%;
+    --input: 36 12% 84%;
+    --ring: 197 62% 46%;
 
-    --radius: 0.25rem;
+    --radius: 0.75rem;
 
-    --bronze: 32 40% 45%;
-    --bronze-light: 32 50% 60%;
-    --bronze-dark: 32 30% 30%;
-    --ivory: 40 30% 92%;
-    --charcoal: 0 0% 8%;
+    --footer-bg: 20 38% 12%;
+    --footer-text: 36 18% 95%;
 
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
@@ -64,32 +61,6 @@
   }
 }
 
-/* Film grain overlay */
-@keyframes grain {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -10%); }
-  20% { transform: translate(-15%, 5%); }
-  30% { transform: translate(7%, -25%); }
-  40% { transform: translate(-5%, 25%); }
-  50% { transform: translate(-15%, 10%); }
-  60% { transform: translate(15%, 0%); }
-  70% { transform: translate(0%, 15%); }
-  80% { transform: translate(3%, 35%); }
-  90% { transform: translate(-10%, 10%); }
-}
-
-.grain-overlay::after {
-  content: '';
-  position: absolute;
-  inset: -200%;
-  width: 400%;
-  height: 400%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  animation: grain 8s steps(10) infinite;
-  pointer-events: none;
-  z-index: 1;
-}
-
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
@@ -103,6 +74,6 @@ html {
   background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--bronze) / 0.4);
+  background: hsl(var(--primary) / 0.3);
   border-radius: 3px;
 }
