@@ -45,8 +45,8 @@ const Navbar = () => {
           </div>
 
           {/* Center logo */}
-          <a href="#" className="flex-shrink-0">
-            <img src={tmLogo} alt="The Motivation Biohackers" className="h-8 md:h-10 w-auto" />
+          <a href="#" className="flex-shrink-0 text-sm tracking-[0.2em] text-foreground font-heading">
+            THE MOTIVATION BIOHACKERS
           </a>
 
           {/* Right nav links */}
