@@ -33,17 +33,14 @@ const Navbar = () => {
       
       <div className="max-w-site mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Brand name - left */}
           <a href="#" className="flex items-center gap-3 flex-shrink-0">
-            
+            <span className={`font-heading italic text-lg tracking-wide transition-colors duration-500 ${
+              scrolled ? "text-foreground" : "text-white"}`
+            }>
+              The Motivation Biohackers
+            </span>
           </a>
-
-          {/* Center brand */}
-          <span className={`hidden md:block font-heading italic text-lg tracking-wide transition-colors duration-500 ${
-          scrolled ? "text-foreground" : "text-white"}`
-          }>
-            The Motivation Biohackers
-          </span>
 
           {/* Right nav links */}
           <div className="hidden md:flex items-center gap-8">
