@@ -1,57 +1,56 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { motion } from "framer-motion";
+import servicePemf from "@/assets/service-pemf.jpg";
+import serviceBioaura from "@/assets/service-bioaura.jpg";
+import serviceEpigenetic from "@/assets/service-epigenetic.jpg";
+import serviceAdvanced from "@/assets/service-advanced.jpg";
 
 const services = [
   {
-    title: "Advanced Health Screening",
-    summary: "Comprehensive biomarker analysis and full-body diagnostics.",
-    detail: "Our advanced screening protocols use cutting-edge technology to map your complete biological landscape—from cellular health markers to metabolic efficiency—providing the foundation for your personalised longevity plan.",
-  },
-  {
     title: "PEMF Therapy",
-    summary: "Pulsed electromagnetic field therapy for cellular regeneration.",
-    detail: "PEMF therapy enhances cellular repair, reduces inflammation, and accelerates recovery by delivering targeted electromagnetic pulses that stimulate your body's natural healing processes at the cellular level.",
+    desc: "Your body deserves healing energy",
+    image: servicePemf,
   },
   {
-    title: "Cellular Detox Programs",
-    summary: "Systematic detoxification at the cellular level.",
-    detail: "Our evidence-based detox protocols target accumulated toxins at the cellular level, supporting mitochondrial function and restoring your body's natural detoxification pathways for sustained vitality.",
+    title: "BioAura AI",
+    desc: "Your voice reveals your mental health",
+    image: serviceBioaura,
   },
   {
     title: "Epigenetic Screening",
-    summary: "Unlock insights from your gene expression patterns.",
-    detail: "Epigenetic screening analyses how lifestyle, environment, and nutrition influence your gene expression—enabling us to design precision interventions that optimise cellular function and slow biological aging.",
+    desc: "Your genes reveal your TRUE health",
+    image: serviceEpigenetic,
   },
   {
-    title: "DNA Screening",
-    summary: "Comprehensive genetic profiling for personalised health.",
-    detail: "Our advanced DNA screening maps your genetic blueprint to identify predispositions, nutrient needs, and metabolic pathways—forming the foundation of a truly personalised longevity strategy.",
-  },
-  {
-    title: "Preventive Longevity Programs",
-    summary: "Proactive strategies for extending healthspan.",
-    detail: "Our longevity programs combine epigenetic testing, nutrigenomics, and lifestyle medicine to create a comprehensive prevention strategy designed to add quality years to your life.",
+    title: "Advanced Treatment",
+    desc: "Biohacking experience",
+    image: serviceAdvanced,
   },
 ];
 
 const ServicesSection = () => {
-  const [activeService, setActiveService] = useState<number | null>(null);
-
   return (
-    <section id="services" className="py-32 px-6 bg-charcoal">
-      <div className="max-w-6xl mx-auto">
+    <section id="services" className="py-20 md:py-[80px] px-6 bg-background">
+      <div className="max-w-site mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-5xl text-center text-ivory mb-20"
+          className="font-heading text-4xl md:text-[48px] text-center text-foreground mb-4"
         >
-          Signature Services
+          Innovative Solutions
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center text-muted-foreground font-body text-base md:text-lg max-w-2xl mx-auto mb-16"
+        >
+          Experience the perfect blend of science and biohacking technology, designed to provide personalized care and optimal wellness results.
+        </motion.p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -59,63 +58,24 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              onClick={() => setActiveService(i)}
-              className="group cursor-pointer p-8 border border-border bg-card hover:border-primary/40 hover:shadow-[0_0_30px_-10px_hsl(var(--bronze)/0.2)] transition-all duration-500"
+              className="group relative rounded-xl overflow-hidden aspect-[3/4] cursor-pointer"
             >
-              <h3 className="font-heading text-lg text-ivory mb-3 group-hover:text-primary transition-colors">
-                {s.title}
-              </h3>
-              <p className="text-muted-foreground text-sm font-body leading-relaxed mb-4">
-                {s.summary}
-              </p>
-              <span className="text-xs tracking-[0.15em] text-primary/70 group-hover:text-primary transition-colors">
-                LEARN MORE →
-              </span>
+              <img
+                src={s.image}
+                alt={s.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="font-heading text-xl md:text-2xl mb-1 group-hover:text-primary transition-colors duration-300">
+                  {s.title}
+                </h3>
+                <p className="text-white/70 text-sm font-body">{s.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Modal */}
-      <AnimatePresence>
-        {activeService !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-6"
-            onClick={() => setActiveService(null)}
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 30, scale: 0.95 }}
-              onClick={(e) => e.stopPropagation()}
-              className="bg-card border border-border max-w-lg w-full p-10 relative"
-            >
-              <button
-                onClick={() => setActiveService(null)}
-                className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <X size={20} />
-              </button>
-              <h3 className="font-heading text-2xl text-ivory mb-4">
-                {services[activeService].title}
-              </h3>
-              <p className="text-foreground/70 font-body text-sm leading-relaxed">
-                {services[activeService].detail}
-              </p>
-              <a
-                href="#booking"
-                onClick={() => setActiveService(null)}
-                className="inline-block mt-8 px-6 py-3 bg-primary text-primary-foreground text-xs tracking-[0.15em] hover:bg-bronze-light transition-colors"
-              >
-                BOOK CONSULTATION
-              </a>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };

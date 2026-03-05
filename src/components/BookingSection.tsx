@@ -6,19 +6,18 @@ const BookingSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Would integrate with booking system
     window.open(`https://wa.me/601121172728?text=Hi, I'm ${formData.name}. I'd like to book a consultation.`, "_blank");
   };
 
   return (
-    <section id="booking" className="py-32 px-6 bg-background">
+    <section id="booking" className="py-20 md:py-[80px] px-6 bg-background">
       <div className="max-w-2xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-5xl text-ivory mb-4"
+          className="font-heading text-4xl md:text-[48px] text-foreground mb-4"
         >
           Begin Your Longevity Journey
         </motion.h2>
@@ -27,7 +26,7 @@ const BookingSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-muted-foreground font-body text-sm mb-12"
+          className="text-muted-foreground font-body text-base mb-12"
         >
           Take the first step toward sustainable vitality.
         </motion.p>
@@ -41,50 +40,50 @@ const BookingSection = () => {
           className="space-y-4 text-left"
         >
           {[
-            { name: "name", label: "Full Name", type: "text" },
+            { name: "name", label: "Name", type: "text" },
             { name: "email", label: "Email", type: "email" },
             { name: "phone", label: "Phone", type: "tel" },
           ].map((field) => (
             <div key={field.name}>
-              <label className="text-xs tracking-[0.15em] text-muted-foreground mb-2 block font-body">
-                {field.label.toUpperCase()}
+              <label className="text-sm text-muted-foreground mb-1.5 block font-body">
+                {field.label}
               </label>
               <input
                 type={field.type}
                 required
                 value={formData[field.name as keyof typeof formData]}
                 onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
-                className="w-full bg-card border border-border px-4 py-3 text-foreground font-body text-sm focus:border-primary focus:outline-none transition-colors"
+                className="w-full bg-white border border-border rounded-lg px-4 py-3 text-foreground font-body text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
               />
             </div>
           ))}
           <div>
-            <label className="text-xs tracking-[0.15em] text-muted-foreground mb-2 block font-body">
-              MESSAGE
+            <label className="text-sm text-muted-foreground mb-1.5 block font-body">
+              Message
             </label>
             <textarea
               rows={4}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full bg-card border border-border px-4 py-3 text-foreground font-body text-sm focus:border-primary focus:outline-none transition-colors resize-none"
+              className="w-full bg-white border border-border rounded-lg px-4 py-3 text-foreground font-body text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"
             />
           </div>
           <button
             type="submit"
-            className="w-full py-4 bg-primary text-primary-foreground text-sm tracking-[0.15em] hover:bg-bronze-light transition-colors duration-300 mt-4"
+            className="w-full py-3.5 bg-primary text-primary-foreground rounded-full text-sm font-body font-medium hover:bg-accent transition-colors duration-300 mt-2"
           >
-            REQUEST CONSULTATION
+            Request Consultation
           </button>
         </motion.form>
 
-        <div className="mt-8 flex items-center justify-center gap-6">
+        <div className="mt-6">
           <a
             href="https://wa.me/601121172728"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs tracking-[0.15em] text-primary hover:text-bronze-light transition-colors font-body"
+            className="text-sm text-primary hover:text-accent transition-colors font-body"
           >
-            WHATSAPP US →
+            Or WhatsApp us directly →
           </a>
         </div>
       </div>
