@@ -75,7 +75,7 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8 }}
           className="font-heading text-4xl md:text-[48px] text-center text-foreground mb-16"
         >
-          Client Success Stories
+          Testimonials
         </motion.h2>
 
         <div className="relative">

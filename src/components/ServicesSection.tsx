@@ -3,6 +3,8 @@ import servicePemf from "@/assets/service-pemf.jpg";
 import serviceBioaura from "@/assets/service-bioaura.jpg";
 import serviceEpigenetic from "@/assets/service-epigenetic.jpg";
 import serviceAdvanced from "@/assets/service-advanced.jpg";
+import serviceNutrition from "@/assets/service-nutrition.jpg";
+import serviceRecognize from "@/assets/service-recognize.jpg";
 
 const services = [
   {
@@ -24,6 +26,16 @@ const services = [
     title: "Advanced Treatment",
     desc: "Biohacking experience",
     image: serviceAdvanced,
+  },
+  {
+    title: "Personalized Nutrition Solutions",
+    desc: "Professional nutritionist guidance for sustainable long-term health",
+    image: serviceNutrition,
+  },
+  {
+    title: "ReCognize",
+    desc: "Interactive cognitive test for early detection of memory concerns",
+    image: serviceRecognize,
   },
 ];
 
@@ -50,7 +62,7 @@ const ServicesSection = () => {
           Experience the perfect blend of science and biohacking technology, designed to provide personalized care and optimal wellness results.
         </motion.p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
