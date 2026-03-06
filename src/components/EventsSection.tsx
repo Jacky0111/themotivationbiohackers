@@ -1,12 +1,28 @@
 import { motion } from "framer-motion";
 import eventImg from "@/assets/event-longevity.jpg";
+import eventTbWebinar from "@/assets/event-tb-webinar.png";
 
 const events = [
+  {
+    title: "《咳嗽背后的真相》世界结核病日线上讲座",
+    date: "March 11, 2026",
+    location: "Zoom Online Webinar",
+    desc: "Co-hosted with Asclepius Healthcare Clinic & KPJ Puteri Specialist Hospital. Featuring Dr See Y.Y. (Respiratory Specialist) and Pharmacist Loh Hao Bo on TB awareness, diagnosis and treatment.",
+    image: eventTbWebinar,
+    link: "https://forms.gle/EtkNHqKjoNb8H97G6",
+  },
   {
     title: "Biohacking Your Longevity",
     date: "June 12, 2026",
     location: "Kuala Lumpur",
     desc: "An exclusive evening exploring the latest in longevity science, regenerative therapies, and personalised health optimisation.",
+    image: eventImg,
+  },
+  {
+    title: "Health & Wellness Expo 2026",
+    date: "TBC",
+    location: "Johor Bahru (Venue TBC)",
+    desc: "Experience cutting-edge biohacking technology, free health screenings, epigenetic testing demos, and live wellness consultations at our upcoming health expo.",
     image: eventImg,
   },
 ];
@@ -50,10 +66,12 @@ const EventsSection = () => {
                 <p className="text-xs text-muted-foreground font-body mb-3">{e.location}</p>
                 <p className="text-sm text-muted-foreground font-body leading-relaxed mb-4">{e.desc}</p>
                 <a
-                  href="#booking"
+                  href={e.link || "#booking"}
+                  target={e.link ? "_blank" : undefined}
+                  rel={e.link ? "noopener noreferrer" : undefined}
                   className="inline-block px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-body font-medium hover:bg-accent transition-colors duration-300"
                 >
-                  Register
+                  {e.link ? "Register Now" : "Register"}
                 </a>
               </div>
             </motion.div>
