@@ -33,12 +33,21 @@ const TeamSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-muted-foreground font-body text-base max-w-2xl mx-auto mb-4"
+        >
+          Masters degree holders with authentic professional certificates
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="text-muted-foreground font-body text-base max-w-2xl mx-auto mb-16"
         >
-          Masters degree holders with authentic professional certificates and over 10 years of experience in chronic disease prevention and recovery.
+          Over 10 years of experience in the space of NCDs or chronic disease prevention and recovery journey
         </motion.p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-14 max-w-4xl mx-auto">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
@@ -48,15 +57,15 @@ const TeamSection = () => {
               transition={{ duration: 0.5, delay: index * 0.08 }}
               className="flex flex-col items-center text-center"
             >
-              <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden mb-3 bg-background shadow-sm">
+              <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden mb-5 bg-muted">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="font-heading text-base md:text-lg text-foreground mb-0.5">{member.name}</h3>
-              <p className="text-muted-foreground font-body text-xs md:text-sm leading-snug">{member.role}</p>
+              <h3 className="font-heading text-lg md:text-xl font-bold uppercase tracking-wide text-foreground mb-1">{member.name}</h3>
+              <p className="text-muted-foreground font-body text-sm leading-snug">{member.role}</p>
             </motion.div>
           ))}
         </div>
