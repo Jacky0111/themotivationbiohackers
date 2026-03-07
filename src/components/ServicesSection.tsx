@@ -1,43 +1,6 @@
 import { motion } from "framer-motion";
-import servicePemf from "@/assets/service-pemf.jpg";
-import serviceBioaura from "@/assets/service-bioaura.jpg";
-import serviceEpigenetic from "@/assets/service-epigenetic.jpg";
-import serviceAdvanced from "@/assets/service-advanced.jpg";
-import serviceNutrition from "@/assets/service-nutrition.jpg";
-import serviceRecognize from "@/assets/service-recognize.jpg";
-
-const services = [
-  {
-    title: "PEMF Therapy",
-    desc: "Your body deserves healing energy",
-    image: servicePemf,
-  },
-  {
-    title: "BioAura AI",
-    desc: "Your voice reveals your mental health",
-    image: serviceBioaura,
-  },
-  {
-    title: "Epigenetic Screening",
-    desc: "Your genes reveal your TRUE health",
-    image: serviceEpigenetic,
-  },
-  {
-    title: "Advanced Treatment",
-    desc: "Biohacking experience",
-    image: serviceAdvanced,
-  },
-  {
-    title: "Personalized Nutrition Solutions",
-    desc: "Professional nutritionist guidance for sustainable long-term health",
-    image: serviceNutrition,
-  },
-  {
-    title: "ReCognize",
-    desc: "Interactive cognitive test for early detection of memory concerns",
-    image: serviceRecognize,
-  },
-];
+import { Link } from "react-router-dom";
+import { services } from "@/data/services";
 
 const ServicesSection = () => {
   return (
@@ -70,20 +33,24 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative rounded-xl overflow-hidden aspect-[3/4] cursor-pointer"
             >
-              <img
-                src={s.image}
-                alt={s.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="font-heading text-xl md:text-2xl mb-1 group-hover:text-primary transition-colors duration-300">
-                  {s.title}
-                </h3>
-                <p className="text-white/70 text-sm font-body">{s.desc}</p>
-              </div>
+              <Link
+                to={`/services/${s.slug}`}
+                className="group relative rounded-xl overflow-hidden aspect-[3/4] cursor-pointer block"
+              >
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="font-heading text-xl md:text-2xl mb-1 group-hover:text-primary transition-colors duration-300">
+                    {s.title}
+                  </h3>
+                  <p className="text-white/70 text-sm font-body">{s.desc}</p>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
