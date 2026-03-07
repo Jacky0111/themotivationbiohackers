@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import silkTexture from "@/assets/silk-texture.jpg";
 
 const AboutSection = () => {
@@ -50,16 +51,19 @@ const AboutSection = () => {
           non-invasive and holistic solutions.
         </motion.p>
 
-        <motion.a
-          href="#services"
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="inline-block px-7 py-3 border border-white/40 text-white rounded-full text-sm font-body hover:bg-white/10 transition-colors duration-300"
         >
-          Learn More
-        </motion.a>
+          <Link
+            to="/about"
+            className="inline-block px-7 py-3 border border-white/40 text-white rounded-full text-sm font-body hover:bg-white/10 transition-colors duration-300"
+          >
+            Learn More
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

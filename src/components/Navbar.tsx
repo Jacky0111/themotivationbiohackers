@@ -4,10 +4,11 @@ import { Menu, X } from "lucide-react";
 import tmLogo from "@/assets/tm-logo.png";
 
 const navLinks = [
-{ label: "Services", href: "#services" },
-{ label: "Events", href: "#events" },
-{ label: "Testimonials", href: "#testimonials" },
-{ label: "About Us", href: "#about" }];
+  { label: "Services", href: "#services" },
+  { label: "Events", href: "#events" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "About Us", href: "/about" },
+];
 
 
 const Navbar = () => {

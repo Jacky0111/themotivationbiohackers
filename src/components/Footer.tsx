@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="h-px bg-footer-text/20 mb-4 max-w-[200px]" />
             <div className="flex flex-col gap-3">
               {[
-                { label: "About Us", href: "#about" },
+                { label: "About Us", href: "/about" },
                 { label: "Services", href: "#services" },
                 { label: "Events", href: "#events" },
                 { label: "Testimonials", href: "#testimonials" },
