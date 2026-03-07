@@ -67,57 +67,39 @@ const TestimonialsSection = () => {
 
   return (
     <section id="testimonials" className="py-20 md:py-[80px] px-6 bg-background overflow-hidden">
-      <div className="max-w-site mx-auto">
+      <div className="max-w-site mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-[48px] text-center text-foreground mb-16"
+          className="font-heading text-4xl md:text-[48px] text-foreground mb-6"
         >
           Testimonials
         </motion.h2>
 
-        <div className="relative">
-          <div
-            ref={scrollRef}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            className="flex gap-6 overflow-x-hidden scroll-smooth"
-          >
-            {items.map((t, i) => (
-              <div
-                key={`${t.name}-${i}`}
-                className="min-w-[300px] md:min-w-[360px] flex-shrink-0 bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-sm"
-              >
-                <Quote className="w-7 h-7 text-primary/40 mb-4" />
-                <p className="font-heading italic text-base text-foreground/90 leading-relaxed mb-6">
-                  "{t.quote}"
-                </p>
-                <div>
-                  <p className="font-body font-semibold text-sm text-foreground">{t.name}</p>
-                  <p className="font-body text-xs text-muted-foreground">{t.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="inline-flex items-center gap-2 bg-muted/60 backdrop-blur-sm rounded-full px-6 py-3 mb-4"
+        >
+          <div className="w-2 h-2 rounded-full bg-primary/60 animate-pulse" />
+          <span className="font-body text-sm text-muted-foreground">
+            Coming Soon
+          </span>
+        </motion.div>
 
-          {/* Navigation arrows */}
-          <button
-            onClick={() => scrollBy(-1)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm shadow-md flex items-center justify-center text-foreground/60 hover:text-foreground transition-colors"
-            aria-label="Previous"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={() => scrollBy(1)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm shadow-md flex items-center justify-center text-foreground/60 hover:text-foreground transition-colors"
-            aria-label="Next"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="font-body text-muted-foreground text-base max-w-xl mx-auto"
+        >
+          We're currently collecting testimonials from our valued clients. This section will be updated with real success stories soon.
+        </motion.p>
       </div>
     </section>
   );
