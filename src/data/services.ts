@@ -49,17 +49,6 @@ Unlike standard blood tests, epigenetic analysis provides a comprehensive pictur
 Our comprehensive report covers vitamins, minerals, amino acids, fatty acids, environmental toxins, and electromagnetic stress indicators.`,
   },
   {
-    title: "Advanced Treatment",
-    desc: "Biohacking experience",
-    slug: "advanced-treatment",
-    image: serviceAdvanced,
-    fullDesc: `Our Advanced Treatment programme combines multiple cutting-edge biohacking technologies to deliver a comprehensive wellness experience. From IV nutrient therapy to photobiomodulation, each treatment is carefully selected and customised to address your specific health goals.
-
-This premium programme is designed for individuals who are serious about optimising their health and performance, offering treatments that are typically only available at world-class longevity clinics.
-
-Each session is supervised by our experienced medical team to ensure safety and maximum efficacy.`,
-  },
-  {
     title: "Personalized Nutrition Solutions",
     desc: "Professional nutritionist guidance for sustainable long-term health",
     slug: "personalized-nutrition",
