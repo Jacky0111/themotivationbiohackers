@@ -5,6 +5,11 @@ import serviceAdvanced from "@/assets/service-advanced.jpg";
 import serviceNutrition from "@/assets/service-nutrition.jpg";
 import serviceRecognize from "@/assets/service-recognize.jpg";
 
+export interface NutritionCategory {
+  name: string;
+  features: string[];
+}
+
 export interface Service {
   title: string;
   desc: string;
@@ -12,6 +17,7 @@ export interface Service {
   slug: string;
   fullDesc: string;
   locked?: boolean;
+  nutritionCategories?: NutritionCategory[];
 }
 
 export const services: Service[] = [
@@ -53,11 +59,34 @@ Our comprehensive report covers vitamins, minerals, amino acids, fatty acids, en
     desc: "Professional nutritionist guidance for sustainable long-term health",
     slug: "personalized-nutrition",
     image: serviceNutrition,
-    fullDesc: `Personalized nutrition guidance by a professional nutritionist designed to help you regain your health. Our approach focuses on improving your wellbeing without drastically changing your lifestyle, making it easier and more sustainable to maintain long-term health.
+    fullDesc: `Every plan is customized just for you with evidence-based recommendations. We're committed to guiding you toward sustainable improvements in your health.
 
-We conduct thorough nutritional assessments, analyse your dietary habits, and create customised meal plans that work with your preferences and schedule — not against them.
-
-Whether you're managing a chronic condition, seeking weight management, or simply wanting to feel your best, our evidence-based approach ensures lasting results.`,
+Our approach focuses on improving your wellbeing without drastically changing your lifestyle, making it easier and more sustainable to maintain long-term health. We conduct thorough nutritional assessments, analyse your dietary habits, and create customised plans that work with your preferences — not against them.`,
+    nutritionCategories: [
+      {
+        name: "Targeted Nutrition Assessment",
+        features: [
+          "Comprehensive review of your diet, lifestyle, and health goals",
+          "Get a personalized 7-day meal plan based on what you love to eat",
+          "Enjoy 3 free consultations to guide and support you",
+          "Practical, actionable advice with simple steps crafted to help you achieve lasting results",
+        ],
+      },
+      {
+        name: "Informed Supplement Choices",
+        features: [
+          "Review your current nutritional supplements regimen",
+          "Receive tailored recommendations for appropriate nutritional supplements",
+        ],
+      },
+      {
+        name: "Smart Food Choices",
+        features: [
+          "Tell us 10 food products you want advice on",
+          "At least two trusted brand options will be provided for each food product",
+        ],
+      },
+    ],
   },
   {
     title: "ReCognize",
