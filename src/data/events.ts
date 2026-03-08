@@ -82,6 +82,14 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
+    title: "留华杯2025匹克球团体赛",
+    date: "November 30, 2025",
+    dateISO: "2025-11-30",
+    location: "City Pickle @ One City, Selangor",
+    desc: "首届马来西亚留华校友匹克球团体赛。主办单位：马来西亚留华同学会。协办单位：浙江大学马来西亚校友会。",
+    image: eventImg,
+  },
+  {
     title: "健康解码，福运随行 · Decode Your Health, Prosper in Wellness",
     date: "January 11, 2026",
     dateISO: "2026-01-11",
