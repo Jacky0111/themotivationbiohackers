@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import PageTransition from "@/components/PageTransition";
 import { getPastEvents } from "@/data/events";
 import silkTexture from "@/assets/silk-texture.jpg";
 
@@ -11,7 +13,9 @@ const PastEvents = () => {
   const pastEvents = getPastEvents();
 
   return (
+    <PageTransition>
     <div className="bg-background min-h-screen">
+      <SEOHead title="Past Events" description="A look back at our community events and health initiatives." path="/past-events" />
       <Navbar />
 
       {/* Hero banner */}
