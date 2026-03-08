@@ -1,10 +1,17 @@
 import tmLogo from "@/assets/tm-logo.png";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+
+const socialLinks = [
+  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+];
 
 const Footer = () => {
   return (
     <footer className="py-16 px-6 bg-footer-bg text-footer-text">
       <div className="max-w-site mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img src={tmLogo} alt="The Motivation Biohackers" className="h-10 w-auto opacity-80" />
@@ -30,6 +37,7 @@ const Footer = () => {
                 { label: "Services", href: "#services" },
                 { label: "Events", href: "#events" },
                 { label: "Testimonials", href: "#testimonials" },
+                { label: "Contact", href: "#contact" },
               ].map((link) => (
                 <a
                   key={link.label}
@@ -40,6 +48,28 @@ const Footer = () => {
                 </a>
               ))}
             </div>
+          </div>
+
+          <div>
+            <p className="text-footer-text/90 font-body text-base mb-4">Follow Us</p>
+            <div className="h-px bg-footer-text/20 mb-4 max-w-[200px]" />
+            <div className="flex gap-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-full border border-footer-text/20 flex items-center justify-center text-footer-text/60 hover:text-primary hover:border-primary transition-colors duration-300"
+                >
+                  <social.icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
+            <p className="text-footer-text/50 text-xs font-body mt-6">
+              Stay connected for wellness tips, events, and exclusive offers.
+            </p>
           </div>
         </div>
 

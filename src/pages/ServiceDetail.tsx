@@ -1,9 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import PageTransition from "@/components/PageTransition";
 import { getServiceBySlug } from "@/data/services";
 
 const ServiceDetail = () => {
@@ -24,7 +26,9 @@ const ServiceDetail = () => {
   }
 
   return (
+    <PageTransition>
     <div className="bg-background min-h-screen">
+      <SEOHead title={service.title} description={service.desc} path={`/services/${slug}`} />
       <Navbar />
 
       {/* Hero */}
@@ -117,6 +121,7 @@ const ServiceDetail = () => {
       <Footer />
       <WhatsAppButton />
     </div>
+    </PageTransition>
   );
 };
 
