@@ -10,7 +10,7 @@ const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = getServiceBySlug(slug || "");
 
-  if (!service) {
+  if (!service || service.locked) {
     return (
       <div className="bg-background min-h-screen">
         <Navbar />
@@ -61,10 +61,40 @@ const ServiceDetail = () => {
             {service.fullDesc}
           </motion.p>
 
+          {/* Nutrition categories */}
+          {service.nutritionCategories && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mt-12 space-y-6"
+            >
+              <h2 className="font-heading text-2xl md:text-3xl text-foreground">What We Offer</h2>
+              {service.nutritionCategories.map((cat, i) => (
+                <div
+                  key={cat.name}
+                  className="bg-secondary rounded-xl p-6 border-l-4 border-primary"
+                >
+                  <h3 className="font-heading text-lg text-foreground mb-3">
+                    #{i + 1} {cat.name}
+                  </h3>
+                  <ul className="space-y-2">
+                    {cat.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2 text-sm font-body text-muted-foreground">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </motion.div>
+          )}
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-12 flex flex-wrap gap-4"
           >
             <Link

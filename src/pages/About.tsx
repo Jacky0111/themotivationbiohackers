@@ -44,11 +44,27 @@ const About = () => {
       {/* Content */}
       <section className="py-20 px-6 bg-background">
         <div className="max-w-3xl mx-auto">
+          {/* Vision */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="mb-12"
+          >
+            <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-4">Our Vision</h2>
+            <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed">
+              Through a process of motivation and education, we provide toxin-free solutions that
+              integrate functional medicine with holistic healing approaches — empowering our
+              clients to achieve metabolic, physical, and mental balance.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.15 }}
             className="space-y-6 text-muted-foreground font-body text-base md:text-lg leading-relaxed"
           >
             <p>
