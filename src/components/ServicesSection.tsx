@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Lock } from "lucide-react";
 import { services } from "@/data/services";
 
 const ServicesSection = () => {
@@ -34,23 +35,45 @@ const ServicesSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <Link
-                to={`/services/${s.slug}`}
-                className="group relative rounded-xl overflow-hidden aspect-[3/4] cursor-pointer block"
-              >
-                <img
-                  src={s.image}
-                  alt={s.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="font-heading text-xl md:text-2xl mb-1 group-hover:text-primary transition-colors duration-300">
-                    {s.title}
-                  </h3>
-                  <p className="text-white/70 text-sm font-body">{s.desc}</p>
+              {s.locked ? (
+                <div className="group relative rounded-xl overflow-hidden aspect-[3/4] cursor-default block">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-60"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                    <Lock className="w-8 h-8 mb-3 opacity-70" />
+                    <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary/80 animate-pulse" />
+                      <span className="font-body text-xs text-white/80">Coming Soon</span>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="font-heading text-xl md:text-2xl mb-1">{s.title}</h3>
+                    <p className="text-white/50 text-sm font-body">{s.desc}</p>
+                  </div>
                 </div>
-              </Link>
+              ) : (
+                <Link
+                  to={`/services/${s.slug}`}
+                  className="group relative rounded-xl overflow-hidden aspect-[3/4] cursor-pointer block"
+                >
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="font-heading text-xl md:text-2xl mb-1 group-hover:text-primary transition-colors duration-300">
+                      {s.title}
+                    </h3>
+                    <p className="text-white/70 text-sm font-body">{s.desc}</p>
+                  </div>
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
