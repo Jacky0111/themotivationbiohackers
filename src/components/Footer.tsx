@@ -1,5 +1,5 @@
 import tmLogo from "@/assets/tm-logo.png";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const socialLinks = [
   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },

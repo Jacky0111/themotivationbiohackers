@@ -15,7 +15,7 @@ const ContactSection = () => {
           Get In Touch
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
               icon: Phone,
@@ -35,12 +35,18 @@ const ContactSection = () => {
               value: "+60 11-2117 2728",
               href: "https://wa.me/601121172728",
             },
+            {
+              icon: MessageCircle,
+              label: "Join Our Community",
+              value: "The Motivation Biohackers Hub",
+              href: "https://chat.whatsapp.com/G7c59PZ1dVYBeYw0OKwLZ7?mode=gi_t",
+            },
           ].map((item, i) => (
             <motion.a
               key={item.label}
               href={item.href}
-              target={item.label === "WhatsApp" ? "_blank" : undefined}
-              rel={item.label === "WhatsApp" ? "noopener noreferrer" : undefined}
+              target={item.label === "WhatsApp" || item.label === "Join Our Community" ? "_blank" : undefined}
+              rel={item.label === "WhatsApp" || item.label === "Join Our Community" ? "noopener noreferrer" : undefined}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
