@@ -110,8 +110,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Team Section */}
-        <TeamSection />
+        {/* <TeamSection /> */}
 
         <Footer />
         <WhatsAppButton />
