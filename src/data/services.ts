@@ -11,6 +11,7 @@ export interface Service {
   image: string;
   slug: string;
   fullDesc: string;
+  locked?: boolean;
 }
 
 export const services: Service[] = [
