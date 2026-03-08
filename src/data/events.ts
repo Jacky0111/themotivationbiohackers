@@ -50,6 +50,14 @@ export const allEvents: EventItem[] = [
   },
   // Past events
   {
+    title: "肠来运转，健康相伴 · Smooth Gut Wellness Strut Health Expo",
+    date: "March 22–23, 2025",
+    dateISO: "2025-03-23",
+    location: "Sutera Mall, Johor Bahru",
+    desc: "A two-day health expo focused on gut health and overall wellness, featuring health screenings, educational talks, and wellness consultations.",
+    image: eventImg,
+  },
+  {
     title: "The Secret Artistree Green Market",
     date: "March 7, 2025",
     dateISO: "2025-03-07",
@@ -71,6 +79,14 @@ export const allEvents: EventItem[] = [
     dateISO: "2025-07-19",
     location: "Dewanraya Jalan Rawa, Taman Perling, Johor Bahru",
     desc: "A community-driven health expo bringing together wellness practitioners, health screenings, and educational talks to empower individuals on their health journey.",
+    image: eventImg,
+  },
+  {
+    title: "留华杯2025匹克球团体赛",
+    date: "November 30, 2025",
+    dateISO: "2025-11-30",
+    location: "City Pickle @ One City, Selangor",
+    desc: "首届马来西亚留华校友匹克球团体赛。主办单位：马来西亚留华同学会。协办单位：浙江大学马来西亚校友会。",
     image: eventImg,
   },
   {
