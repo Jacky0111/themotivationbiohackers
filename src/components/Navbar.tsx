@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Events", href: "/#events" },
   { label: "Testimonials", href: "/#testimonials" },
   { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -39,7 +40,6 @@ const Navbar = () => {
     }
   };
 
-  // Handle scroll-to after navigating back to homepage
   useEffect(() => {
     const state = location.state as { scrollTo?: string } | null;
     if (state?.scrollTo && location.pathname === "/") {
@@ -47,7 +47,6 @@ const Navbar = () => {
         const el = document.getElementById(state.scrollTo!);
         el?.scrollIntoView({ behavior: "smooth" });
       }, 100);
-      // Clear state
       window.history.replaceState({}, document.title);
     }
   }, [location]);
@@ -90,6 +89,13 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/#booking"
+              onClick={(e) => handleNavClick(e, "/#booking")}
+              className="px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-body font-medium hover:bg-accent transition-colors duration-300 shadow-sm"
+            >
+              Book Now
+            </a>
           </div>
 
           <button
@@ -122,6 +128,13 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="/#booking"
+                onClick={(e) => handleNavClick(e, "/#booking")}
+                className="px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-body font-medium hover:bg-accent transition-colors"
+              >
+                Book Now
+              </a>
             </div>
           </motion.div>
         )}

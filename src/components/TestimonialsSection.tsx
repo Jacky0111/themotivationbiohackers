@@ -39,12 +39,11 @@ const TestimonialsSection = () => {
     if (!container) return;
 
     let animationId: number;
-    let speed = 0.5;
+    const speed = 0.5;
 
     const scroll = () => {
       if (!isPaused && container) {
         container.scrollLeft += speed;
-        // Reset to start when reaching halfway (duplicate set)
         if (container.scrollLeft >= container.scrollWidth / 2) {
           container.scrollLeft = 0;
         }
@@ -62,44 +61,73 @@ const TestimonialsSection = () => {
     container.scrollBy({ left: direction * 340, behavior: "smooth" });
   };
 
-  // Duplicate testimonials for seamless infinite scroll
   const items = [...testimonials, ...testimonials];
 
   return (
     <section id="testimonials" className="py-20 md:py-[80px] px-6 bg-background overflow-hidden">
-      <div className="max-w-site mx-auto text-center">
+      <div className="max-w-site mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl md:text-[48px] text-foreground mb-6"
+          className="font-heading text-4xl md:text-[48px] text-foreground mb-4 text-center"
         >
-          Testimonials
+          What Our Clients Say
         </motion.h2>
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 bg-muted/60 backdrop-blur-sm rounded-full px-6 py-3 mb-4"
-        >
-          <div className="w-2 h-2 rounded-full bg-primary/60 animate-pulse" />
-          <span className="font-body text-sm text-muted-foreground">
-            Coming Soon
-          </span>
-        </motion.div>
-
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="font-body text-muted-foreground text-base max-w-xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-muted-foreground font-body text-base max-w-xl mx-auto text-center mb-12"
         >
-          We're currently collecting testimonials from our valued clients. This section will be updated with real success stories soon.
+          Real experiences from those who've transformed their health with us
         </motion.p>
+
+        {/* Navigation arrows */}
+        <div className="flex justify-end gap-2 mb-6 max-w-site mx-auto">
+          <button
+            onClick={() => scrollBy(-1)}
+            className="p-2 rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => scrollBy(1)}
+            className="p-2 rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Scrolling carousel */}
+        <div
+          ref={scrollRef}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          className="flex gap-6 overflow-x-hidden cursor-grab"
+        >
+          {items.map((t, i) => (
+            <div
+              key={i}
+              className="min-w-[300px] max-w-[340px] flex-shrink-0 bg-secondary rounded-2xl p-8 flex flex-col justify-between"
+            >
+              <div>
+                <Quote className="w-8 h-8 text-primary/40 mb-4" />
+                <p className="font-body text-foreground text-sm leading-relaxed mb-6">
+                  "{t.quote}"
+                </p>
+              </div>
+              <div>
+                <p className="font-heading text-base text-foreground">{t.name}</p>
+                <p className="font-body text-xs text-muted-foreground">{t.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
