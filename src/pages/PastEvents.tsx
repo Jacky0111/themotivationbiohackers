@@ -98,6 +98,7 @@ const PastEvents = () => {
       <Footer />
       <WhatsAppButton />
     </div>
+    </PageTransition>
   );
 };
 

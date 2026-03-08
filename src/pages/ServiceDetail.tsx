@@ -26,7 +26,9 @@ const ServiceDetail = () => {
   }
 
   return (
+    <PageTransition>
     <div className="bg-background min-h-screen">
+      <SEOHead title={service.title} description={service.desc} path={`/services/${slug}`} />
       <Navbar />
 
       {/* Hero */}
