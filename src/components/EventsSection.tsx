@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import eventImg from "@/assets/event-longevity.jpg";
 import eventTbWebinar from "@/assets/event-tb-webinar.png";
+import eventAwareness from "@/assets/event-awareness.jpg";
 
 const events = [
   {
@@ -10,6 +11,14 @@ const events = [
     desc: "Co-hosted with Asclepius Healthcare Clinic & KPJ Puteri Specialist Hospital. Featuring Dr See Y.Y. (Respiratory Specialist) and Pharmacist Loh Hao Bo on TB awareness, diagnosis and treatment.",
     image: eventTbWebinar,
     link: "https://forms.gle/EtkNHqKjoNb8H97G6",
+  },
+  {
+    title: "觉知之旅 · A Dance of Awareness",
+    date: "March 15, 2026",
+    location: "9:00 AM – 1:00 PM",
+    desc: "静心 · 觉知 · 升华 — 一次融合天地人与身心智慧的深度体验。包含茶点与饮品，以及 BioAura AI 能量检测（价值 RM169）。课程费用：RM369 / 人。",
+    image: eventAwareness,
+    link: "https://wa.me/601121172728?text=Hi%2C%20I%20would%20like%20to%20register%20for%20%E8%A7%89%E7%9F%A5%E4%B9%8B%E6%97%85%20A%20Dance%20of%20Awareness%20on%20March%2015",
   },
   {
     title: "Biohacking Your Longevity",
