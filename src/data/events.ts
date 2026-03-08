@@ -59,8 +59,8 @@ export const allEvents: EventItem[] = [
   },
   {
     title: "科技照亮抗癌之路",
-    date: "2025",
-    dateISO: "2025-06-01",
+    date: "June 16, 2025",
+    dateISO: "2025-06-16",
     location: "Johor Bahru",
     desc: "A collaborative health talk in partnership with GS Health Consultancy, 广州中医药大学金沙洲医院, and Asclepius Health Care Clinic — exploring the intersection of technology and integrative oncology.",
     image: eventImg,
