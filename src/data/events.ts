@@ -58,7 +58,7 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
-    title: "科技照亮抗癌之路 · Technology Lights the Way Against Cancer",
+    title: "科技照亮抗癌之路",
     date: "2025",
     dateISO: "2025-06-01",
     location: "Johor Bahru",
