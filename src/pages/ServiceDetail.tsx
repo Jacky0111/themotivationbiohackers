@@ -121,6 +121,7 @@ const ServiceDetail = () => {
       <Footer />
       <WhatsAppButton />
     </div>
+    </PageTransition>
   );
 };
 
