@@ -1,5 +1,5 @@
 import tmLogo from "@/assets/tm-logo.png";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const socialLinks = [
   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
@@ -67,7 +67,16 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <p className="text-footer-text/50 text-xs font-body mt-6">
+            <a
+              href="https://chat.whatsapp.com/G7c59PZ1dVYBeYw0OKwLZ7?mode=gi_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-5 px-4 py-2 rounded-full border border-footer-text/20 text-footer-text/70 text-xs font-body hover:text-primary hover:border-primary transition-colors duration-300"
+            >
+              <MessageCircle className="w-3.5 h-3.5" />
+              Join our WhatsApp Community
+            </a>
+            <p className="text-footer-text/50 text-xs font-body mt-4">
               Stay connected for wellness tips, events, and exclusive offers.
             </p>
           </div>
