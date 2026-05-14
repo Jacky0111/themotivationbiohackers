@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -29,6 +30,22 @@ const ServiceDetail = () => {
     <PageTransition>
     <div className="bg-background min-h-screen">
       <SEOHead title={service.title} description={service.desc} path={`/services/${slug}`} />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: service.title,
+          description: service.desc,
+          serviceType: service.title,
+          provider: {
+            "@type": "MedicalBusiness",
+            name: "The Motivation Biohackers",
+            url: "https://themotivationbiohackers.lovable.app",
+          },
+          areaServed: { "@type": "Country", name: "Malaysia" },
+          url: `https://themotivationbiohackers.lovable.app/services/${slug}`,
+        })}</script>
+      </Helmet>
       <Navbar />
 
       {/* Hero */}

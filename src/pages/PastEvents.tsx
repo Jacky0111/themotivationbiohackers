@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -16,6 +17,21 @@ const PastEvents = () => {
     <PageTransition>
     <div className="bg-background min-h-screen">
       <SEOHead title="Past Events" description="A look back at our community events and health initiatives." path="/past-events" />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(
+          pastEvents.map((e) => ({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            name: e.title,
+            startDate: e.dateISO,
+            eventStatus: "https://schema.org/EventScheduled",
+            eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+            location: { "@type": "Place", name: e.location, address: { "@type": "PostalAddress", addressCountry: "MY" } },
+            description: e.desc,
+            organizer: { "@type": "Organization", name: "The Motivation Biohackers" },
+          }))
+        )}</script>
+      </Helmet>
       <Navbar />
 
       {/* Hero banner */}
