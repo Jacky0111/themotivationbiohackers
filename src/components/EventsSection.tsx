@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { getUpcomingEvents } from "@/data/events";
+import EventCountdown from "./EventCountdown";
 
 const EventsSection = () => {
   const events = getUpcomingEvents();
@@ -61,6 +62,7 @@ const EventsSection = () => {
                 <h3 className="font-heading text-xl text-foreground mb-1">{e.title}</h3>
                 <p className="text-xs text-muted-foreground font-body mb-3">{e.location}</p>
                 <p className="text-sm text-muted-foreground font-body leading-relaxed mb-4">{e.desc}</p>
+                <EventCountdown dateISO={e.dateISO} timeHint={e.location} />
                 <a
                   href={e.link || "#booking"}
                   target={e.link ? "_blank" : undefined}
