@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { getUpcomingEvents } from "@/data/events";
 
 const EventsSection = () => {
@@ -8,6 +9,23 @@ const EventsSection = () => {
 
   return (
     <section id="events" className="py-20 md:py-[80px] px-6 bg-secondary">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(
+          events.map((e) => ({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            name: e.title,
+            startDate: e.dateISO,
+            eventStatus: "https://schema.org/EventScheduled",
+            eventAttendanceMode: e.location.toLowerCase().includes("zoom") || e.location.toLowerCase().includes("online")
+              ? "https://schema.org/OnlineEventAttendanceMode"
+              : "https://schema.org/OfflineEventAttendanceMode",
+            location: { "@type": "Place", name: e.location, address: { "@type": "PostalAddress", addressCountry: "MY" } },
+            description: e.desc,
+            organizer: { "@type": "Organization", name: "The Motivation Biohackers", url: "https://themotivationbiohackers.lovable.app" },
+          }))
+        )}</script>
+      </Helmet>
       <div className="max-w-site mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
