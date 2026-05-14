@@ -1,0 +1,23 @@
+# The Motivation Biohackers
+
+> Luxury functional medicine, regenerative therapies, and longevity optimisation clinic in Malaysia. We help high-purchasing-power professionals and leaders achieve metabolic, physical, and mental balance through evidence-based, non-invasive protocols.
+
+## Pages
+
+- [Home](/): Overview of services, philosophy, upcoming events, and consultation booking.
+- [About](/about): Vision, team credentials (masters degree holders, 10+ years experience), and approach to functional medicine.
+- [Past Events](/past-events): History of community health expos, webinars, and wellness initiatives.
+
+## Services
+
+- [PEMF Therapy](/services/pemf-therapy): Pulsed electromagnetic field therapy for cellular repair, circulation, and inflammation reduction.
+- [BioAura AI](/services/bioaura-ai): Voice biomarker analysis for mental and emotional wellbeing screening.
+- [Epigenetic Screening](/services/epigenetic-screening): Comprehensive analysis of gene expression, nutritional deficiencies, toxin exposure, and metabolic imbalances.
+- [Personalized Nutrition](/services/personalized-nutrition): Customised meal plans, supplement guidance, and food product recommendations from certified nutritionists.
+- [ReCognize](/services/recognize): Game-based cognitive assessment for early detection of memory loss and dementia risk.
+
+## Contact
+
+- WhatsApp: +60 11-2117 2728
+- Email: themotivation0207@gmail.com
+- Location: Malaysia

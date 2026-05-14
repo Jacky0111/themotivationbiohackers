@@ -23,7 +23,7 @@ export interface Service {
 export const services: Service[] = [
   {
     title: "PEMF Therapy",
-    desc: "Your body deserves healing energy",
+    desc: "Pulsed electromagnetic field therapy that stimulates cellular repair, boosts circulation, and reduces inflammation — non-invasive healing for chronic pain and fatigue.",
     slug: "pemf-therapy",
     image: servicePemf,
     fullDesc: `Pulsed Electromagnetic Field (PEMF) Therapy uses targeted electromagnetic pulses to stimulate cellular repair and regeneration. This non-invasive treatment enhances blood circulation, reduces inflammation, and accelerates the body's natural healing processes.
@@ -34,7 +34,7 @@ Our sessions are personalised to your specific health needs, ensuring maximum th
   },
   {
     title: "BioAura AI",
-    desc: "Your voice reveals your mental health",
+    desc: "AI-powered voice biomarker analysis that screens for stress, anxiety and emotional wellbeing in minutes — actionable mental health insights, completely non-invasive.",
     slug: "bioaura-ai",
     image: serviceBioaura,
     fullDesc: `BioAura AI is a cutting-edge voice analysis technology that provides insights into your mental and emotional wellbeing. By analysing subtle vocal biomarkers, the system can detect signs of stress, anxiety, and other psychological conditions.
@@ -45,7 +45,7 @@ Our trained specialists will guide you through the results and recommend persona
   },
   {
     title: "Epigenetic Screening",
-    desc: "Your genes reveal your TRUE health",
+    desc: "Advanced gene-expression analysis revealing nutritional deficiencies, toxin exposure and metabolic imbalances — a complete cellular blueprint for personalised health.",
     slug: "epigenetic-screening",
     image: serviceEpigenetic,
     fullDesc: `Epigenetic Screening goes beyond traditional genetic testing to reveal how your lifestyle, environment, and habits are actually affecting your gene expression. This powerful screening identifies nutritional deficiencies, toxin exposures, and metabolic imbalances at the cellular level.
@@ -101,7 +101,7 @@ Results are reviewed by our specialists who can recommend next steps, including 
   },
   {
     title: "Advanced Treatment",
-    desc: "Biohacking experience",
+    desc: "Premium biohacking programme combining IV nutrient therapy, photobiomodulation and longevity protocols — supervised, customised treatments for peak performance and health.",
     slug: "advanced-treatment",
     image: serviceAdvanced,
     locked: true,

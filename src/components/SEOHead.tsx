@@ -14,7 +14,7 @@ const SEOHead = ({
   description = "Elevate your well-being through science and holistic care. Premier functional medicine, regenerative therapies, and longevity optimisation clinic in Malaysia.",
   path = "/",
 }: SEOHeadProps) => {
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Functional Medicine & Longevity Clinic Malaysia`;
+  const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Longevity Clinic Malaysia`;
   const url = `${BASE_URL}${path}`;
 
   return (
