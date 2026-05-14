@@ -83,6 +83,14 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
+    title: "Breast Health Beyond Cancer · Women's Health Month 線上特別講座",
+    date: "May 12, 2026",
+    dateISO: "2026-05-12",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "A Women's Health Month special webinar led by a Family Physician and a Breast Cancer Integrative Care Case Manager. Covers personal breast cancer risk assessment, screening options, lifestyle and stress-based prevention, and the difference between early detection and preventive medicine.",
+    image: eventBreastHealth,
+  },
+  {
     title: "留华杯2025匹克球团体赛",
     date: "November 30, 2025",
     dateISO: "2025-11-30",
