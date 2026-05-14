@@ -1,6 +1,7 @@
 import eventImg from "@/assets/event-longevity.jpg";
 import eventTbWebinar from "@/assets/event-tb-webinar.png";
 import eventAwareness from "@/assets/event-awareness.png";
+import eventBreastHealth from "@/assets/event-breast-health.png";
 
 export interface EventItem {
   title: string;
@@ -80,6 +81,14 @@ export const allEvents: EventItem[] = [
     location: "Dewanraya Jalan Rawa, Taman Perling, Johor Bahru",
     desc: "A community-driven health expo bringing together wellness practitioners, health screenings, and educational talks to empower individuals on their health journey.",
     image: eventImg,
+  },
+  {
+    title: "Breast Health Beyond Cancer · Women's Health Month 線上特別講座",
+    date: "May 12, 2026",
+    dateISO: "2026-05-12",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "A Women's Health Month special webinar led by a Family Physician and a Breast Cancer Integrative Care Case Manager. Covers personal breast cancer risk assessment, screening options, lifestyle and stress-based prevention, and the difference between early detection and preventive medicine.",
+    image: eventBreastHealth,
   },
   {
     title: "留华杯2025匹克球团体赛",
