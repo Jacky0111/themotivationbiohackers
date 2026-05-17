@@ -53,21 +53,24 @@ const EventCountdown = ({ dateISO, timeHint }: EventCountdownProps) => {
   const seconds = Math.floor((diff % 60000) / 1000);
 
   const Box = ({ value, label }: { value: number; label: string }) => (
-    <div className="flex flex-col items-center min-w-[44px] px-2 py-1.5 rounded-md bg-background/70 border border-border">
-      <span className="font-heading text-base leading-none text-foreground tabular-nums">
+    <div className="flex flex-col items-center min-w-[52px] px-3 py-2.5 rounded-lg bg-[#0d0d0d]/95 border border-[#c9a84c]/30 shadow-[0_4px_20px_-8px_rgba(201,168,76,0.35)] backdrop-blur-sm">
+      <span className="font-heading text-xl leading-none text-[#f0d78c] tabular-nums font-semibold tracking-tight">
         {value.toString().padStart(2, "0")}
       </span>
-      <span className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">{label}</span>
+      <span className="text-[9px] uppercase tracking-[0.18em] text-[#c9a84c]/70 mt-2 font-medium">
+        {label}
+      </span>
     </div>
   );
 
   return (
-    <div className="mb-4">
-      <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted-foreground mb-2">
+    <div className="mb-5">
+      <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-[#c9a84c] mb-3 font-medium">
         <Clock className="w-3 h-3" />
         <span>距離開講</span>
+        <span className="flex-1 h-px bg-gradient-to-r from-[#c9a84c]/40 to-transparent ml-1" />
       </div>
-      <div className="flex gap-1.5">
+      <div className="flex gap-2">
         <Box value={days} label="Days" />
         <Box value={hours} label="Hrs" />
         <Box value={minutes} label="Min" />
