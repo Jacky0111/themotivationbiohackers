@@ -52,7 +52,12 @@ const EventsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-250"
             >
-              <div className="relative overflow-hidden aspect-[16/10]">
+              <button
+                type="button"
+                onClick={() => setPosterEvent(e)}
+                className="relative overflow-hidden aspect-[16/10] block w-full text-left group/poster"
+                aria-label={`View full poster for ${e.title}`}
+              >
                 <img
                   src={e.image}
                   alt={e.title}
@@ -61,7 +66,12 @@ const EventsSection = () => {
                 <div className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-body font-semibold px-3 py-1.5 rounded-full">
                   {e.date}
                 </div>
-              </div>
+                <div className="absolute inset-0 bg-black/0 group-hover/poster:bg-black/30 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover/poster:opacity-100">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 text-foreground text-xs font-body font-medium">
+                    <Expand className="w-3.5 h-3.5" /> View Poster
+                  </span>
+                </div>
+              </button>
               <div className="p-6">
                 <h3 className="font-heading text-xl text-foreground mb-1">{e.title}</h3>
                 <p className="text-xs text-muted-foreground font-body mb-3">{e.location}</p>
