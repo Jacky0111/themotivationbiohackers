@@ -106,6 +106,22 @@ const EventsSection = () => {
           </Link>
         </motion.div>
       </div>
+
+      <Dialog open={!!posterEvent} onOpenChange={(o) => !o && setPosterEvent(null)}>
+        <DialogContent className="max-w-4xl p-2 sm:p-4 bg-background">
+          <VisuallyHidden>
+            <DialogTitle>{posterEvent?.title ?? "Event poster"}</DialogTitle>
+            <DialogDescription>{posterEvent?.desc ?? ""}</DialogDescription>
+          </VisuallyHidden>
+          {posterEvent && (
+            <img
+              src={posterEvent.image}
+              alt={posterEvent.title}
+              className="w-full h-auto max-h-[85vh] object-contain rounded-md"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
