@@ -8,58 +8,16 @@ interface EventCountdownProps {
   timeHint?: string;
 }
 
-/**
- * Parse a time out of free-text. Supports:
- *  - 24h: "20:00", "8:30"
- *  - 12h with AM/PM: "8:00 PM", "8pm", "8:30 a.m."
- *  - Chinese periods: "下午8點", "晚上8:30", "早上9点", "上午10:00", "中午12點", "凌晨1点", "午夜12:00"
- * Returns [h, m] in 24h, or null.
- */
+/** Parse a time like "8:00 PM" or "9:00 AM" out of a free-text string. Returns [h,m] in 24h, or null. */
 const parseTime = (s?: string): [number, number] | null => {
   if (!s) return null;
-  const str = s.replace(/\s+/g, "");
-
-  // Detect Chinese period qualifier
-  const periodMatch = str.match(/(凌晨|早上|上午|中午|下午|傍晚|晚上|午夜)/);
-  const period = periodMatch?.[1];
-
-  // Detect AM/PM qualifier (handles a.m./p.m. with dots)
-  const ampmMatch = str.match(/([AaPp])\.?\s*[Mm]\.?/);
-  const ampm = ampmMatch?.[1]?.toUpperCase();
-
-  // Extract H:M or H点/點 M? — accept 點/点/时/時 as hour separators with optional minutes
-  let h: number | null = null;
-  let min = 0;
-  const hm = str.match(/(\d{1,2}):(\d{2})/);
-  if (hm) {
-    h = parseInt(hm[1], 10);
-    min = parseInt(hm[2], 10);
-  } else {
-    const hOnly = str.match(/(\d{1,2})\s*(?:[點点時时])?\s*(?:(\d{1,2})\s*[分])?/);
-    if (hOnly && hOnly[1]) {
-      h = parseInt(hOnly[1], 10);
-      if (hOnly[2]) min = parseInt(hOnly[2], 10);
-    }
-  }
-  if (h === null || isNaN(h)) return null;
-
-  // Apply qualifier
-  if (period) {
-    if (period === "午夜") h = 0;
-    else if (period === "中午") h = 12;
-    else if (period === "凌晨" || period === "早上" || period === "上午") {
-      if (h === 12) h = 0;
-    } else {
-      // 下午 / 傍晚 / 晚上 → PM
-      if (h < 12) h += 12;
-    }
-  } else if (ampm === "P" && h < 12) {
-    h += 12;
-  } else if (ampm === "A" && h === 12) {
-    h = 0;
-  }
-
-  if (h < 0 || h > 23 || min < 0 || min > 59) return null;
+  const m = s.match(/(\d{1,2}):(\d{2})\s*(AM|PM)?/i);
+  if (!m) return null;
+  let h = parseInt(m[1], 10);
+  const min = parseInt(m[2], 10);
+  const ap = m[3]?.toUpperCase();
+  if (ap === "PM" && h < 12) h += 12;
+  if (ap === "AM" && h === 12) h = 0;
   return [h, min];
 };
 
@@ -84,7 +42,7 @@ const EventCountdown = ({ dateISO, timeHint }: EventCountdownProps) => {
     return (
       <div className="flex items-center gap-2 text-xs font-body text-accent">
         <Clock className="w-3.5 h-3.5" />
-        <span>Event In Progress</span>
+        <span>講座進行中 / 已開始</span>
       </div>
     );
   }
@@ -109,7 +67,7 @@ const EventCountdown = ({ dateISO, timeHint }: EventCountdownProps) => {
     <div className="mb-5">
       <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-[#c9a84c] mb-3 font-medium">
         <Clock className="w-3 h-3" />
-        <span>Starts In</span>
+        <span>距離開講</span>
         <span className="flex-1 h-px bg-gradient-to-r from-[#c9a84c]/40 to-transparent ml-1" />
       </div>
       <div className="flex gap-2">
