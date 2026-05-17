@@ -84,7 +84,7 @@ const EventCountdown = ({ dateISO, timeHint }: EventCountdownProps) => {
     return (
       <div className="flex items-center gap-2 text-xs font-body text-accent">
         <Clock className="w-3.5 h-3.5" />
-        <span>講座進行中 / 已開始</span>
+        <span>Event In Progress</span>
       </div>
     );
   }
@@ -109,7 +109,7 @@ const EventCountdown = ({ dateISO, timeHint }: EventCountdownProps) => {
     <div className="mb-5">
       <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-[#c9a84c] mb-3 font-medium">
         <Clock className="w-3 h-3" />
-        <span>距離開講</span>
+        <span>Starts In</span>
         <span className="flex-1 h-px bg-gradient-to-r from-[#c9a84c]/40 to-transparent ml-1" />
       </div>
       <div className="flex gap-2">
