@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Expand } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 import { getUpcomingEvents } from "@/data/events";
 import EventCountdown from "./EventCountdown";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const EventsSection = () => {
   const events = getUpcomingEvents();
+  const [posterEvent, setPosterEvent] = useState<typeof events[number] | null>(null);
 
   return (
     <section id="events" className="py-20 md:py-[80px] px-6 bg-secondary">
@@ -48,7 +52,12 @@ const EventsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-250"
             >
-              <div className="relative overflow-hidden aspect-[16/10]">
+              <button
+                type="button"
+                onClick={() => setPosterEvent(e)}
+                className="relative overflow-hidden aspect-[16/10] block w-full text-left group/poster"
+                aria-label={`View full poster for ${e.title}`}
+              >
                 <img
                   src={e.image}
                   alt={e.title}
@@ -57,7 +66,12 @@ const EventsSection = () => {
                 <div className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-body font-semibold px-3 py-1.5 rounded-full">
                   {e.date}
                 </div>
-              </div>
+                <div className="absolute inset-0 bg-black/0 group-hover/poster:bg-black/30 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover/poster:opacity-100">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 text-foreground text-xs font-body font-medium">
+                    <Expand className="w-3.5 h-3.5" /> View Poster
+                  </span>
+                </div>
+              </button>
               <div className="p-6">
                 <h3 className="font-heading text-xl text-foreground mb-1">{e.title}</h3>
                 <p className="text-xs text-muted-foreground font-body mb-3">{e.location}</p>
@@ -92,6 +106,22 @@ const EventsSection = () => {
           </Link>
         </motion.div>
       </div>
+
+      <Dialog open={!!posterEvent} onOpenChange={(o) => !o && setPosterEvent(null)}>
+        <DialogContent className="max-w-4xl p-2 sm:p-4 bg-background">
+          <VisuallyHidden>
+            <DialogTitle>{posterEvent?.title ?? "Event poster"}</DialogTitle>
+            <DialogDescription>{posterEvent?.desc ?? ""}</DialogDescription>
+          </VisuallyHidden>
+          {posterEvent && (
+            <img
+              src={posterEvent.image}
+              alt={posterEvent.title}
+              className="w-full h-auto max-h-[85vh] object-contain rounded-md"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
