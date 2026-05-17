@@ -10,6 +10,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const EventsSection = () => {
   const events = getUpcomingEvents();
+  const [posterEvent, setPosterEvent] = useState<typeof events[number] | null>(null);
 
   return (
     <section id="events" className="py-20 md:py-[80px] px-6 bg-secondary">
