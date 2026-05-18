@@ -17,7 +17,7 @@ export interface EventItem {
 
 export const allEvents: EventItem[] = [
   {
-    title: "《咳嗽背后的真相》世界结核病日线上讲座",
+    title": "The Truth Behind the Cough · World TB Day Online Webinar",
     date: "March 11, 2026",
     dateISO: "2026-03-11",
     location: "Zoom Online Webinar",
