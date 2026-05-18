@@ -101,11 +101,11 @@ export const allEvents: EventItem[] = [
     image: eventBreastHealth,
   },
   {
-    title: "留华杯2025匹克球团体赛",
+    title: "Liu Hua Cup 2025 Pickleball Team Tournament",
     date: "November 30, 2025",
     dateISO: "2025-11-30",
     location: "City Pickle @ One City, Selangor",
-    desc: "首届马来西亚留华校友匹克球团体赛。主办单位：马来西亚留华同学会。协办单位：浙江大学马来西亚校友会。",
+    desc: "The inaugural Malaysia China-alumni pickleball team tournament. Organised by the Malaysia China Graduates Association. Co-organised by the Zhejiang University Malaysia Alumni Association.",
     image: eventImg,
   },
   {
