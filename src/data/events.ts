@@ -26,7 +26,7 @@ export const allEvents: EventItem[] = [
     link: "https://forms.gle/EtkNHqKjoNb8H97G6",
   },
   {
-    title: "觉知之旅 · A Dance of Awareness",
+    title: "A Dance of Awareness",
     date: "March 15, 2026",
     dateISO: "2026-03-15",
     location: "9:00 AM – 1:00 PM",
