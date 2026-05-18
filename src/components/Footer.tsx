@@ -1,5 +1,6 @@
 import tmLogo from "@/assets/tm-logo.png";
 import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const socialLinks = [
   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
@@ -88,10 +89,17 @@ const Footer = () => {
           We offer holistic wellness programs, lifestyle education, and non-invasive
           biohacking solutions intended to support overall wellbeing. Our services are
           not a substitute for medical diagnosis, treatment, or professional healthcare
-          advice. Please consult a qualified medical practitioner for any medical condition.
+          advice. Please consult a qualified medical practitioner for any medical condition.{" "}
+          <Link to="/disclaimer" className="underline hover:text-primary transition-colors">
+            Read full disclaimer & terms
+          </Link>
+          .
         </p>
         <p className="text-footer-text/50 text-xs font-body text-center">
-          © 2026 The Motivation Biohackers. All rights reserved.
+          © 2026 The Motivation Biohackers. All rights reserved. ·{" "}
+          <Link to="/disclaimer" className="hover:text-primary transition-colors">
+            Disclaimer & Terms
+          </Link>
         </p>
       </div>
     </footer>
