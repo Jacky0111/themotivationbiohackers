@@ -85,7 +85,7 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
-    title: "不再孤单 · Never Alone Health Expo",
+    title: "Never Alone Health Expo",
     date: "July 19, 2025",
     dateISO: "2025-07-19",
     location: "Dewanraya Jalan Rawa, Taman Perling, Johor Bahru",
