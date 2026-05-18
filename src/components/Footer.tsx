@@ -83,6 +83,13 @@ const Footer = () => {
         </div>
 
         <div className="h-px bg-footer-text/15 mb-6" />
+        <p className="text-footer-text/60 text-xs font-body text-center max-w-3xl mx-auto mb-4 leading-relaxed">
+          Disclaimer: The Motivation Biohackers is a wellness center, not a medical clinic.
+          We offer holistic wellness programs, lifestyle education, and non-invasive
+          biohacking solutions intended to support overall wellbeing. Our services are
+          not a substitute for medical diagnosis, treatment, or professional healthcare
+          advice. Please consult a qualified medical practitioner for any medical condition.
+        </p>
         <p className="text-footer-text/50 text-xs font-body text-center">
           © 2026 The Motivation Biohackers. All rights reserved.
         </p>
