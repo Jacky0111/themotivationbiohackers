@@ -107,7 +107,7 @@ Results are reviewed by our specialists who can recommend next steps, including 
     locked: true,
     fullDesc: `Our Advanced Treatment programme combines multiple cutting-edge biohacking technologies to deliver a comprehensive wellness experience. From IV nutrient therapy to photobiomodulation, each treatment is carefully selected and customised to address your specific health goals.
 
-This premium programme is designed for individuals who are serious about optimising their health and performance, offering treatments that are typically only available at world-class longevity clinics.
+This premium programme is designed for individuals who are serious about optimising their health and performance, offering treatments that are typically only available at world-class longevity wellness centers.
 
 Each session is supervised by our experienced medical team to ensure safety and maximum efficacy.`,
   },
