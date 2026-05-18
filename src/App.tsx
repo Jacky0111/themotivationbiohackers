@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import ServiceDetail from "./pages/ServiceDetail";
 import PastEvents from "./pages/PastEvents";
+import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/past-events" element={<PastEvents />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
