@@ -109,7 +109,7 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
-    title: "健康解码，福运随行 · Decode Your Health, Prosper in Wellness",
+    title: "Decode Your Health, Prosper in Wellness",
     date: "January 11, 2026",
     dateISO: "2026-01-11",
     location: "Sutera Mall, Johor Bahru",
