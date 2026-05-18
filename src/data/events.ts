@@ -61,7 +61,7 @@ export const allEvents: EventItem[] = [
   },
   // Past events
   {
-    title: "肠来运转，健康相伴 · Smooth Gut Wellness Strut Health Expo",
+    title: "Smooth Gut Wellness Strut Health Expo",
     date: "March 22–23, 2025",
     dateISO: "2025-03-23",
     location: "Sutera Mall, Johor Bahru",
