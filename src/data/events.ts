@@ -77,11 +77,11 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
-    title: "科技照亮抗癌之路",
+    title: "Technology Illuminates the Path Against Cancer",
     date: "June 16, 2025",
     dateISO: "2025-06-16",
     location: "Johor Bahru",
-    desc: "A collaborative health talk in partnership with GS Health Consultancy, 广州中医药大学金沙洲医院, and Asclepius Health Care Clinic — exploring the intersection of technology and integrative oncology.",
+    desc: "A collaborative health talk in partnership with GS Health Consultancy, Guangzhou University of Chinese Medicine Jinshazhou Hospital, and Asclepius Health Care Clinic — exploring the intersection of technology and integrative oncology.",
     image: eventImg,
   },
   {
