@@ -42,7 +42,7 @@ const EventCountdown = ({ dateISO, timeHint }: EventCountdownProps) => {
     return (
       <div className="flex items-center gap-2 text-xs font-body text-accent">
         <Clock className="w-3.5 h-3.5" />
-        <span>講座進行中 / 已開始</span>
+        <span>Webinar in progress / Started</span>
       </div>
     );
   }
@@ -65,7 +65,7 @@ const EventCountdown = ({ dateISO, timeHint }: EventCountdownProps) => {
     <div className="mb-4">
       <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted-foreground mb-2">
         <Clock className="w-3 h-3" />
-        <span>距離開講</span>
+        <span>Starts In</span>
       </div>
       <div className="flex gap-1.5">
         <Box value={days} label="Days" />

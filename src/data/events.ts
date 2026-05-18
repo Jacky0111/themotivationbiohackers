@@ -17,7 +17,7 @@ export interface EventItem {
 
 export const allEvents: EventItem[] = [
   {
-    title: "《咳嗽背后的真相》世界结核病日线上讲座",
+    title: "The Truth Behind the Cough · World TB Day Online Webinar",
     date: "March 11, 2026",
     dateISO: "2026-03-11",
     location: "Zoom Online Webinar",
@@ -26,7 +26,7 @@ export const allEvents: EventItem[] = [
     link: "https://forms.gle/EtkNHqKjoNb8H97G6",
   },
   {
-    title: "觉知之旅 · A Dance of Awareness",
+    title: "A Dance of Awareness",
     date: "March 15, 2026",
     dateISO: "2026-03-15",
     location: "9:00 AM – 1:00 PM",
@@ -35,7 +35,7 @@ export const allEvents: EventItem[] = [
     link: "https://wa.me/601121172728?text=Hi%2C%20I%20would%20like%20to%20register%20for%20%E8%A7%89%E7%9F%A5%E4%B9%8B%E6%97%85%20A%20Dance%20of%20Awareness%20on%20March%2015",
   },
   {
-    title: "男人的沉默杀手：你没检查的，才最危险",
+    title: "The Silent Killers in Men: What You Don't Check Is the Most Dangerous",
     date: "June 10, 2026",
     dateISO: "2026-06-10",
     location: "Zoom Online Webinar · 8:00 PM",
@@ -61,7 +61,7 @@ export const allEvents: EventItem[] = [
   },
   // Past events
   {
-    title: "肠来运转，健康相伴 · Smooth Gut Wellness Strut Health Expo",
+    title: "Smooth Gut Wellness Strut Health Expo",
     date: "March 22–23, 2025",
     dateISO: "2025-03-23",
     location: "Sutera Mall, Johor Bahru",
@@ -77,15 +77,15 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
-    title: "科技照亮抗癌之路",
+    title: "Technology Illuminates the Path Against Cancer",
     date: "June 16, 2025",
     dateISO: "2025-06-16",
     location: "Johor Bahru",
-    desc: "A collaborative health talk in partnership with GS Health Consultancy, 广州中医药大学金沙洲医院, and Asclepius Health Care Clinic — exploring the intersection of technology and integrative oncology.",
+    desc: "A collaborative health talk in partnership with GS Health Consultancy, Guangzhou University of Chinese Medicine Jinshazhou Hospital, and Asclepius Health Care Clinic — exploring the intersection of technology and integrative oncology.",
     image: eventImg,
   },
   {
-    title: "不再孤单 · Never Alone Health Expo",
+    title: "Never Alone Health Expo",
     date: "July 19, 2025",
     dateISO: "2025-07-19",
     location: "Dewanraya Jalan Rawa, Taman Perling, Johor Bahru",
@@ -93,7 +93,7 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
-    title: "Breast Health Beyond Cancer · Women's Health Month 線上特別講座",
+    title: "Breast Health Beyond Cancer · Women's Health Month Special Webinar",
     date: "May 12, 2026",
     dateISO: "2026-05-12",
     location: "Zoom Online Webinar · 8:00 PM",
@@ -101,15 +101,15 @@ export const allEvents: EventItem[] = [
     image: eventBreastHealth,
   },
   {
-    title: "留华杯2025匹克球团体赛",
+    title: "Liu Hua Cup 2025 Pickleball Team Tournament",
     date: "November 30, 2025",
     dateISO: "2025-11-30",
     location: "City Pickle @ One City, Selangor",
-    desc: "首届马来西亚留华校友匹克球团体赛。主办单位：马来西亚留华同学会。协办单位：浙江大学马来西亚校友会。",
+    desc: "The inaugural Malaysia China-alumni pickleball team tournament. Organised by the Malaysia China Graduates Association. Co-organised by the Zhejiang University Malaysia Alumni Association.",
     image: eventImg,
   },
   {
-    title: "健康解码，福运随行 · Decode Your Health, Prosper in Wellness",
+    title: "Decode Your Health, Prosper in Wellness",
     date: "January 11, 2026",
     dateISO: "2026-01-11",
     location: "Sutera Mall, Johor Bahru",

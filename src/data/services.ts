@@ -93,7 +93,7 @@ Our approach focuses on improving your wellbeing without drastically changing yo
     desc: "Interactive cognitive test for early detection of memory concerns",
     slug: "recognize",
     image: serviceRecognize,
-    fullDesc: `ReCognize is an interactive cognitive test designed to help detect early signs of memory loss, forgetfulness (健忘症), or dementia (老人痴呆症). Through engaging game-based assessments, it provides insights into your cognitive health and helps identify whether further professional evaluation may be needed.
+    fullDesc: `ReCognize is an interactive cognitive test designed to help detect early signs of memory loss, forgetfulness, or dementia. Through engaging game-based assessments, it provides insights into your cognitive health and helps identify whether further professional evaluation may be needed.
 
 Early detection is key to managing cognitive decline. ReCognize offers a comfortable, non-intimidating way to screen for potential concerns, making it accessible for individuals and families alike.
 
