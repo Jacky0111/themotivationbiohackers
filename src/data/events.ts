@@ -93,7 +93,7 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
-    title: "Breast Health Beyond Cancer · Women's Health Month 線上特別講座",
+    title: "Breast Health Beyond Cancer · Women's Health Month Special Webinar",
     date: "May 12, 2026",
     dateISO: "2026-05-12",
     location: "Zoom Online Webinar · 8:00 PM",
