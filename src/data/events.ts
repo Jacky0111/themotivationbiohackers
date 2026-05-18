@@ -35,7 +35,7 @@ export const allEvents: EventItem[] = [
     link: "https://wa.me/601121172728?text=Hi%2C%20I%20would%20like%20to%20register%20for%20%E8%A7%89%E7%9F%A5%E4%B9%8B%E6%97%85%20A%20Dance%20of%20Awareness%20on%20March%2015",
   },
   {
-    title: "男人的沉默杀手：你没检查的，才最危险",
+    title: "The Silent Killers in Men: What You Don't Check Is the Most Dangerous",
     date: "June 10, 2026",
     dateISO: "2026-06-10",
     location: "Zoom Online Webinar · 8:00 PM",
