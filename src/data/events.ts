@@ -3,6 +3,7 @@ import eventTbWebinar from "@/assets/event-tb-webinar.png";
 import eventAwareness from "@/assets/event-awareness.png";
 import eventBreastHealth from "@/assets/event-breast-health.png";
 import eventMensHealth from "@/assets/event-mens-health.png";
+import eventAwarenessApril from "@/assets/event-awareness-april.jpg";
 
 export interface EventItem {
   title: string;
@@ -107,6 +108,15 @@ export const allEvents: EventItem[] = [
     location: "City Pickle @ One City, Selangor",
     desc: "The inaugural Malaysia China-alumni pickleball team tournament. Organised by the Malaysia China Graduates Association. Co-organised by the Zhejiang University Malaysia Alumni Association.",
     image: eventImg,
+  },
+  {
+    title: "A Dance of Awareness · April Edition",
+    date: "April 19, 2026",
+    dateISO: "2026-04-19",
+    location: "9:00 AM – 1:00 PM",
+    desc: "Stillness · Awareness · Elevation — A retreat blending Eastern wisdom with Western science to guide you back to yourself. The three-part journey of stillness, awareness, and elevation moves through body and mind to reveal the self beyond emotions and roles. Includes guided meditation and breathwork, white crystal singing bowl healing, and BioAura AI energy field screening. Refreshments included. Fee: RM369 / pax.",
+    image: eventAwarenessApril,
+    link: "https://forms.gle/rHXBd2NtjxCEKNNA7",
   },
   {
     title: "Decode Your Health, Prosper in Wellness",
