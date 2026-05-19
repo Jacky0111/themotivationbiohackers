@@ -118,6 +118,14 @@ export const allEvents: EventItem[] = [
     image: eventAwarenessApril,
     link: "https://forms.gle/rHXBd2NtjxCEKNNA7",
   },
+  {
+    title: "Decode Your Health, Prosper in Wellness",
+    date: "January 11, 2026",
+    dateISO: "2026-01-11",
+    location: "Sutera Mall, Johor Bahru",
+    desc: "A wellness expo combining health education, biohacking demonstrations, and personalised health consultations to help attendees decode their path to optimal wellness.",
+    image: eventImg,
+  },
 ];
 
 /**
