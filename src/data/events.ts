@@ -110,12 +110,13 @@ export const allEvents: EventItem[] = [
     image: eventImg,
   },
   {
-    title: "Decode Your Health, Prosper in Wellness",
-    date: "January 11, 2026",
-    dateISO: "2026-01-11",
-    location: "Sutera Mall, Johor Bahru",
-    desc: "A wellness expo combining health education, biohacking demonstrations, and personalised health consultations to help attendees decode their path to optimal wellness.",
-    image: eventImg,
+    title: "A Dance of Awareness · April Edition",
+    date: "April 19, 2026",
+    dateISO: "2026-04-19",
+    location: "9:00 AM – 1:00 PM",
+    desc: "Stillness · Awareness · Elevation — A retreat blending Eastern wisdom with Western science to guide you back to yourself. The three-part journey of stillness, awareness, and elevation moves through body and mind to reveal the self beyond emotions and roles. Includes guided meditation and breathwork, white crystal singing bowl healing, and BioAura AI energy field screening. Refreshments included. Fee: RM369 / pax.",
+    image: eventAwarenessApril,
+    link: "https://forms.gle/rHXBd2NtjxCEKNNA7",
   },
 ];
 
