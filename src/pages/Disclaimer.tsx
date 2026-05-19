@@ -1,11 +1,47 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import PageTransition from "@/components/PageTransition";
 
+const SECTIONS = [
+  { id: "wellness-center", label: "Wellness Center, Not a Medical Clinic" },
+  { id: "no-medical-advice", label: "No Medical Advice" },
+  { id: "individual-results", label: "Individual Results May Vary" },
+  { id: "educational-events", label: "Educational Events & Webinars" },
+  { id: "use-of-services", label: "Use of Our Services" },
+  { id: "liability", label: "Limitation of Liability" },
+  { id: "contact", label: "Contact" },
+];
+
 const Disclaimer = () => {
+  const [activeId, setActiveId] = useState<string>(SECTIONS[0].id);
+
+  useEffect(() => {
+    const elements = SECTIONS
+      .map((s) => document.getElementById(s.id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) {
+          setActiveId(visible[0].target.id);
+        }
+      },
+      { rootMargin: "-128px 0px -60% 0px", threshold: 0 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <PageTransition>
       <SEOHead
@@ -52,13 +88,24 @@ const Disclaimer = () => {
             <nav aria-label="On this page" className="mb-12 rounded-lg border border-border bg-card/50 p-6">
               <h2 className="font-heading text-lg text-foreground mb-3">On this page</h2>
               <ol className="list-decimal list-inside space-y-1 font-body text-sm text-foreground">
-                <li><a href="#wellness-center" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Wellness Center, Not a Medical Clinic</a></li>
-                <li><a href="#no-medical-advice" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">No Medical Advice</a></li>
-                <li><a href="#individual-results" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Individual Results May Vary</a></li>
-                <li><a href="#educational-events" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Educational Events & Webinars</a></li>
-                <li><a href="#use-of-services" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Use of Our Services</a></li>
-                <li><a href="#liability" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Limitation of Liability</a></li>
-                <li><a href="#contact" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Contact</a></li>
+                {SECTIONS.map((s) => {
+                  const isActive = activeId === s.id;
+                  return (
+                    <li key={s.id}>
+                      <a
+                        href={`#${s.id}`}
+                        aria-current={isActive ? "location" : undefined}
+                        className={`rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors ${
+                          isActive
+                            ? "text-primary font-semibold underline underline-offset-4"
+                            : "text-primary hover:underline"
+                        }`}
+                      >
+                        {s.label}
+                      </a>
+                    </li>
+                  );
+                })}
               </ol>
             </nav>
 
