@@ -15,27 +15,57 @@ const Disclaimer = () => {
       />
       <Navbar />
 
-      <main className="pt-32 pb-24 px-6 bg-background min-h-screen">
+      <a
+        href="#disclaimer-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      >
+        Skip to main content
+      </a>
+
+      <main
+        id="disclaimer-content"
+        tabIndex={-1}
+        aria-labelledby="disclaimer-title"
+        className="pt-32 pb-24 px-6 bg-background min-h-dvh focus:outline-none"
+      >
         <div className="max-w-3xl mx-auto">
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-body uppercase tracking-[0.2em] text-primary mb-4">
-              Legal
-            </p>
-            <h1 className="font-heading text-4xl md:text-5xl text-foreground mb-6 leading-tight">
-              Disclaimer & Terms of Use
-            </h1>
-            <p className="text-foreground/60 font-body text-sm mb-12">
-              Last updated: May 2026
-            </p>
+            <header>
+              <p className="text-sm font-body uppercase tracking-[0.2em] text-primary mb-4">
+                Legal
+              </p>
+              <h1
+                id="disclaimer-title"
+                className="font-heading text-4xl md:text-5xl text-foreground mb-6 leading-tight"
+              >
+                Disclaimer & Terms of Use
+              </h1>
+              <p className="text-muted-foreground font-body text-sm mb-12">
+                Last updated: <time dateTime="2026-05">May 2026</time>
+              </p>
+            </header>
 
-            <div className="space-y-10 font-body text-foreground/80 leading-relaxed">
-              <section>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Wellness Center, Not a Medical Clinic
+            <nav aria-label="On this page" className="mb-12 rounded-lg border border-border bg-card/50 p-6">
+              <h2 className="font-heading text-lg text-foreground mb-3">On this page</h2>
+              <ol className="list-decimal list-inside space-y-1 font-body text-sm text-foreground">
+                <li><a href="#wellness-center" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Wellness Center, Not a Medical Clinic</a></li>
+                <li><a href="#no-medical-advice" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">No Medical Advice</a></li>
+                <li><a href="#individual-results" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Individual Results May Vary</a></li>
+                <li><a href="#educational-events" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Educational Events & Webinars</a></li>
+                <li><a href="#use-of-services" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Use of Our Services</a></li>
+                <li><a href="#liability" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Limitation of Liability</a></li>
+                <li><a href="#contact" className="text-primary hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Contact</a></li>
+              </ol>
+            </nav>
+
+            <div className="space-y-10 font-body text-foreground leading-relaxed">
+              <section aria-labelledby="wellness-center">
+                <h2 id="wellness-center" className="font-heading text-2xl text-foreground mb-4 scroll-mt-32">
+                  1. Wellness Center, Not a Medical Clinic
                 </h2>
                 <p>
                   The Motivation Biohackers is a wellness center, not a medical
@@ -46,9 +76,9 @@ const Disclaimer = () => {
                 </p>
               </section>
 
-              <section>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  No Medical Advice
+              <section aria-labelledby="no-medical-advice">
+                <h2 id="no-medical-advice" className="font-heading text-2xl text-foreground mb-4 scroll-mt-32">
+                  2. No Medical Advice
                 </h2>
                 <p>
                   Information shared through our website, events, webinars,
@@ -64,9 +94,9 @@ const Disclaimer = () => {
                 </p>
               </section>
 
-              <section>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Individual Results May Vary
+              <section aria-labelledby="individual-results">
+                <h2 id="individual-results" className="font-heading text-2xl text-foreground mb-4 scroll-mt-32">
+                  3. Individual Results May Vary
                 </h2>
                 <p>
                   Wellness outcomes depend on many individual factors including
@@ -77,9 +107,9 @@ const Disclaimer = () => {
                 </p>
               </section>
 
-              <section>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Educational Events & Webinars
+              <section aria-labelledby="educational-events">
+                <h2 id="educational-events" className="font-heading text-2xl text-foreground mb-4 scroll-mt-32">
+                  4. Educational Events & Webinars
                 </h2>
                 <p>
                   Talks, webinars, and workshops hosted or co-hosted by The
@@ -91,9 +121,9 @@ const Disclaimer = () => {
                 </p>
               </section>
 
-              <section>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Use of Our Services
+              <section aria-labelledby="use-of-services">
+                <h2 id="use-of-services" className="font-heading text-2xl text-foreground mb-4 scroll-mt-32">
+                  5. Use of Our Services
                 </h2>
                 <p>
                   By engaging with our programs, attending events, or using our
@@ -105,9 +135,9 @@ const Disclaimer = () => {
                 </p>
               </section>
 
-              <section>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Limitation of Liability
+              <section aria-labelledby="liability">
+                <h2 id="liability" className="font-heading text-2xl text-foreground mb-4 scroll-mt-32">
+                  6. Limitation of Liability
                 </h2>
                 <p>
                   To the fullest extent permitted by law, The Motivation
@@ -118,21 +148,24 @@ const Disclaimer = () => {
                 </p>
               </section>
 
-              <section>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Contact
+              <section aria-labelledby="contact">
+                <h2 id="contact" className="font-heading text-2xl text-foreground mb-4 scroll-mt-32">
+                  7. Contact
                 </h2>
                 <p>
                   For questions about this disclaimer or our wellness programs,
                   please reach us at{" "}
                   <a
                     href="mailto:themotivation0207@gmail.com"
-                    className="text-primary hover:underline"
+                    className="text-primary underline-offset-4 hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                   >
                     themotivation0207@gmail.com
                   </a>{" "}
                   or{" "}
-                  <a href="tel:+601121172728" className="text-primary hover:underline">
+                  <a
+                    href="tel:+601121172728"
+                    className="text-primary underline-offset-4 hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  >
                     +60 11-2117 2728
                   </a>
                   .
@@ -143,12 +176,12 @@ const Disclaimer = () => {
             <div className="mt-16 pt-8 border-t border-border">
               <Link
                 to="/"
-                className="text-sm font-body text-primary hover:underline"
+                className="inline-flex items-center text-sm font-body text-primary underline-offset-4 hover:underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
                 ← Back to Home
               </Link>
             </div>
-          </motion.div>
+          </motion.article>
         </div>
       </main>
 
