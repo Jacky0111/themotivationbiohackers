@@ -6,7 +6,42 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import PageTransition from "@/components/PageTransition";
 
+const SECTIONS = [
+  { id: "wellness-center", label: "Wellness Center, Not a Medical Clinic" },
+  { id: "no-medical-advice", label: "No Medical Advice" },
+  { id: "individual-results", label: "Individual Results May Vary" },
+  { id: "educational-events", label: "Educational Events & Webinars" },
+  { id: "use-of-services", label: "Use of Our Services" },
+  { id: "liability", label: "Limitation of Liability" },
+  { id: "contact", label: "Contact" },
+];
+
 const Disclaimer = () => {
+  const [activeId, setActiveId] = useState<string>(SECTIONS[0].id);
+
+  useEffect(() => {
+    const elements = SECTIONS
+      .map((s) => document.getElementById(s.id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) {
+          setActiveId(visible[0].target.id);
+        }
+      },
+      { rootMargin: "-128px 0px -60% 0px", threshold: 0 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <PageTransition>
       <SEOHead
