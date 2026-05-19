@@ -3,6 +3,7 @@ import eventTbWebinar from "@/assets/event-tb-webinar.png";
 import eventAwareness from "@/assets/event-awareness.png";
 import eventBreastHealth from "@/assets/event-breast-health.png";
 import eventMensHealth from "@/assets/event-mens-health.png";
+import eventAwarenessApril from "@/assets/event-awareness-april.jpg";
 
 export interface EventItem {
   title: string;
