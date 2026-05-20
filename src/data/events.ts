@@ -6,6 +6,7 @@ import eventMensHealth from "@/assets/event-mens-health.png";
 import eventAwarenessApril from "@/assets/event-awareness-april.jpg";
 import eventDecodeHealth from "@/assets/event-decode-health.png";
 import eventLiuHuaCup from "@/assets/event-liu-hua-cup.jpg";
+import eventNutritionKids from "@/assets/event-nutrition-kids.jpg";
 
 export interface EventItem {
   title: string;
@@ -127,6 +128,14 @@ export const allEvents: EventItem[] = [
     location: "Sutera Mall, Johor Bahru",
     desc: "A wellness expo combining health education, biohacking demonstrations, and personalised health consultations to help attendees decode their path to optimal wellness.",
     image: eventDecodeHealth,
+  },
+  {
+    title: "Nutrition for Growing Children: Helping Kids Win at the Starting Line",
+    date: "May 9, 2026",
+    dateISO: "2026-05-09",
+    location: "Atrium C, Sutera Mall, Johor Bahru · 4:30 PM",
+    desc: "A free public health talk by Dr Gan CE (MBBS NCL, MC-SPMED UniMelb) on the nutrition fundamentals behind children's growth — why 'eating well' is not the same as 'absorbing well', and how absorption shapes focus, immunity, and energy. Open to all parents.",
+    image: eventNutritionKids,
   },
 ];
 
