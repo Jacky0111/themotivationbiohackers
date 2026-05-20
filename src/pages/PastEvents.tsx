@@ -1,17 +1,21 @@
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Expand } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageTransition from "@/components/PageTransition";
 import { getPastEvents } from "@/data/events";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import silkTexture from "@/assets/silk-texture.jpg";
 
 const PastEvents = () => {
   const pastEvents = getPastEvents();
+  const [posterEvent, setPosterEvent] = useState<typeof pastEvents[number] | null>(null);
 
   return (
     <PageTransition>
@@ -74,7 +78,12 @@ const PastEvents = () => {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group bg-secondary rounded-xl overflow-hidden shadow-sm"
               >
-                <div className="relative overflow-hidden aspect-[16/10]">
+                <button
+                  type="button"
+                  onClick={() => setPosterEvent(e)}
+                  className="relative overflow-hidden aspect-[16/10] block w-full text-left group/poster"
+                  aria-label={`View full poster for ${e.title}`}
+                >
                   <img
                     src={e.image}
                     alt={e.title}
@@ -83,7 +92,12 @@ const PastEvents = () => {
                   <div className="absolute top-4 left-4 bg-muted text-muted-foreground text-xs font-body font-semibold px-3 py-1.5 rounded-full">
                     {e.date}
                   </div>
-                </div>
+                  <div className="absolute inset-0 bg-black/0 group-hover/poster:bg-black/30 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover/poster:opacity-100">
+                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 text-foreground text-xs font-body font-medium">
+                      <Expand className="w-3.5 h-3.5" /> View Poster
+                    </span>
+                  </div>
+                </button>
                 <div className="p-6">
                   <h3 className="font-heading text-xl text-foreground mb-1">{e.title}</h3>
                   <p className="text-xs text-muted-foreground font-body mb-3">{e.location}</p>
@@ -110,6 +124,22 @@ const PastEvents = () => {
           </motion.div>
         </div>
       </section>
+
+      <Dialog open={!!posterEvent} onOpenChange={(o) => !o && setPosterEvent(null)}>
+        <DialogContent className="max-w-4xl p-2 sm:p-4 bg-background">
+          <VisuallyHidden>
+            <DialogTitle>{posterEvent?.title ?? "Event poster"}</DialogTitle>
+            <DialogDescription>{posterEvent?.desc ?? ""}</DialogDescription>
+          </VisuallyHidden>
+          {posterEvent && (
+            <img
+              src={posterEvent.image}
+              alt={posterEvent.title}
+              className="w-full h-auto max-h-[85vh] object-contain rounded-md"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
 
       <Footer />
       <WhatsAppButton />
