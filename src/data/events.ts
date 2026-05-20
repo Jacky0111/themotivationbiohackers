@@ -7,6 +7,7 @@ import eventAwarenessApril from "@/assets/event-awareness-april.jpg";
 import eventDecodeHealth from "@/assets/event-decode-health.png";
 import eventLiuHuaCup from "@/assets/event-liu-hua-cup.jpg";
 import eventNutritionKids from "@/assets/event-nutrition-kids.jpg";
+import eventProstateHealth from "@/assets/event-prostate-health.jpg";
 
 export interface EventItem {
   title: string;
@@ -137,6 +138,15 @@ export const allEvents: EventItem[] = [
     desc: "A free public health talk by Dr Gan CE (MBBS NCL, MC-SPMED UniMelb) on the nutrition fundamentals behind children's growth — why 'eating well' is not the same as 'absorbing well', and how absorption shapes focus, immunity, and energy. Open to all parents.",
     image: eventNutritionKids,
   },
+  {
+    title: "Nocturia, Frequent Urination, Poor Sleep? Decoding the Prostate Trap",
+    date: "November 22, 2025",
+    dateISO: "2025-11-22",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "A Movember men's health webinar decoding the prostate crisis through three expert lenses — clinical medicine, cancer genomics, and nutritional intervention. Learn the three health alarms behind nocturia, the prostate-protecting heroes and villains on your plate, and how to reverse risk at the epigenetic level. Co-hosted with Asclepius Healthcare and OLAB.",
+    image: eventProstateHealth,
+  },
+
 ];
 
 /**
