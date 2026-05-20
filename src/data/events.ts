@@ -7,6 +7,7 @@ import eventAwarenessApril from "@/assets/event-awareness-april.jpg";
 import eventDecodeHealth from "@/assets/event-decode-health.png";
 import eventLiuHuaCup from "@/assets/event-liu-hua-cup.jpg";
 import eventNutritionKids from "@/assets/event-nutrition-kids.jpg";
+import eventProstateHealth from "@/assets/event-prostate-health.jpg";
 
 export interface EventItem {
   title: string;
