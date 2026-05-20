@@ -4,6 +4,8 @@ import eventAwareness from "@/assets/event-awareness.png";
 import eventBreastHealth from "@/assets/event-breast-health.png";
 import eventMensHealth from "@/assets/event-mens-health.png";
 import eventAwarenessApril from "@/assets/event-awareness-april.jpg";
+import eventDecodeHealth from "@/assets/event-decode-health.png";
+import eventLiuHuaCup from "@/assets/event-liu-hua-cup.jpg";
 
 export interface EventItem {
   title: string;
@@ -107,7 +109,7 @@ export const allEvents: EventItem[] = [
     dateISO: "2025-11-30",
     location: "City Pickle @ One City, Selangor",
     desc: "The inaugural Malaysia China-alumni pickleball team tournament. Organised by the Malaysia China Graduates Association. Co-organised by the Zhejiang University Malaysia Alumni Association.",
-    image: eventImg,
+    image: eventLiuHuaCup,
   },
   {
     title: "A Dance of Awareness · April Edition",
@@ -124,7 +126,7 @@ export const allEvents: EventItem[] = [
     dateISO: "2026-01-11",
     location: "Sutera Mall, Johor Bahru",
     desc: "A wellness expo combining health education, biohacking demonstrations, and personalised health consultations to help attendees decode their path to optimal wellness.",
-    image: eventImg,
+    image: eventDecodeHealth,
   },
 ];
 
