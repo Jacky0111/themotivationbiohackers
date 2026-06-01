@@ -9,6 +9,7 @@ import eventLiuHuaCup from "@/assets/event-liu-hua-cup.jpg";
 import eventNutritionKids from "@/assets/event-nutrition-kids.jpg";
 import eventProstateHealth from "@/assets/event-prostate-health.jpg";
 import eventCnySlimming from "@/assets/event-cny-slimming.jpg";
+import eventWorldHealthDay from "@/assets/event-world-health-day.jpg";
 
 export interface EventItem {
   title: string;
