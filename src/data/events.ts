@@ -156,6 +156,14 @@ export const allEvents: EventItem[] = [
     desc: "A Lunar New Year health webinar unpacking the real science of weight loss — why obesity is driven by insulin 'fat-locking' and inflammation, and why keto, low-carb, and OMAD often backfire. Learn how low-GI eating and magnesium support steady fat loss for postpartum mums, PCOS, perimenopause, and stubborn belly fat. Led by a practising family physician and a registered nutritionist. Co-hosted with OLAB and Asclepius Healthcare.",
     image: eventCnySlimming,
   },
+  {
+    title: "From Symptoms to Root Cause: Why Medication Alone Can't Resolve Chronic Disease",
+    date: "April 7, 2026",
+    dateISO: "2026-04-07",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "A World Health Day special talk with a practising physician and a food science specialist on why chronic conditions like hypertension, diabetes, gut issues, and fatigue rarely improve with medication alone. Explores the role of diet, metabolism, inflammation, and lifestyle in shifting from symptom control to genuine recovery. Co-hosted with Asclepius Healthcare.",
+    image: eventWorldHealthDay,
+  },
 ];
 
 
