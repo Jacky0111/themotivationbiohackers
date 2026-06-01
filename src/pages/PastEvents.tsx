@@ -17,6 +17,19 @@ const PastEvents = () => {
   const pastEvents = getPastEvents();
   const [posterEvent, setPosterEvent] = useState<typeof pastEvents[number] | null>(null);
 
+  const downloadICS = (event: typeof pastEvents[number]) => {
+    if (!event.ics) return;
+    const blob = new Blob([event.ics], { type: "text/calendar" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${event.title.replace(/[^a-z0-9]/gi, "_").toLowerCase()}.ics`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <PageTransition>
     <div className="bg-background min-h-screen">
