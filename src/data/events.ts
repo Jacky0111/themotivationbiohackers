@@ -147,8 +147,14 @@ export const allEvents: EventItem[] = [
     desc: "A Movember men's health webinar decoding the prostate crisis through three expert lenses — clinical medicine, cancer genomics, and nutritional intervention. Learn the three health alarms behind nocturia, the prostate-protecting heroes and villains on your plate, and how to reverse risk at the epigenetic level. Co-hosted with Asclepius Healthcare and OLAB.",
     image: eventProstateHealth,
   },
-
-];
+  {
+    title: "Lunar New Year Slimming Done Right: Science-Backed Beauty for the Year of the Horse",
+    date: "January 24, 2026",
+    dateISO: "2026-01-24",
+    location: "Zoom Online Webinar · 2:00 PM",
+    desc: "A Lunar New Year health webinar unpacking the real science of weight loss — why obesity is driven by insulin 'fat-locking' and inflammation, and why keto, low-carb, and OMAD often backfire. Learn how low-GI eating and magnesium support steady fat loss for postpartum mums, PCOS, perimenopause, and stubborn belly fat. Led by a practising family physician and a registered nutritionist. Co-hosted with OLAB and Asclepius Healthcare.",
+    image: eventCnySlimming,
+  },
 
 /**
  * Returns upcoming events (event date >= today).
