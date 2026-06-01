@@ -155,6 +155,9 @@ export const allEvents: EventItem[] = [
     desc: "A Lunar New Year health webinar unpacking the real science of weight loss — why obesity is driven by insulin 'fat-locking' and inflammation, and why keto, low-carb, and OMAD often backfire. Learn how low-GI eating and magnesium support steady fat loss for postpartum mums, PCOS, perimenopause, and stubborn belly fat. Led by a practising family physician and a registered nutritionist. Co-hosted with OLAB and Asclepius Healthcare.",
     image: eventCnySlimming,
   },
+];
+
+
 
 /**
  * Returns upcoming events (event date >= today).
