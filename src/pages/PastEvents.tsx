@@ -115,6 +115,16 @@ const PastEvents = () => {
                   <h3 className="font-heading text-xl text-foreground mb-1">{e.title}</h3>
                   <p className="text-xs text-muted-foreground font-body mb-3">{e.location}</p>
                   <p className="text-sm text-muted-foreground font-body leading-relaxed">{e.desc}</p>
+                  {e.ics && (
+                    <button
+                      type="button"
+                      onClick={() => downloadICS(e)}
+                      className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-foreground text-xs font-body font-medium hover:bg-muted/80 transition-colors duration-300"
+                    >
+                      <Calendar className="w-3.5 h-3.5" />
+                      Add to Calendar
+                    </button>
+                  )}
                 </div>
               </motion.div>
             ))}
