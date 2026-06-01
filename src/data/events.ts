@@ -165,6 +165,18 @@ export const allEvents: EventItem[] = [
     location: "Zoom Online Webinar · 8:00 PM",
     desc: "A World Health Day special talk with a practising physician and a food science specialist on why chronic conditions like hypertension, diabetes, gut issues, and fatigue rarely improve with medication alone. Explores the role of diet, metabolism, inflammation, and lifestyle in shifting from symptom control to genuine recovery. Co-hosted with Asclepius Healthcare.",
     image: eventWorldHealthDay,
+    ics: `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Motivation Biohackers//World Health Day Webinar//EN
+BEGIN:VEVENT
+UID:world-health-day-2026@themotivationbiohackers.com
+DTSTART;TZID=Asia/Kuala_Lumpur:20260407T200000
+DTEND;TZID=Asia/Kuala_Lumpur:20260407T210000
+SUMMARY:From Symptoms to Root Cause: Why Medication Alone Can't Resolve Chronic Disease
+DESCRIPTION:A World Health Day special talk with a practising physician and a food science specialist on why chronic conditions like hypertension\\, diabetes\\, gut issues\\, and fatigue rarely improve with medication alone. Explores the role of diet\\, metabolism\\, inflammation\\, and lifestyle in shifting from symptom control to genuine recovery. Co-hosted with Asclepius Healthcare.
+LOCATION:Zoom Online Webinar
+END:VEVENT
+END:VCALENDAR`,
   },
 ];
 
