@@ -20,6 +20,8 @@ export interface EventItem {
   desc: string;
   image: string;
   link?: string;
+  /** Optional pre-formatted .ics calendar content for download */
+  ics?: string;
 }
 
 export const allEvents: EventItem[] = [
