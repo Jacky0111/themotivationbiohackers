@@ -120,7 +120,7 @@ export const allEvents: EventItem[] = [
     date: "April 19, 2026",
     dateISO: "2026-04-19",
     location: "9:00 AM – 1:00 PM",
-    desc: "Stillness · Awareness · Elevation — A retreat blending Eastern wisdom with Western science to guide you back to yourself. The three-part journey of stillness, awareness, and elevation moves through body and mind to reveal the self beyond emotions and roles. Includes guided meditation and breathwork, white crystal singing bowl healing, and BioAura AI energy field screening. Refreshments included. Fee: RM369 / pax.",
+    desc: "Stillness · Awareness · Elevation — A transformative retreat blending the wisdom of heaven, earth, and the human body. Includes refreshments and BioAura AI energy screening (worth RM169). Fee: RM369 / pax.",
     image: eventAwarenessApril,
     link: "https://forms.gle/rHXBd2NtjxCEKNNA7",
   },
