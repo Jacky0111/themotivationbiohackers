@@ -11,6 +11,7 @@ import eventProstateHealth from "@/assets/event-prostate-health.jpg";
 import eventCnySlimming from "@/assets/event-cny-slimming.jpg";
 import eventWorldHealthDay from "@/assets/event-world-health-day.jpg";
 import eventDyslexia from "@/assets/event-dyslexia.png";
+import eventGutAging from "@/assets/event-gut-aging.png";
 
 export interface EventItem {
   title: string;
@@ -59,6 +60,15 @@ export const allEvents: EventItem[] = [
     desc: "Series 1: Understanding Dyslexia — Beyond Reading Difficulties. An online session with Mr Kevin (Special Needs Educator) and Dr Gan (GP with a special interest in Functional Medicine) exploring dyslexia from educational and medical perspectives — early warning signs, common misconceptions, assessment, how the brain learns to read, neurodevelopment, and when medical evaluation may be needed. For parents, educators, and healthcare professionals.",
     image: eventDyslexia,
     link: "https://forms.gle/SoP4nxdhX9WakfNv5",
+  },
+  {
+    title: "Your Gut Microbiome Decides How Fast You Age",
+    date: "July 14, 2026",
+    dateISO: "2026-07-14",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "Why do some 60-year-olds look 40? Emerging research shows gut microbiome health may influence ageing more than chronological age. When the gut flora is out of balance, chronic inflammation accelerates skin ageing, slows metabolism, weakens immunity, and raises chronic-disease risk. Join a Food Science Master, a Registered Nutritionist, and a Registered Pharmacist to unpack the science of longevity — starting from the gut. Co-hosted with Asclepius Healthcare.",
+    image: eventGutAging,
+    link: "https://forms.gle/ARPhL25KoZ6wUFTi8",
   },
   {
     title: "Health & Wellness Expo 2026",
