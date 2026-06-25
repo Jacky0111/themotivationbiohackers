@@ -61,14 +61,6 @@ export const allEvents: EventItem[] = [
     link: "https://forms.gle/SoP4nxdhX9WakfNv5",
   },
   {
-    title: "Biohacking Your Longevity",
-    date: "June 12, 2026",
-    dateISO: "2026-06-12",
-    location: "Kuala Lumpur",
-    desc: "An exclusive evening exploring the latest in longevity science, regenerative therapies, and personalised health optimisation.",
-    image: eventImg,
-  },
-  {
     title: "Health & Wellness Expo 2026",
     date: "TBC",
     dateISO: "2026-12-31",
