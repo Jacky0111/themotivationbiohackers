@@ -10,6 +10,7 @@ import eventNutritionKids from "@/assets/event-nutrition-kids.jpg";
 import eventProstateHealth from "@/assets/event-prostate-health.jpg";
 import eventCnySlimming from "@/assets/event-cny-slimming.jpg";
 import eventWorldHealthDay from "@/assets/event-world-health-day.jpg";
+import eventDyslexia from "@/assets/event-dyslexia.png";
 
 export interface EventItem {
   title: string;
@@ -49,6 +50,15 @@ export const allEvents: EventItem[] = [
     desc: "An online men's health talk on the silent killers — heart disease, the 'three highs' (hypertension, high blood sugar, high cholesterol), and prostate issues. Featuring Dr Ngan (Family Physician) and Liew Wei Ting (Registered Nutritionist) on early warning signs, essential screenings after 30, and risk-reversing nutrition.",
     image: eventMensHealth,
     link: "https://forms.gle/WrcjZTB6HzM18CrP8",
+  },
+  {
+    title: "Unlocking Potential: A Holistic Approach to Dyslexia, Learning & Brain Health",
+    date: "June 30, 2026",
+    dateISO: "2026-06-30",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "Series 1: Understanding Dyslexia — Beyond Reading Difficulties. An online session with Mr Kevin (Special Needs Educator) and Dr Gan (GP with a special interest in Functional Medicine) exploring dyslexia from educational and medical perspectives — early warning signs, common misconceptions, assessment, how the brain learns to read, neurodevelopment, and when medical evaluation may be needed. For parents, educators, and healthcare professionals.",
+    image: eventDyslexia,
+    link: "https://forms.gle/SoP4nxdhX9WakfNv5",
   },
   {
     title: "Biohacking Your Longevity",
