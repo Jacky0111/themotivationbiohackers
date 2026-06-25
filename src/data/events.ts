@@ -62,6 +62,15 @@ export const allEvents: EventItem[] = [
     link: "https://forms.gle/SoP4nxdhX9WakfNv5",
   },
   {
+    title: "Your Gut Microbiome Decides How Fast You Age",
+    date: "July 14, 2026",
+    dateISO: "2026-07-14",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "Why do some 60-year-olds look 40? Emerging research shows gut microbiome health may influence ageing more than chronological age. When the gut flora is out of balance, chronic inflammation accelerates skin ageing, slows metabolism, weakens immunity, and raises chronic-disease risk. Join a Food Science Master, a Registered Nutritionist, and a Registered Pharmacist to unpack the science of longevity — starting from the gut. Co-hosted with Asclepius Healthcare.",
+    image: eventGutAging,
+    link: "https://forms.gle/ARPhL25KoZ6wUFTi8",
+  },
+  {
     title: "Health & Wellness Expo 2026",
     date: "TBC",
     dateISO: "2026-12-31",
