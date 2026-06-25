@@ -66,7 +66,7 @@ export const allEvents: EventItem[] = [
     date: "July 14, 2026",
     dateISO: "2026-07-14",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "Why do some 60-year-olds look 40? Gut microbiome health may shape ageing more than chronological age. A Food Science Master, Registered Nutritionist, and Registered Pharmacist unpack the science of longevity — starting from the gut. Co-hosted with Asclepius Healthcare.",
+    desc: "Why do some 60-year-olds look 40? A Food Science Master, Registered Nutritionist, and Registered Pharmacist unpack how gut health shapes ageing. Co-hosted with Asclepius Healthcare.",
     image: eventGutAging,
     link: "https://forms.gle/ARPhL25KoZ6wUFTi8",
   },
