@@ -57,7 +57,7 @@ export const allEvents: EventItem[] = [
     date: "June 30, 2026",
     dateISO: "2026-06-30",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "Series 1: Understanding Dyslexia — Beyond Reading Difficulties. A holistic webinar with Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) on early signs, common misconceptions, how the brain learns to read, and when medical evaluation helps. For parents, educators, and healthcare professionals.",
+    desc: "Series 1: Understanding Dyslexia — Beyond Reading Difficulties. With Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) on early signs, misconceptions, and when medical evaluation helps.",
     image: eventDyslexia,
     link: "https://forms.gle/SoP4nxdhX9WakfNv5",
   },
