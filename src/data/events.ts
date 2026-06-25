@@ -11,6 +11,7 @@ import eventProstateHealth from "@/assets/event-prostate-health.jpg";
 import eventCnySlimming from "@/assets/event-cny-slimming.jpg";
 import eventWorldHealthDay from "@/assets/event-world-health-day.jpg";
 import eventDyslexia from "@/assets/event-dyslexia.png";
+import eventGutAging from "@/assets/event-gut-aging.png";
 
 export interface EventItem {
   title: string;
