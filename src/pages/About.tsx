@@ -26,6 +26,8 @@ const About = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${silkTexture})` }}
           />
+          <div className="absolute inset-0 bg-black/55" />
+
           
 
           <div className="relative z-10 text-center px-6 max-w-site mx-auto">
