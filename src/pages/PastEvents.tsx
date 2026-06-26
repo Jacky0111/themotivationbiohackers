@@ -58,7 +58,7 @@ const PastEvents = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-lg font-body text-white/70"
+            className="text-lg font-body text-white/90"
           >
             A look back at our community events and health initiatives
           </motion.p>
