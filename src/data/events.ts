@@ -1,17 +1,32 @@
 import eventImg from "@/assets/event-longevity.jpg";
-import eventTbWebinar from "@/assets/event-tb-webinar.png";
-import eventAwareness from "@/assets/event-awareness.png";
-import eventBreastHealth from "@/assets/event-breast-health.png";
-import eventMensHealth from "@/assets/event-mens-health.png";
-import eventAwarenessApril from "@/assets/event-awareness-april.jpg";
-import eventDecodeHealth from "@/assets/event-decode-health.png";
-import eventLiuHuaCup from "@/assets/event-liu-hua-cup.jpg";
-import eventNutritionKids from "@/assets/event-nutrition-kids.jpg";
-import eventProstateHealth from "@/assets/event-prostate-health.jpg";
-import eventCnySlimming from "@/assets/event-cny-slimming.jpg";
-import eventWorldHealthDay from "@/assets/event-world-health-day.jpg";
-import eventDyslexia from "@/assets/event-dyslexia.png";
-import eventGutAging from "@/assets/event-gut-aging.png";
+import eventTbWebinarAsset from "@/assets/event-tb-webinar.png.asset.json";
+import eventAwarenessAsset from "@/assets/event-awareness.png.asset.json";
+import eventBreastHealthAsset from "@/assets/event-breast-health.png.asset.json";
+import eventMensHealthAsset from "@/assets/event-mens-health.png.asset.json";
+import eventAwarenessAprilAsset from "@/assets/event-awareness-april.jpg.asset.json";
+import eventDecodeHealthAsset from "@/assets/event-decode-health.png.asset.json";
+import eventLiuHuaCupAsset from "@/assets/event-liu-hua-cup.jpg.asset.json";
+import eventNutritionKidsAsset from "@/assets/event-nutrition-kids.jpg.asset.json";
+import eventProstateHealthAsset from "@/assets/event-prostate-health.jpg.asset.json";
+import eventCnySlimmingAsset from "@/assets/event-cny-slimming.jpg.asset.json";
+import eventWorldHealthDayAsset from "@/assets/event-world-health-day.jpg.asset.json";
+import eventDyslexiaAsset from "@/assets/event-dyslexia.png.asset.json";
+import eventGutAgingAsset from "@/assets/event-gut-aging.png.asset.json";
+
+const eventTbWebinar = eventTbWebinarAsset.url;
+const eventAwareness = eventAwarenessAsset.url;
+const eventBreastHealth = eventBreastHealthAsset.url;
+const eventMensHealth = eventMensHealthAsset.url;
+const eventAwarenessApril = eventAwarenessAprilAsset.url;
+const eventDecodeHealth = eventDecodeHealthAsset.url;
+const eventLiuHuaCup = eventLiuHuaCupAsset.url;
+const eventNutritionKids = eventNutritionKidsAsset.url;
+const eventProstateHealth = eventProstateHealthAsset.url;
+const eventCnySlimming = eventCnySlimmingAsset.url;
+const eventWorldHealthDay = eventWorldHealthDayAsset.url;
+const eventDyslexia = eventDyslexiaAsset.url;
+const eventGutAging = eventGutAgingAsset.url;
+
 
 export interface EventItem {
   title: string;
