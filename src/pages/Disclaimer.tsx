@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import PageTransition from "@/components/PageTransition";
 
 const SECTIONS = [
@@ -49,6 +50,7 @@ const Disclaimer = () => {
         description="The Motivation Biohackers is a wellness center, not a medical clinic. Read our disclaimer and terms of use."
         path="/disclaimer"
       />
+      <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Disclaimer & Terms", path: "/disclaimer" }]} />
       <Navbar />
 
       <a

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -21,6 +22,7 @@ const PastEvents = () => {
     <PageTransition>
     <div className="bg-background min-h-screen">
       <SEOHead title="Past Events" description="A look back at our community events and health initiatives." path="/past-events" />
+      <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Past Events", path: "/past-events" }]} />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(
           pastEvents.map((e) => ({
