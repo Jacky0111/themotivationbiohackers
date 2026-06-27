@@ -25,17 +25,29 @@ const PastEvents = () => {
       <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Past Events", path: "/past-events" }]} />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(
-          pastEvents.map((e) => ({
-            "@context": "https://schema.org",
-            "@type": "Event",
-            name: e.title,
-            startDate: e.dateISO,
-            eventStatus: "https://schema.org/EventScheduled",
-            eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-            location: { "@type": "Place", name: e.location, address: { "@type": "PostalAddress", addressCountry: "MY" } },
-            description: e.desc,
-            organizer: { "@type": "Organization", name: "The Motivation Biohackers" },
-          }))
+          pastEvents.map((e) => {
+            const isOnline = e.location.toLowerCase().includes("zoom") || e.location.toLowerCase().includes("online");
+            const absImage = e.image?.startsWith("http")
+              ? e.image
+              : `https://themotivationbiohackers.lovable.app${e.image}`;
+            return {
+              "@context": "https://schema.org",
+              "@type": "Event",
+              name: e.title,
+              startDate: e.dateISO,
+              endDate: e.dateISO,
+              eventStatus: "https://schema.org/EventScheduled",
+              eventAttendanceMode: isOnline
+                ? "https://schema.org/OnlineEventAttendanceMode"
+                : "https://schema.org/OfflineEventAttendanceMode",
+              location: isOnline
+                ? { "@type": "VirtualLocation", url: "https://themotivationbiohackers.lovable.app/past-events" }
+                : { "@type": "Place", name: e.location, address: { "@type": "PostalAddress", addressCountry: "MY" } },
+              image: [absImage],
+              description: e.desc,
+              organizer: { "@type": "Organization", name: "The Motivation Biohackers", url: "https://themotivationbiohackers.lovable.app" },
+            };
+          })
         )}</script>
       </Helmet>
       <Navbar />

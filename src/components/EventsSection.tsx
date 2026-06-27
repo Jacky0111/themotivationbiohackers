@@ -16,19 +16,29 @@ const EventsSection = () => {
     <section id="events" className="py-20 md:py-[80px] px-6 bg-secondary">
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(
-          events.map((e) => ({
-            "@context": "https://schema.org",
-            "@type": "Event",
-            name: e.title,
-            startDate: e.dateISO,
-            eventStatus: "https://schema.org/EventScheduled",
-            eventAttendanceMode: e.location.toLowerCase().includes("zoom") || e.location.toLowerCase().includes("online")
-              ? "https://schema.org/OnlineEventAttendanceMode"
-              : "https://schema.org/OfflineEventAttendanceMode",
-            location: { "@type": "Place", name: e.location, address: { "@type": "PostalAddress", addressCountry: "MY" } },
-            description: e.desc,
-            organizer: { "@type": "Organization", name: "The Motivation Biohackers", url: "https://themotivationbiohackers.lovable.app" },
-          }))
+          events.map((e) => {
+            const isOnline = e.location.toLowerCase().includes("zoom") || e.location.toLowerCase().includes("online");
+            const absImage = e.image?.startsWith("http")
+              ? e.image
+              : `https://themotivationbiohackers.lovable.app${e.image}`;
+            return {
+              "@context": "https://schema.org",
+              "@type": "Event",
+              name: e.title,
+              startDate: e.dateISO,
+              endDate: e.dateISO,
+              eventStatus: "https://schema.org/EventScheduled",
+              eventAttendanceMode: isOnline
+                ? "https://schema.org/OnlineEventAttendanceMode"
+                : "https://schema.org/OfflineEventAttendanceMode",
+              location: isOnline
+                ? { "@type": "VirtualLocation", url: e.link || "https://themotivationbiohackers.lovable.app/" }
+                : { "@type": "Place", name: e.location, address: { "@type": "PostalAddress", addressCountry: "MY" } },
+              image: [absImage],
+              description: e.desc,
+              organizer: { "@type": "Organization", name: "The Motivation Biohackers", url: "https://themotivationbiohackers.lovable.app" },
+            };
+          })
         )}</script>
       </Helmet>
       <div className="max-w-site mx-auto">
