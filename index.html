@@ -22,18 +22,46 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "The Motivation Biohackers",
-      "description": "Luxury functional medicine, regenerative therapies, and longevity optimisation wellness center in Malaysia.",
-      "url": "https://themotivationbiohackers.lovable.app",
-      "telephone": "+601121172728",
-      "email": "themotivation0207@gmail.com",
-      "image": "https://themotivationbiohackers.lovable.app/og-image.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "MY"
-      },
-      "medicalSpecialty": ["Functional Medicine", "Regenerative Medicine", "Preventive Medicine"]
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://themotivationbiohackers.lovable.app/#organization",
+          "name": "The Motivation Biohackers",
+          "alternateName": "Motivation Biohackers Wellness Center",
+          "url": "https://themotivationbiohackers.lovable.app",
+          "logo": "https://themotivationbiohackers.lovable.app/og-image.jpg",
+          "image": "https://themotivationbiohackers.lovable.app/og-image.jpg",
+          "description": "Premier longevity and functional wellness center in Malaysia offering science-based, non-invasive programs for vitality, performance, and healthy aging.",
+          "email": "themotivation0207@gmail.com",
+          "telephone": "+601121172728",
+          "areaServed": { "@type": "Country", "name": "Malaysia" },
+          "sameAs": []
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://themotivationbiohackers.lovable.app/#localbusiness",
+          "name": "The Motivation Biohackers",
+          "description": "Luxury wellness center in Malaysia specialising in functional wellness, regenerative therapies, and longevity optimisation programs. We are a wellness center, not a medical clinic, and do not provide medical diagnosis or treatment.",
+          "url": "https://themotivationbiohackers.lovable.app",
+          "telephone": "+601121172728",
+          "email": "themotivation0207@gmail.com",
+          "image": "https://themotivationbiohackers.lovable.app/og-image.jpg",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "MY"
+          },
+          "areaServed": { "@type": "Country", "name": "Malaysia" },
+          "parentOrganization": { "@id": "https://themotivationbiohackers.lovable.app/#organization" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://themotivationbiohackers.lovable.app/#website",
+          "url": "https://themotivationbiohackers.lovable.app",
+          "name": "The Motivation Biohackers",
+          "publisher": { "@id": "https://themotivationbiohackers.lovable.app/#organization" }
+        }
+      ]
     }
     </script>
     <meta property="og:title" content="The Motivation Biohackers | Longevity Wellness Center Malaysia">
