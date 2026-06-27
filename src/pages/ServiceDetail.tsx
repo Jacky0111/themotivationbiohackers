@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import SEOHead from "@/components/SEOHead";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -46,6 +47,13 @@ const ServiceDetail = () => {
           url: `https://themotivationbiohackers.lovable.app/services/${slug}`,
         })}</script>
       </Helmet>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/#services" },
+          { name: service.title, path: `/services/${slug}` },
+        ]}
+      />
       <Navbar />
 
       {/* Hero */}

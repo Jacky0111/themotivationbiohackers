@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import silkTexture from "@/assets/silk-texture.jpg";
 import SEOHead from "@/components/SEOHead";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import Navbar from "@/components/Navbar";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
@@ -18,6 +19,7 @@ const About = () => {
           description="Meet the team behind The Motivation Biohackers — masters degree holders with over 10 years of experience in functional medicine and chronic disease prevention."
           path="/about"
         />
+        <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]} />
         <Navbar />
 
         {/* Hero banner */}
