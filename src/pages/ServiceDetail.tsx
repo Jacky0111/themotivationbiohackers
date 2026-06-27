@@ -38,7 +38,7 @@ const ServiceDetail = () => {
           description: service.desc,
           serviceType: service.title,
           provider: {
-            "@type": "MedicalBusiness",
+            "@type": "Organization",
             name: "The Motivation Biohackers",
             url: "https://themotivationbiohackers.lovable.app",
           },
