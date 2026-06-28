@@ -46,6 +46,15 @@ const PastEvents = () => {
               image: [absImage],
               description: e.desc,
               organizer: { "@type": "Organization", name: "The Motivation Biohackers", url: "https://themotivationbiohackers.lovable.app" },
+              performer: { "@type": "Organization", name: "The Motivation Biohackers" },
+              offers: {
+                "@type": "Offer",
+                url: "https://themotivationbiohackers.lovable.app/past-events",
+                price: "0",
+                priceCurrency: "MYR",
+                availability: "https://schema.org/SoldOut",
+                validFrom: e.dateISO,
+              },
             };
           })
         )}</script>
