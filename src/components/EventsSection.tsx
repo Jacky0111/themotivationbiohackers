@@ -37,6 +37,15 @@ const EventsSection = () => {
               image: [absImage],
               description: e.desc,
               organizer: { "@type": "Organization", name: "The Motivation Biohackers", url: "https://themotivationbiohackers.lovable.app" },
+              performer: { "@type": "Organization", name: "The Motivation Biohackers" },
+              offers: {
+                "@type": "Offer",
+                url: e.link || "https://themotivationbiohackers.lovable.app/#events",
+                price: "0",
+                priceCurrency: "MYR",
+                availability: "https://schema.org/InStock",
+                validFrom: e.dateISO,
+              },
             };
           })
         )}</script>
