@@ -13,7 +13,12 @@
   <url>
     <loc>https://themotivationbiohackers.lovable.app/past-events</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://themotivationbiohackers.lovable.app/disclaimer</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://themotivationbiohackers.lovable.app/services/pemf-therapy</loc>
@@ -37,6 +42,11 @@
   </url>
   <url>
     <loc>https://themotivationbiohackers.lovable.app/services/recognize</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://themotivationbiohackers.lovable.app/services/advanced-treatment</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
