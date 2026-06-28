@@ -99,6 +99,10 @@ const Navbar = () => {
           </div>
 
           <button
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
             className={`md:hidden transition-colors ${
               scrolled ? "text-foreground" : "text-white"
             }`}
