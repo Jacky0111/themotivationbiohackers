@@ -94,7 +94,7 @@ export const allEvents: EventItem[] = [
     location: "富力广场 R&F Mall, 新山 · 10:00 AM – 8:00 PM",
     desc: "聚焦现代「四高」——高血压、高血糖、高胆固醇、高尿酸。亮点：前100名免费血脂检测、基础健康检查与咨询、专家健康讲座、AED & CPR 实操体验、BioAura AI 心理健康预筛、营养配对游戏。加 RM28 升级完整基础血液检测配套。立即报名，预留免费检测名额！",
     image: eventFourHighs,
-    link: "https://wa.me/601121172728?text=Hi%2C%20I%20would%20like%20to%20register%20for%20the%20Four%20Highs%20Health%20Expo%20on%20July%2018%202026",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLScozLTS50eyhbU0O7H_qUBk7QIMX9AS4-utzG0TeRe-VndSfg/viewform",
   },
   {
     title: "Health & Wellness Expo 2026",
