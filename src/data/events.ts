@@ -88,7 +88,6 @@ export const allEvents: EventItem[] = [
     link: "https://forms.gle/ARPhL25KoZ6wUFTi8",
   },
   {
-  {
     title: "Keep the Four Highs Low, Live a Healthier Life · Health Expo",
     date: "July 18, 2026",
     dateISO: "2026-07-18",
