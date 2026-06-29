@@ -12,6 +12,7 @@ import eventCnySlimmingAsset from "@/assets/event-cny-slimming.jpg.asset.json";
 import eventWorldHealthDayAsset from "@/assets/event-world-health-day.jpg.asset.json";
 import eventDyslexiaAsset from "@/assets/event-dyslexia.png.asset.json";
 import eventGutAgingAsset from "@/assets/event-gut-aging.png.asset.json";
+import eventFourHighsAsset from "@/assets/event-four-highs.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
