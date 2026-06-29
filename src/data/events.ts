@@ -13,6 +13,7 @@ import eventWorldHealthDayAsset from "@/assets/event-world-health-day.jpg.asset.
 import eventDyslexiaAsset from "@/assets/event-dyslexia.png.asset.json";
 import eventGutAgingAsset from "@/assets/event-gut-aging.png.asset.json";
 import eventFourHighsAsset from "@/assets/event-four-highs.png.asset.json";
+import eventFourHighsTalkAsset from "@/assets/event-four-highs-talk.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
@@ -28,6 +29,7 @@ const eventWorldHealthDay = eventWorldHealthDayAsset.url;
 const eventDyslexia = eventDyslexiaAsset.url;
 const eventGutAging = eventGutAgingAsset.url;
 const eventFourHighs = eventFourHighsAsset.url;
+const eventFourHighsTalk = eventFourHighsTalkAsset.url;
 
 
 export interface EventItem {
@@ -94,6 +96,15 @@ export const allEvents: EventItem[] = [
     location: "富力广场 R&F Mall, 新山 · 10:00 AM – 8:00 PM",
     desc: "聚焦现代「四高」——高血压、高血糖、高胆固醇、高尿酸。亮点：前100名免费血脂检测、基础健康检查与咨询、专家健康讲座、AED & CPR 实操体验、BioAura AI 心理健康预筛、营养配对游戏。加 RM28 升级完整基础血液检测配套。立即报名，预留免费检测名额！",
     image: eventFourHighs,
+    link: "https://docs.google.com/forms/d/e/1FAIpQLScozLTS50eyhbU0O7H_qUBk7QIMX9AS4-utzG0TeRe-VndSfg/viewform",
+  },
+  {
+    title: "降四高 · 赢健康 健康讲座",
+    date: "July 18, 2026",
+    dateISO: "2026-07-18",
+    location: "R&F Mall 新山富力广场 · 10:00 AM – 8:00 PM",
+    desc: "你以为四高是老年人的问题？根据大马卫生部 NHMS 2023：每3位成年人就有1位高胆固醇、每10位就有3位高血压、每6位就有1位糖尿病。讲座由友德医务所创办人 Dr Gan 主讲，结合医学专业与临床经验，深入浅出讲解四高的成因、预防与管理，分享科学、实用且容易执行的健康管理方法。免费参与，给自己一小时，换未来几十年的健康。",
+    image: eventFourHighsTalk,
     link: "https://docs.google.com/forms/d/e/1FAIpQLScozLTS50eyhbU0O7H_qUBk7QIMX9AS4-utzG0TeRe-VndSfg/viewform",
   },
   {
