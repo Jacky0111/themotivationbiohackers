@@ -12,6 +12,7 @@ import eventCnySlimmingAsset from "@/assets/event-cny-slimming.jpg.asset.json";
 import eventWorldHealthDayAsset from "@/assets/event-world-health-day.jpg.asset.json";
 import eventDyslexiaAsset from "@/assets/event-dyslexia.png.asset.json";
 import eventGutAgingAsset from "@/assets/event-gut-aging.png.asset.json";
+import eventFourHighsAsset from "@/assets/event-four-highs.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
@@ -26,6 +27,7 @@ const eventCnySlimming = eventCnySlimmingAsset.url;
 const eventWorldHealthDay = eventWorldHealthDayAsset.url;
 const eventDyslexia = eventDyslexiaAsset.url;
 const eventGutAging = eventGutAgingAsset.url;
+const eventFourHighs = eventFourHighsAsset.url;
 
 
 export interface EventItem {
@@ -84,6 +86,15 @@ export const allEvents: EventItem[] = [
     desc: "Why do some 60-year-olds look 40? A Food Science Master, Registered Nutritionist, and Registered Pharmacist unpack how gut health shapes ageing. Co-hosted with Asclepius Healthcare.",
     image: eventGutAging,
     link: "https://forms.gle/ARPhL25KoZ6wUFTi8",
+  },
+  {
+    title: "Keep the Four Highs Low, Live a Healthier Life · Health Expo",
+    date: "July 18, 2026",
+    dateISO: "2026-07-18",
+    location: "R&F Mall, Johor Bahru · 10:00 AM – 8:00 PM",
+    desc: "A community health expo on the modern 'Four Highs' — high blood pressure, blood sugar, cholesterol, and uric acid. Highlights include FREE lipid profile screening (first 100), basic health checks & consultations, expert health talks, AED & CPR hands-on, BioAura AI mental health pre-screening, and a nutrition matching game. Top up RM28 for the full basic blood screening package.",
+    image: eventFourHighs,
+    link: "https://wa.me/601121172728?text=Hi%2C%20I%20would%20like%20to%20register%20for%20the%20Four%20Highs%20Health%20Expo%20on%20July%2018%202026",
   },
   {
     title: "Health & Wellness Expo 2026",
