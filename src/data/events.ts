@@ -27,6 +27,7 @@ const eventCnySlimming = eventCnySlimmingAsset.url;
 const eventWorldHealthDay = eventWorldHealthDayAsset.url;
 const eventDyslexia = eventDyslexiaAsset.url;
 const eventGutAging = eventGutAgingAsset.url;
+const eventFourHighs = eventFourHighsAsset.url;
 
 
 export interface EventItem {
