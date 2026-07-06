@@ -11,10 +11,10 @@ const BASE_URL = "https://themotivationbiohackers.lovable.app";
 
 const SEOHead = ({
   title,
-  description = "Elevate your well-being through science and holistic care. Premier functional medicine, regenerative therapies, and longevity optimisation wellness center in Malaysia.",
+  description = "Science-based longevity and functional wellness programs in Malaysia — functional medicine, regenerative therapies, and biohacking.",
   path = "/",
 }: SEOHeadProps) => {
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Longevity Wellness Center Malaysia`;
+  const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Wellness Center Malaysia`;
   const url = `${BASE_URL}${path}`;
 
   return (
