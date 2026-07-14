@@ -17,6 +17,9 @@ import eventFourHighsTalkAsset from "@/assets/event-four-highs-talk.png.asset.js
 import eventLearningBrainAsset from "@/assets/event-learning-brain.png.asset.json";
 import eventDyslexiaFamilyEnAsset from "@/assets/event-dyslexia-family-en.png.asset.json";
 import eventDyslexiaFamilyCnAsset from "@/assets/event-dyslexia-family-cn.png.asset.json";
+import eventKombuchaAsset from "@/assets/event-kombucha.png.asset.json";
+import eventSmartNutritionEnAsset from "@/assets/event-smart-nutrition-en.png.asset.json";
+import eventSmartNutritionCnAsset from "@/assets/event-smart-nutrition-cn.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
