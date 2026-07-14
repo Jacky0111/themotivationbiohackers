@@ -108,6 +108,7 @@ export const allEvents: EventItem[] = [
     desc: "Learning smarter, not just harder. Mr Kevin (Special Needs Educator) shares learning strategies and multi-sensory approaches for dyslexic children; Dr Gan (GP, Functional Medicine) covers brain nutrition and key nutrients — Iron, Vitamin D, B12 & Omega-3 — with evidence-based dietary recommendations. Empower children with the right strategies and the right foundation.",
     image: eventLearningBrain,
     link: "https://forms.gle/7CcNyeGkGAPHM5fo6",
+  },
   {
     title: "降四高 · 赢健康 健康讲座",
     date: "July 18, 2026",
