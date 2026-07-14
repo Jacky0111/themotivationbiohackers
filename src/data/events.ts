@@ -31,6 +31,7 @@ const eventDyslexia = eventDyslexiaAsset.url;
 const eventGutAging = eventGutAgingAsset.url;
 const eventFourHighs = eventFourHighsAsset.url;
 const eventFourHighsTalk = eventFourHighsTalkAsset.url;
+const eventLearningBrain = eventLearningBrainAsset.url;
 
 
 export interface EventItem {
