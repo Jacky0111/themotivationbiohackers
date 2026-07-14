@@ -43,8 +43,10 @@ const eventKombucha = eventKombuchaAsset.url;
 const eventSmartNutritionEn = eventSmartNutritionEnAsset.url;
 const eventSmartNutritionCn = eventSmartNutritionCnAsset.url;
 
-const whatsappRegister = (title: string) =>
-  `https://wa.me/601121172728?text=${encodeURIComponent(`Hi, I would like to register for ${title}`)}`;
+const whatsappRegister = (name: string, date: string) =>
+  `https://wa.me/601121172728?text=${encodeURIComponent(
+    `Hi The Motivation Biohackers, I would like to register for "${name}" on ${date}. Please share the next steps. Thank you!`
+  )}`;
 
 
 export interface EventItem {
