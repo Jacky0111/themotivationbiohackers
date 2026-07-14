@@ -158,7 +158,7 @@ export const allEvents: EventItem[] = [
     location: "ADTEC Senai (ILPPG Kampus Senai) · 1:00 PM – 2:00 PM",
     desc: "A National Training Week 2026 talk by Dr Gan C.E. (General Practitioner, Founder of Asclepius Healthcare Clinic) on how everyday nutrition fuels focus, memory, and mental performance. Language: English.",
     image: eventSmartNutritionEn,
-    link: whatsappRegister("Smart Nutrition for Smart Minds - English (23 July 2026, 1pm)"),
+    link: whatsappRegister("Smart Nutrition for Smart Minds (English)", "23 July 2026, 1:00 PM"),
   },
   {
     title: "智慧营养，聪明大脑（中文）",
