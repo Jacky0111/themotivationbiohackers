@@ -149,7 +149,7 @@ export const allEvents: EventItem[] = [
     location: "HRDC Office @ Iskandar · 2:00 PM – 5:00 PM",
     desc: "Curious about what kombucha is and how it's made? Join Junhao (Brew By Root) for a hands-on workshop covering the fundamentals of brewing your own kombucha at home. Part of National Training Week 2026.",
     image: eventKombucha,
-    link: whatsappRegister("Kombucha Workshop (20 July 2026, 2pm)"),
+    link: whatsappRegister("Kombucha Workshop · Brew By Root", "20 July 2026, 2:00 PM"),
   },
   {
     title: "Smart Nutrition for Smart Minds (English)",
