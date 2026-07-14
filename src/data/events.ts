@@ -77,7 +77,7 @@ export const allEvents: EventItem[] = [
     location: "9:00 AM – 1:00 PM",
     desc: "Stillness · Awareness · Elevation — A transformative retreat blending the wisdom of heaven, earth, and the human body. Includes refreshments and BioAura AI energy screening (worth RM169). Fee: RM369 / pax.",
     image: eventAwareness,
-    link: "https://wa.me/601121172728?text=Hi%2C%20I%20would%20like%20to%20register%20for%20%E8%A7%89%E7%9F%A5%E4%B9%8B%E6%97%85%20A%20Dance%20of%20Awareness%20on%20March%2015",
+    link: whatsappRegister("A Dance of Awareness", "March 15, 2026"),
   },
   {
     title: "The Silent Killers in Men: What You Don't Check Is the Most Dangerous",
