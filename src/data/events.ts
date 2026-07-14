@@ -101,6 +101,14 @@ export const allEvents: EventItem[] = [
     link: "https://docs.google.com/forms/d/e/1FAIpQLScozLTS50eyhbU0O7H_qUBk7QIMX9AS4-utzG0TeRe-VndSfg/viewform",
   },
   {
+    title: "Unlocking Potential · Series 2: Building a Stronger Learning Brain",
+    date: "July 28, 2026",
+    dateISO: "2026-07-28",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "Learning smarter, not just harder. Mr Kevin (Special Needs Educator) shares learning strategies and multi-sensory approaches for dyslexic children; Dr Gan (GP, Functional Medicine) covers brain nutrition and key nutrients — Iron, Vitamin D, B12 & Omega-3 — with evidence-based dietary recommendations. Empower children with the right strategies and the right foundation.",
+    image: eventLearningBrain,
+    link: "https://forms.gle/7CcNyeGkGAPHM5fo6",
+  {
     title: "降四高 · 赢健康 健康讲座",
     date: "July 18, 2026",
     dateISO: "2026-07-18",
