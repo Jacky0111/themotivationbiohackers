@@ -39,6 +39,9 @@ const eventFourHighsTalk = eventFourHighsTalkAsset.url;
 const eventLearningBrain = eventLearningBrainAsset.url;
 const eventDyslexiaFamilyEn = eventDyslexiaFamilyEnAsset.url;
 const eventDyslexiaFamilyCn = eventDyslexiaFamilyCnAsset.url;
+const eventKombucha = eventKombuchaAsset.url;
+const eventSmartNutritionEn = eventSmartNutritionEnAsset.url;
+const eventSmartNutritionCn = eventSmartNutritionCnAsset.url;
 
 const whatsappRegister = (title: string) =>
   `https://wa.me/601121172728?text=${encodeURIComponent(`Hi, I would like to register for ${title}`)}`;
