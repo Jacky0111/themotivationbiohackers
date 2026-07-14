@@ -34,6 +34,11 @@ const eventGutAging = eventGutAgingAsset.url;
 const eventFourHighs = eventFourHighsAsset.url;
 const eventFourHighsTalk = eventFourHighsTalkAsset.url;
 const eventLearningBrain = eventLearningBrainAsset.url;
+const eventDyslexiaFamilyEn = eventDyslexiaFamilyEnAsset.url;
+const eventDyslexiaFamilyCn = eventDyslexiaFamilyCnAsset.url;
+
+const whatsappRegister = (title: string) =>
+  `https://wa.me/601121172728?text=${encodeURIComponent(`Hi, I would like to register for ${title}`)}`;
 
 
 export interface EventItem {
