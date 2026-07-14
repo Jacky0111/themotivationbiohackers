@@ -167,7 +167,7 @@ export const allEvents: EventItem[] = [
     location: "ADTEC Senai（ILPPG Kampus Senai）· 下午2时 – 3时",
     desc: "全国培训周 2026 讲座，由 Ms Gan W.S（食品科学与技术硕士）主讲，分享日常营养如何影响专注力、记忆力与大脑表现。语言：中文。",
     image: eventSmartNutritionCn,
-    link: whatsappRegister("智慧营养，聪明大脑 - 中文（2026年7月23日 2pm）"),
+    link: whatsappRegister("智慧营养，聪明大脑（中文）", "2026年7月23日 下午2时"),
   },
   {
     title: "降四高 · 赢健康 健康讲座",
