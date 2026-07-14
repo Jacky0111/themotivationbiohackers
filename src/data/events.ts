@@ -15,6 +15,8 @@ import eventGutAgingAsset from "@/assets/event-gut-aging.png.asset.json";
 import eventFourHighsAsset from "@/assets/event-four-highs.png.asset.json";
 import eventFourHighsTalkAsset from "@/assets/event-four-highs-talk.png.asset.json";
 import eventLearningBrainAsset from "@/assets/event-learning-brain.png.asset.json";
+import eventDyslexiaFamilyEnAsset from "@/assets/event-dyslexia-family-en.png.asset.json";
+import eventDyslexiaFamilyCnAsset from "@/assets/event-dyslexia-family-cn.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
