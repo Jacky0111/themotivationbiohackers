@@ -131,7 +131,7 @@ export const allEvents: EventItem[] = [
     location: "HRDCorp Office @ Iskandar · 9:00 AM – 10:30 AM",
     desc: "A National Training Week 2026 family workshop. Mr Kevin (Special Needs Educator) and Ms Punithamalar Rajagopal (Clinical Psychologist) share practical ways to understand, support, and empower dyslexic children at home. Understand. Support. Empower. Together.",
     image: eventDyslexiaFamilyEn,
-    link: whatsappRegister("Raising a Dyslexia-Friendly Family Workshop (20 July 2026, 9am)"),
+    link: whatsappRegister("Raising a Dyslexia-Friendly Family Workshop", "20 July 2026, 9:00 AM"),
   },
   {
     title: "打造阅读障碍友好家庭工作坊",
