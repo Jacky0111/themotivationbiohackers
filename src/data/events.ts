@@ -17,6 +17,9 @@ import eventFourHighsTalkAsset from "@/assets/event-four-highs-talk.png.asset.js
 import eventLearningBrainAsset from "@/assets/event-learning-brain.png.asset.json";
 import eventDyslexiaFamilyEnAsset from "@/assets/event-dyslexia-family-en.png.asset.json";
 import eventDyslexiaFamilyCnAsset from "@/assets/event-dyslexia-family-cn.png.asset.json";
+import eventKombuchaAsset from "@/assets/event-kombucha.png.asset.json";
+import eventSmartNutritionEnAsset from "@/assets/event-smart-nutrition-en.png.asset.json";
+import eventSmartNutritionCnAsset from "@/assets/event-smart-nutrition-cn.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
@@ -36,6 +39,9 @@ const eventFourHighsTalk = eventFourHighsTalkAsset.url;
 const eventLearningBrain = eventLearningBrainAsset.url;
 const eventDyslexiaFamilyEn = eventDyslexiaFamilyEnAsset.url;
 const eventDyslexiaFamilyCn = eventDyslexiaFamilyCnAsset.url;
+const eventKombucha = eventKombuchaAsset.url;
+const eventSmartNutritionEn = eventSmartNutritionEnAsset.url;
+const eventSmartNutritionCn = eventSmartNutritionCnAsset.url;
 
 const whatsappRegister = (title: string) =>
   `https://wa.me/601121172728?text=${encodeURIComponent(`Hi, I would like to register for ${title}`)}`;
@@ -133,6 +139,33 @@ export const allEvents: EventItem[] = [
     desc: "全国培训周 2026 家庭工作坊。由 Mr Kevin（特殊教育工作者）与 Dr Gan C.E.（家庭医生）主讲，分享如何在家中理解、支持并赋能阅读障碍孩子。理解 · 支持 · 赋能 · 共创未来。",
     image: eventDyslexiaFamilyCn,
     link: whatsappRegister("打造阅读障碍友好家庭工作坊（2026年7月20日 11am）"),
+  },
+  {
+    title: "Kombucha Workshop · Brew By Root",
+    date: "July 20, 2026",
+    dateISO: "2026-07-20",
+    location: "HRDC Office @ Iskandar · 2:00 PM – 5:00 PM",
+    desc: "Curious about what kombucha is and how it's made? Join Junhao (Brew By Root) for a hands-on workshop covering the fundamentals of brewing your own kombucha at home. Part of National Training Week 2026.",
+    image: eventKombucha,
+    link: whatsappRegister("Kombucha Workshop (20 July 2026, 2pm)"),
+  },
+  {
+    title: "Smart Nutrition for Smart Minds (English)",
+    date: "July 23, 2026",
+    dateISO: "2026-07-23",
+    location: "ADTEC Senai (ILPPG Kampus Senai) · 1:00 PM – 2:00 PM",
+    desc: "A National Training Week 2026 talk by Dr Gan C.E. (General Practitioner, Founder of Asclepius Healthcare Clinic) on how everyday nutrition fuels focus, memory, and mental performance. Language: English.",
+    image: eventSmartNutritionEn,
+    link: whatsappRegister("Smart Nutrition for Smart Minds - English (23 July 2026, 1pm)"),
+  },
+  {
+    title: "智慧营养，聪明大脑（中文）",
+    date: "2026年7月23日",
+    dateISO: "2026-07-23",
+    location: "ADTEC Senai（ILPPG Kampus Senai）· 下午2时 – 3时",
+    desc: "全国培训周 2026 讲座，由 Ms Gan W.S（食品科学与技术硕士）主讲，分享日常营养如何影响专注力、记忆力与大脑表现。语言：中文。",
+    image: eventSmartNutritionCn,
+    link: whatsappRegister("智慧营养，聪明大脑 - 中文（2026年7月23日 2pm）"),
   },
   {
     title: "降四高 · 赢健康 健康讲座",
