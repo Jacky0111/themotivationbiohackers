@@ -14,6 +14,7 @@ import eventDyslexiaAsset from "@/assets/event-dyslexia.png.asset.json";
 import eventGutAgingAsset from "@/assets/event-gut-aging.png.asset.json";
 import eventFourHighsAsset from "@/assets/event-four-highs.png.asset.json";
 import eventFourHighsTalkAsset from "@/assets/event-four-highs-talk.png.asset.json";
+import eventLearningBrainAsset from "@/assets/event-learning-brain.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
@@ -30,6 +31,7 @@ const eventDyslexia = eventDyslexiaAsset.url;
 const eventGutAging = eventGutAgingAsset.url;
 const eventFourHighs = eventFourHighsAsset.url;
 const eventFourHighsTalk = eventFourHighsTalkAsset.url;
+const eventLearningBrain = eventLearningBrainAsset.url;
 
 
 export interface EventItem {
@@ -97,6 +99,15 @@ export const allEvents: EventItem[] = [
     desc: "聚焦现代「四高」——高血压、高血糖、高胆固醇、高尿酸。亮点：前100名免费血脂检测、基础健康检查与咨询、专家健康讲座、AED & CPR 实操体验、BioAura AI 心理健康预筛、营养配对游戏。加 RM28 升级完整基础血液检测配套。立即报名，预留免费检测名额！",
     image: eventFourHighs,
     link: "https://docs.google.com/forms/d/e/1FAIpQLScozLTS50eyhbU0O7H_qUBk7QIMX9AS4-utzG0TeRe-VndSfg/viewform",
+  },
+  {
+    title: "Unlocking Potential · Series 2: Building a Stronger Learning Brain",
+    date: "July 28, 2026",
+    dateISO: "2026-07-28",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "Learning smarter, not just harder. Mr Kevin (Special Needs Educator) shares learning strategies and multi-sensory approaches for dyslexic children; Dr Gan (GP, Functional Medicine) covers brain nutrition and key nutrients — Iron, Vitamin D, B12 & Omega-3 — with evidence-based dietary recommendations. Empower children with the right strategies and the right foundation.",
+    image: eventLearningBrain,
+    link: "https://forms.gle/7CcNyeGkGAPHM5fo6",
   },
   {
     title: "降四高 · 赢健康 健康讲座",
