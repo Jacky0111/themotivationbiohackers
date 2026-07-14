@@ -15,6 +15,8 @@ import eventGutAgingAsset from "@/assets/event-gut-aging.png.asset.json";
 import eventFourHighsAsset from "@/assets/event-four-highs.png.asset.json";
 import eventFourHighsTalkAsset from "@/assets/event-four-highs-talk.png.asset.json";
 import eventLearningBrainAsset from "@/assets/event-learning-brain.png.asset.json";
+import eventDyslexiaFamilyEnAsset from "@/assets/event-dyslexia-family-en.png.asset.json";
+import eventDyslexiaFamilyCnAsset from "@/assets/event-dyslexia-family-cn.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
@@ -32,6 +34,11 @@ const eventGutAging = eventGutAgingAsset.url;
 const eventFourHighs = eventFourHighsAsset.url;
 const eventFourHighsTalk = eventFourHighsTalkAsset.url;
 const eventLearningBrain = eventLearningBrainAsset.url;
+const eventDyslexiaFamilyEn = eventDyslexiaFamilyEnAsset.url;
+const eventDyslexiaFamilyCn = eventDyslexiaFamilyCnAsset.url;
+
+const whatsappRegister = (title: string) =>
+  `https://wa.me/601121172728?text=${encodeURIComponent(`Hi, I would like to register for ${title}`)}`;
 
 
 export interface EventItem {
@@ -108,6 +115,24 @@ export const allEvents: EventItem[] = [
     desc: "Learning smarter, not just harder. Mr Kevin (Special Needs Educator) shares learning strategies and multi-sensory approaches for dyslexic children; Dr Gan (GP, Functional Medicine) covers brain nutrition and key nutrients — Iron, Vitamin D, B12 & Omega-3 — with evidence-based dietary recommendations. Empower children with the right strategies and the right foundation.",
     image: eventLearningBrain,
     link: "https://forms.gle/7CcNyeGkGAPHM5fo6",
+  },
+  {
+    title: "Raising a Dyslexia-Friendly Family Workshop",
+    date: "July 20, 2026",
+    dateISO: "2026-07-20",
+    location: "HRDCorp Office @ Iskandar · 9:00 AM – 10:30 AM",
+    desc: "A National Training Week 2026 family workshop. Mr Kevin (Special Needs Educator) and Ms Punithamalar Rajagopal (Clinical Psychologist) share practical ways to understand, support, and empower dyslexic children at home. Understand. Support. Empower. Together.",
+    image: eventDyslexiaFamilyEn,
+    link: whatsappRegister("Raising a Dyslexia-Friendly Family Workshop (20 July 2026, 9am)"),
+  },
+  {
+    title: "打造阅读障碍友好家庭工作坊",
+    date: "2026年7月20日",
+    dateISO: "2026-07-20",
+    location: "HRDCorp 办公室 @ 依斯干达 · 上午11时 – 中午12时30分",
+    desc: "全国培训周 2026 家庭工作坊。由 Mr Kevin（特殊教育工作者）与 Dr Gan C.E.（家庭医生）主讲，分享如何在家中理解、支持并赋能阅读障碍孩子。理解 · 支持 · 赋能 · 共创未来。",
+    image: eventDyslexiaFamilyCn,
+    link: whatsappRegister("打造阅读障碍友好家庭工作坊（2026年7月20日 11am）"),
   },
   {
     title: "降四高 · 赢健康 健康讲座",
