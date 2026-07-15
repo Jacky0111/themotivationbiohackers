@@ -100,6 +100,14 @@ const EventsSection = () => {
                   href={e.link || "#booking"}
                   target={e.link ? "_blank" : undefined}
                   rel={e.link ? "noopener noreferrer" : undefined}
+                  onClick={(e2) => {
+                    if (!e.link) return;
+                    // Safari blocks target=_blank navigation to wa.me/api.whatsapp.com
+                    // due to Cross-Origin-Opener-Policy on the preview host. Fall back
+                    // to a top-level navigation which always works.
+                    e2.preventDefault();
+                    window.location.href = e.link;
+                  }}
                   className="inline-block px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-body font-medium hover:bg-accent transition-colors duration-300"
                 >
                   {e.link ? "Register Now" : "Register"}
