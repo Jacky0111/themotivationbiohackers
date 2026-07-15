@@ -140,7 +140,7 @@ export const allEvents: EventItem[] = [
     location: "HRDCorp 办公室 @ 依斯干达 · 上午11时 – 中午12时30分",
     desc: "全国培训周 2026 家庭工作坊。由 Mr Kevin（特殊教育工作者）与 Dr Gan C.E.（家庭医生）主讲，分享如何在家中理解、支持并赋能阅读障碍孩子。理解 · 支持 · 赋能 · 共创未来。",
     image: eventDyslexiaFamilyCn,
-    link: whatsappRegister("打造阅读障碍友好家庭工作坊", "2026年7月20日 上午11时"),
+    link: whatsappRegister("打造阅读障碍友好家庭工作坊", "2026年7月20日 上午11时 – 中午12时30分", "HRDCorp 办公室 @ 依斯干达"),
   },
   {
     title: "Kombucha Workshop · Brew By Root",
