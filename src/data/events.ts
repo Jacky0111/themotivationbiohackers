@@ -43,9 +43,9 @@ const eventKombucha = eventKombuchaAsset.url;
 const eventSmartNutritionEn = eventSmartNutritionEnAsset.url;
 const eventSmartNutritionCn = eventSmartNutritionCnAsset.url;
 
-const whatsappRegister = (name: string, date: string) =>
+const whatsappRegister = (name: string, date: string, venue: string) =>
   `https://wa.me/601121172728?text=${encodeURIComponent(
-    `Hi The Motivation Biohackers, I would like to register for "${name}" on ${date}. Please share the next steps. Thank you!`
+    `Hello The Motivation Biohackers 👋\n\nI would like to register for the following event:\n\n• Event: ${name}\n• Date & Time: ${date}\n• Venue: ${venue}\n\nCould you please confirm my seat and share the next steps (payment, confirmation, or any preparation needed)?\n\nThank you!`
   )}`;
 
 
@@ -77,7 +77,7 @@ export const allEvents: EventItem[] = [
     location: "9:00 AM – 1:00 PM",
     desc: "Stillness · Awareness · Elevation — A transformative retreat blending the wisdom of heaven, earth, and the human body. Includes refreshments and BioAura AI energy screening (worth RM169). Fee: RM369 / pax.",
     image: eventAwareness,
-    link: whatsappRegister("A Dance of Awareness", "March 15, 2026"),
+    link: whatsappRegister("A Dance of Awareness", "15 March 2026, 9:00 AM – 1:00 PM", "The Motivation Biohackers Studio, Johor Bahru"),
   },
   {
     title: "The Silent Killers in Men: What You Don't Check Is the Most Dangerous",
@@ -131,7 +131,7 @@ export const allEvents: EventItem[] = [
     location: "HRDCorp Office @ Iskandar · 9:00 AM – 10:30 AM",
     desc: "A National Training Week 2026 family workshop. Mr Kevin (Special Needs Educator) and Ms Punithamalar Rajagopal (Clinical Psychologist) share practical ways to understand, support, and empower dyslexic children at home. Understand. Support. Empower. Together.",
     image: eventDyslexiaFamilyEn,
-    link: whatsappRegister("Raising a Dyslexia-Friendly Family Workshop", "20 July 2026, 9:00 AM"),
+    link: whatsappRegister("Raising a Dyslexia-Friendly Family Workshop", "20 July 2026, 9:00 AM – 10:30 AM", "HRDCorp Office @ Iskandar"),
   },
   {
     title: "打造阅读障碍友好家庭工作坊",
@@ -140,7 +140,7 @@ export const allEvents: EventItem[] = [
     location: "HRDCorp 办公室 @ 依斯干达 · 上午11时 – 中午12时30分",
     desc: "全国培训周 2026 家庭工作坊。由 Mr Kevin（特殊教育工作者）与 Dr Gan C.E.（家庭医生）主讲，分享如何在家中理解、支持并赋能阅读障碍孩子。理解 · 支持 · 赋能 · 共创未来。",
     image: eventDyslexiaFamilyCn,
-    link: whatsappRegister("打造阅读障碍友好家庭工作坊", "2026年7月20日 上午11时"),
+    link: whatsappRegister("打造阅读障碍友好家庭工作坊", "2026年7月20日 上午11时 – 中午12时30分", "HRDCorp 办公室 @ 依斯干达"),
   },
   {
     title: "Kombucha Workshop · Brew By Root",
@@ -149,7 +149,7 @@ export const allEvents: EventItem[] = [
     location: "HRDC Office @ Iskandar · 2:00 PM – 5:00 PM",
     desc: "Curious about what kombucha is and how it's made? Join Junhao (Brew By Root) for a hands-on workshop covering the fundamentals of brewing your own kombucha at home. Part of National Training Week 2026.",
     image: eventKombucha,
-    link: whatsappRegister("Kombucha Workshop · Brew By Root", "20 July 2026, 2:00 PM"),
+    link: whatsappRegister("Kombucha Workshop · Brew By Root", "20 July 2026, 2:00 PM – 5:00 PM", "HRDC Office @ Iskandar"),
   },
   {
     title: "Smart Nutrition for Smart Minds (English)",
@@ -158,7 +158,7 @@ export const allEvents: EventItem[] = [
     location: "ADTEC Senai (ILPPG Kampus Senai) · 1:00 PM – 2:00 PM",
     desc: "A National Training Week 2026 talk by Dr Gan C.E. (General Practitioner, Founder of Asclepius Healthcare Clinic) on how everyday nutrition fuels focus, memory, and mental performance. Language: English.",
     image: eventSmartNutritionEn,
-    link: whatsappRegister("Smart Nutrition for Smart Minds (English)", "23 July 2026, 1:00 PM"),
+    link: whatsappRegister("Smart Nutrition for Smart Minds (English)", "23 July 2026, 1:00 PM – 2:00 PM", "ADTEC Senai (ILPPG Kampus Senai)"),
   },
   {
     title: "智慧营养，聪明大脑（中文）",
@@ -167,7 +167,7 @@ export const allEvents: EventItem[] = [
     location: "ADTEC Senai（ILPPG Kampus Senai）· 下午2时 – 3时",
     desc: "全国培训周 2026 讲座，由 Ms Gan W.S（食品科学与技术硕士）主讲，分享日常营养如何影响专注力、记忆力与大脑表现。语言：中文。",
     image: eventSmartNutritionCn,
-    link: whatsappRegister("智慧营养，聪明大脑（中文）", "2026年7月23日 下午2时"),
+    link: whatsappRegister("智慧营养，聪明大脑（中文）", "2026年7月23日 下午2时 – 3时", "ADTEC Senai（ILPPG Kampus Senai）"),
   },
   {
     title: "降四高 · 赢健康 健康讲座",
