@@ -4,6 +4,7 @@ import { ArrowRight, Expand } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { getUpcomingEvents } from "@/data/events";
+import { trackRegisterClick } from "@/lib/analytics";
 import EventCountdown from "./EventCountdown";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
