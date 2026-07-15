@@ -7,7 +7,7 @@ import {
 
 describe("normalizePhone", () => {
   it("strips spaces, dashes and parentheses", () => {
-    expect(normalizePhone("+60 11-2117 2728")).toBe("60112117​2728".replace("​", ""));
+    expect(normalizePhone("+60 11-2117 2728")).toBe("601121172728");
     expect(normalizePhone("(601) 121-172-728")).toBe("601121172728");
   });
 
