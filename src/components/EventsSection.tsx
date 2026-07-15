@@ -102,6 +102,13 @@ const EventsSection = () => {
                   target={e.link ? "_blank" : undefined}
                   rel={e.link ? "noopener noreferrer" : undefined}
                   onClick={(e2) => {
+                    if (e.link) {
+                      trackRegisterClick({
+                        eventTitle: e.title,
+                        eventDate: e.date,
+                        destination: e.link,
+                      });
+                    }
                     if (!e.link) return;
                     // Safari blocks target=_blank navigation to wa.me/api.whatsapp.com
                     // due to Cross-Origin-Opener-Policy on the preview host. Fall back
