@@ -4,6 +4,7 @@ import { ArrowRight, Expand } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { getUpcomingEvents } from "@/data/events";
+import { trackRegisterClick } from "@/lib/analytics";
 import EventCountdown from "./EventCountdown";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
@@ -101,6 +102,13 @@ const EventsSection = () => {
                   target={e.link ? "_blank" : undefined}
                   rel={e.link ? "noopener noreferrer" : undefined}
                   onClick={(e2) => {
+                    if (e.link) {
+                      trackRegisterClick({
+                        eventTitle: e.title,
+                        eventDate: e.date,
+                        destination: e.link,
+                      });
+                    }
                     if (!e.link) return;
                     // Safari blocks target=_blank navigation to wa.me/api.whatsapp.com
                     // due to Cross-Origin-Opener-Policy on the preview host. Fall back
