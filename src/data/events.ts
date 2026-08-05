@@ -320,6 +320,37 @@ export const allEvents: EventItem[] = [
   },
 ];
 
+/** Build a URL-safe slug from an event title, falling back to its date. */
+const slugify = (title: string, dateISO: string): string => {
+  const base = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return base || `event-${dateISO}`;
+};
+
+// Assign stable, unique slugs once at module load.
+const usedSlugs = new Set<string>();
+allEvents.forEach((e) => {
+  let slug = slugify(e.title, e.dateISO);
+  if (usedSlugs.has(slug)) {
+    let n = 2;
+    while (usedSlugs.has(`${slug}-${n}`)) n += 1;
+    slug = `${slug}-${n}`;
+  }
+  usedSlugs.add(slug);
+  e.slug = slug;
+});
+
+export const getEventBySlug = (slug: string): EventItem | undefined =>
+  allEvents.find((e) => e.slug === slug);
+
+/** True when the event date has not passed yet. */
+export const isUpcoming = (e: EventItem): boolean =>
+  e.dateISO >= new Date().toISOString().slice(0, 10);
+
+
+
 
 
 /**
