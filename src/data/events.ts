@@ -254,6 +254,17 @@ export const allEvents: EventItem[] = [
     desc: "ADHD or dyslexia? Sometimes both, sometimes neither. Mr Kevin (Special Needs Educator) covers dyslexia vs ADHD, overlapping symptoms, and when to seek professional help; Dr Gan (GP, Functional Medicine) covers medical causes of poor concentration, sleep issues, nutritional deficiencies, and mental health considerations. For parents, educators, healthcare professionals, and caregivers.",
     image: eventAdhdDyslexia,
     link: "https://forms.gle/yKy71dfvhSSaNt5C6",
+    agenda: [
+      "8:00 PM — ADHD vs dyslexia: defining the difference",
+      "8:20 PM — Overlapping symptoms and when both co-occur",
+      "8:45 PM — Medical causes of poor concentration",
+      "9:05 PM — Sleep, nutrition and mental health factors",
+      "9:20 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Mr Kevin", role: "Special Needs Educator" },
+      { name: "Dr Gan", role: "GP, Functional Medicine" },
+    ],
   },
   {
     title: "降四高 · 赢健康 健康讲座",
