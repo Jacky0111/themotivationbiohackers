@@ -93,34 +93,48 @@ const EventsSection = () => {
                 </div>
               </button>
               <div className="p-6">
-                <h3 className="font-heading text-xl text-foreground mb-1">{e.title}</h3>
+                <h3 className="font-heading text-xl text-foreground mb-1">
+                  <Link to={`/events/${e.slug}`} className="hover:text-primary transition-colors">
+                    {e.title}
+                  </Link>
+                </h3>
                 <p className="text-xs text-muted-foreground font-body mb-3">{e.location}</p>
                 <p className="text-sm text-muted-foreground font-body leading-relaxed mb-4">{e.desc}</p>
                 <EventCountdown dateISO={e.dateISO} timeHint={e.location} />
-                <a
-                  href={e.link || "#booking"}
-                  target={e.link ? "_blank" : undefined}
-                  rel={e.link ? "noopener noreferrer" : undefined}
-                  onClick={(e2) => {
-                    if (e.link) {
-                      trackRegisterClick({
-                        eventTitle: e.title,
-                        eventDate: e.date,
-                        destination: e.link,
-                      });
-                    }
-                    if (!e.link) return;
-                    // Safari blocks target=_blank navigation to wa.me/api.whatsapp.com
-                    // due to Cross-Origin-Opener-Policy on the preview host. Fall back
-                    // to a top-level navigation which always works.
-                    e2.preventDefault();
-                    window.location.href = e.link;
-                  }}
-                  className="inline-block px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-body font-medium hover:bg-accent transition-colors duration-300"
-                >
-                  {e.link ? "Register Now" : "Register"}
-                </a>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href={e.link || "#booking"}
+                    target={e.link ? "_blank" : undefined}
+                    rel={e.link ? "noopener noreferrer" : undefined}
+                    onClick={(e2) => {
+                      if (e.link) {
+                        trackRegisterClick({
+                          eventTitle: e.title,
+                          eventDate: e.date,
+                          destination: e.link,
+                        });
+                      }
+                      if (!e.link) return;
+                      // Safari blocks target=_blank navigation to wa.me/api.whatsapp.com
+                      // due to Cross-Origin-Opener-Policy on the preview host. Fall back
+                      // to a top-level navigation which always works.
+                      e2.preventDefault();
+                      window.location.href = e.link;
+                    }}
+                    className="inline-block px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-body font-medium hover:bg-accent transition-colors duration-300"
+                  >
+                    {e.link ? "Register Now" : "Register"}
+                  </a>
+                  <Link
+                    to={`/events/${e.slug}`}
+                    className="inline-flex items-center gap-1.5 text-sm font-body text-foreground hover:text-primary transition-colors"
+                  >
+                    View Details
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
+
             </motion.div>
           ))}
         </div>
