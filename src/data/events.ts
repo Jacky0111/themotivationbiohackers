@@ -21,6 +21,7 @@ import eventKombuchaAsset from "@/assets/event-kombucha.png.asset.json";
 import eventSmartNutritionEnAsset from "@/assets/event-smart-nutrition-en.png.asset.json";
 import eventSmartNutritionCnAsset from "@/assets/event-smart-nutrition-cn.png.asset.json";
 import eventMentalHealthCnAsset from "@/assets/event-mental-health-cn.png.asset.json";
+import eventAdhdDyslexiaAsset from "@/assets/event-adhd-dyslexia.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
@@ -44,6 +45,7 @@ const eventKombucha = eventKombuchaAsset.url;
 const eventSmartNutritionEn = eventSmartNutritionEnAsset.url;
 const eventSmartNutritionCn = eventSmartNutritionCnAsset.url;
 const eventMentalHealthCn = eventMentalHealthCnAsset.url;
+const eventAdhdDyslexia = eventAdhdDyslexiaAsset.url;
 
 const whatsappRegister = (name: string, date: string, venue: string) =>
   `https://wa.me/601121172728?text=${encodeURIComponent(
@@ -179,6 +181,15 @@ export const allEvents: EventItem[] = [
     desc: "焦虑、失眠、难以专注、提不起劲？长期压力不只影响情绪，也牵动睡眠、免疫力、肠道健康与慢性病风险。讲座分享如何透过营养、睡眠、运动与支持系统照顾大脑与情绪。免费参与，名额有限。",
     image: eventMentalHealthCn,
     link: "https://forms.gle/v1m2VH3MB67xcbCW7",
+  },
+  {
+    title: "Unlocking Potential · Series 3: ADHD, Dyslexia & Learning Challenges — Telling the Difference",
+    date: "August 25, 2026",
+    dateISO: "2026-08-25",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "ADHD or dyslexia? Sometimes both, sometimes neither. Mr Kevin (Special Needs Educator) covers dyslexia vs ADHD, overlapping symptoms, and when to seek professional help; Dr Gan (GP, Functional Medicine) covers medical causes of poor concentration, sleep issues, nutritional deficiencies, and mental health considerations. For parents, educators, healthcare professionals, and caregivers.",
+    image: eventAdhdDyslexia,
+    link: "https://forms.gle/yKy71dfvhSSaNt5C6",
   },
   {
     title: "降四高 · 赢健康 健康讲座",
