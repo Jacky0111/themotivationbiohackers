@@ -143,6 +143,18 @@ export const allEvents: EventItem[] = [
     desc: "Why do some 60-year-olds look 40? A Food Science Master, Registered Nutritionist, and Registered Pharmacist unpack how gut health shapes ageing. Co-hosted with Asclepius Healthcare.",
     image: eventGutAging,
     link: "https://forms.gle/ARPhL25KoZ6wUFTi8",
+    agenda: [
+      "8:00 PM — Why biological age differs from your birthday",
+      "8:15 PM — The gut microbiome and inflammageing",
+      "8:40 PM — Foods, fibre and fermentation that slow ageing",
+      "9:05 PM — Supplements: what actually has evidence",
+      "9:20 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Ms Gan W.S", role: "Master of Food Science & Technology" },
+      { name: "Registered Nutritionist", role: "Asclepius Healthcare" },
+      { name: "Registered Pharmacist", role: "Asclepius Healthcare" },
+    ],
   },
   {
     title: "四高不高，健康更好 · 健康博览会",
