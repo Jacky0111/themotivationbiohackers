@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Expand } from "lucide-react";
+import { ArrowLeft, ArrowRight, Expand } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
@@ -123,10 +123,22 @@ const PastEvents = () => {
                   </div>
                 </button>
                 <div className="p-6">
-                  <h3 className="font-heading text-xl text-foreground mb-1">{e.title}</h3>
+                  <h3 className="font-heading text-xl text-foreground mb-1">
+                    <Link to={`/events/${e.slug}`} className="hover:text-primary transition-colors">
+                      {e.title}
+                    </Link>
+                  </h3>
                   <p className="text-xs text-muted-foreground font-body mb-3">{e.location}</p>
                   <p className="text-sm text-muted-foreground font-body leading-relaxed">{e.desc}</p>
+                  <Link
+                    to={`/events/${e.slug}`}
+                    className="inline-flex items-center gap-1.5 mt-4 text-sm font-body text-foreground hover:text-primary transition-colors"
+                  >
+                    View Details
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
+
               </motion.div>
             ))}
           </div>

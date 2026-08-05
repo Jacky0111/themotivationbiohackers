@@ -53,6 +53,11 @@ const whatsappRegister = (name: string, date: string, venue: string) =>
   )}`;
 
 
+export interface EventSpeaker {
+  name: string;
+  role?: string;
+}
+
 export interface EventItem {
   title: string;
   date: string;
@@ -62,7 +67,14 @@ export interface EventItem {
   desc: string;
   image: string;
   link?: string;
+  /** URL-safe identifier used by the event detail page */
+  slug?: string;
+  /** Optional run-of-show agenda items */
+  agenda?: string[];
+  /** Optional speaker line-up */
+  speakers?: EventSpeaker[];
 }
+
 
 export const allEvents: EventItem[] = [
   {
@@ -91,6 +103,17 @@ export const allEvents: EventItem[] = [
     desc: "An online men's health talk on the silent killers — heart disease, the 'three highs' (hypertension, high blood sugar, high cholesterol), and prostate issues. Featuring Dr Ngan (Family Physician) and Liew Wei Ting (Registered Nutritionist) on early warning signs, essential screenings after 30, and risk-reversing nutrition.",
     image: eventMensHealth,
     link: "https://forms.gle/WrcjZTB6HzM18CrP8",
+    agenda: [
+      "8:00 PM — Welcome & why men skip check-ups",
+      "8:10 PM — Heart disease and the 'three highs' explained",
+      "8:35 PM — Prostate health: signs you shouldn't ignore",
+      "9:00 PM — Nutrition that reverses risk",
+      "9:20 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Dr Ngan", role: "Family Physician" },
+      { name: "Liew Wei Ting", role: "Registered Nutritionist" },
+    ],
   },
   {
     title: "Unlocking Potential: A Holistic Approach to Dyslexia, Learning & Brain Health",
@@ -100,6 +123,17 @@ export const allEvents: EventItem[] = [
     desc: "Series 1: Understanding Dyslexia — Beyond Reading Difficulties. With Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) on early signs, misconceptions, and when medical evaluation helps.",
     image: eventDyslexia,
     link: "https://forms.gle/SoP4nxdhX9WakfNv5",
+    agenda: [
+      "8:00 PM — Opening: what dyslexia is (and isn't)",
+      "8:15 PM — Early signs and common misconceptions",
+      "8:40 PM — The medical lens: when evaluation helps",
+      "9:05 PM — Supporting your child at home and school",
+      "9:20 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Mr Kevin", role: "Special Needs Educator" },
+      { name: "Dr Gan", role: "GP, Functional Medicine" },
+    ],
   },
   {
     title: "Your Gut Microbiome Decides How Fast You Age",
@@ -109,6 +143,18 @@ export const allEvents: EventItem[] = [
     desc: "Why do some 60-year-olds look 40? A Food Science Master, Registered Nutritionist, and Registered Pharmacist unpack how gut health shapes ageing. Co-hosted with Asclepius Healthcare.",
     image: eventGutAging,
     link: "https://forms.gle/ARPhL25KoZ6wUFTi8",
+    agenda: [
+      "8:00 PM — Why biological age differs from your birthday",
+      "8:15 PM — The gut microbiome and inflammageing",
+      "8:40 PM — Foods, fibre and fermentation that slow ageing",
+      "9:05 PM — Supplements: what actually has evidence",
+      "9:20 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Ms Gan W.S", role: "Master of Food Science & Technology" },
+      { name: "Registered Nutritionist", role: "Asclepius Healthcare" },
+      { name: "Registered Pharmacist", role: "Asclepius Healthcare" },
+    ],
   },
   {
     title: "四高不高，健康更好 · 健康博览会",
@@ -127,6 +173,17 @@ export const allEvents: EventItem[] = [
     desc: "Learning smarter, not just harder. Mr Kevin (Special Needs Educator) shares learning strategies and multi-sensory approaches for dyslexic children; Dr Gan (GP, Functional Medicine) covers brain nutrition and key nutrients — Iron, Vitamin D, B12 & Omega-3 — with evidence-based dietary recommendations. Empower children with the right strategies and the right foundation.",
     image: eventLearningBrain,
     link: "https://forms.gle/7CcNyeGkGAPHM5fo6",
+    agenda: [
+      "8:00 PM — Learning smarter, not harder: the framing",
+      "8:15 PM — Multi-sensory strategies for dyslexic learners",
+      "8:45 PM — Brain nutrition: Iron, Vitamin D, B12 & Omega-3",
+      "9:10 PM — Practical meal and study routines",
+      "9:20 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Mr Kevin", role: "Special Needs Educator" },
+      { name: "Dr Gan", role: "GP, Functional Medicine" },
+    ],
   },
   {
     title: "Raising a Dyslexia-Friendly Family Workshop",
@@ -181,6 +238,13 @@ export const allEvents: EventItem[] = [
     desc: "焦虑、失眠、难以专注、提不起劲？长期压力不只影响情绪，也牵动睡眠、免疫力、肠道健康与慢性病风险。讲座分享如何透过营养、睡眠、运动与支持系统照顾大脑与情绪。免费参与，名额有限。",
     image: eventMentalHealthCn,
     link: "https://forms.gle/v1m2VH3MB67xcbCW7",
+    agenda: [
+      "晚上8时 — 认识压力与情绪警讯",
+      "晚上8时20分 — 压力如何影响睡眠、免疫与肠道",
+      "晚上8时45分 — 营养、运动与作息的调整策略",
+      "晚上9时10分 — 建立支持系统",
+      "晚上9时20分 — 线上问答",
+    ],
   },
   {
     title: "Unlocking Potential · Series 3: ADHD, Dyslexia & Learning Challenges — Telling the Difference",
@@ -190,6 +254,17 @@ export const allEvents: EventItem[] = [
     desc: "ADHD or dyslexia? Sometimes both, sometimes neither. Mr Kevin (Special Needs Educator) covers dyslexia vs ADHD, overlapping symptoms, and when to seek professional help; Dr Gan (GP, Functional Medicine) covers medical causes of poor concentration, sleep issues, nutritional deficiencies, and mental health considerations. For parents, educators, healthcare professionals, and caregivers.",
     image: eventAdhdDyslexia,
     link: "https://forms.gle/yKy71dfvhSSaNt5C6",
+    agenda: [
+      "8:00 PM — ADHD vs dyslexia: defining the difference",
+      "8:20 PM — Overlapping symptoms and when both co-occur",
+      "8:45 PM — Medical causes of poor concentration",
+      "9:05 PM — Sleep, nutrition and mental health factors",
+      "9:20 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Mr Kevin", role: "Special Needs Educator" },
+      { name: "Dr Gan", role: "GP, Functional Medicine" },
+    ],
   },
   {
     title: "降四高 · 赢健康 健康讲座",
@@ -307,6 +382,37 @@ export const allEvents: EventItem[] = [
     image: eventWorldHealthDay,
   },
 ];
+
+/** Build a URL-safe slug from an event title, falling back to its date. */
+const slugify = (title: string, dateISO: string): string => {
+  const base = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return base || `event-${dateISO}`;
+};
+
+// Assign stable, unique slugs once at module load.
+const usedSlugs = new Set<string>();
+allEvents.forEach((e) => {
+  let slug = slugify(e.title, e.dateISO);
+  if (usedSlugs.has(slug)) {
+    let n = 2;
+    while (usedSlugs.has(`${slug}-${n}`)) n += 1;
+    slug = `${slug}-${n}`;
+  }
+  usedSlugs.add(slug);
+  e.slug = slug;
+});
+
+export const getEventBySlug = (slug: string): EventItem | undefined =>
+  allEvents.find((e) => e.slug === slug);
+
+/** True when the event date has not passed yet. */
+export const isUpcoming = (e: EventItem): boolean =>
+  e.dateISO >= new Date().toISOString().slice(0, 10);
+
+
 
 
 
