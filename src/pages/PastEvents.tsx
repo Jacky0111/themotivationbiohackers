@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Expand } from "lucide-react";
+import { ArrowLeft, ArrowRight, Expand } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
