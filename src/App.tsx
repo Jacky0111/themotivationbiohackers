@@ -24,6 +24,8 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/past-events" element={<PastEvents />} />
+        <Route path="/events/:slug" element={<EventDetail />} />
+
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
