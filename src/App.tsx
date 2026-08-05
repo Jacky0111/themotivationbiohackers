@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import ServiceDetail from "./pages/ServiceDetail";
 import PastEvents from "./pages/PastEvents";
+import EventDetail from "./pages/EventDetail";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
 
