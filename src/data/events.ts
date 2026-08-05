@@ -20,6 +20,7 @@ import eventDyslexiaFamilyCnAsset from "@/assets/event-dyslexia-family-cn.png.as
 import eventKombuchaAsset from "@/assets/event-kombucha.png.asset.json";
 import eventSmartNutritionEnAsset from "@/assets/event-smart-nutrition-en.png.asset.json";
 import eventSmartNutritionCnAsset from "@/assets/event-smart-nutrition-cn.png.asset.json";
+import eventMentalHealthCnAsset from "@/assets/event-mental-health-cn.png.asset.json";
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
@@ -42,6 +43,7 @@ const eventDyslexiaFamilyCn = eventDyslexiaFamilyCnAsset.url;
 const eventKombucha = eventKombuchaAsset.url;
 const eventSmartNutritionEn = eventSmartNutritionEnAsset.url;
 const eventSmartNutritionCn = eventSmartNutritionCnAsset.url;
+const eventMentalHealthCn = eventMentalHealthCnAsset.url;
 
 const whatsappRegister = (name: string, date: string, venue: string) =>
   `https://wa.me/601121172728?text=${encodeURIComponent(
@@ -168,6 +170,15 @@ export const allEvents: EventItem[] = [
     desc: "全国培训周 2026 讲座，由 Ms Gan W.S（食品科学与技术硕士）主讲，分享日常营养如何影响专注力、记忆力与大脑表现。语言：中文。",
     image: eventSmartNutritionCn,
     link: whatsappRegister("智慧营养，聪明大脑（中文）", "2026年7月23日 下午2时 – 3时", "ADTEC Senai（ILPPG Kampus Senai）"),
+  },
+  {
+    title: "心理健康，值得被重视 · 压力与情绪管理线上讲座",
+    date: "2026年8月18日",
+    dateISO: "2026-08-18",
+    location: "Zoom 线上讲座 · 晚上8时",
+    desc: "焦虑、失眠、难以专注、提不起劲？长期压力不只影响情绪，也牵动睡眠、免疫力、肠道健康与慢性病风险。讲座分享如何透过营养、睡眠、运动与支持系统照顾大脑与情绪。免费参与，名额有限。",
+    image: eventMentalHealthCn,
+    link: "https://forms.gle/v1m2VH3MB67xcbCW7",
   },
   {
     title: "降四高 · 赢健康 健康讲座",
