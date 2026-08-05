@@ -238,6 +238,13 @@ export const allEvents: EventItem[] = [
     desc: "焦虑、失眠、难以专注、提不起劲？长期压力不只影响情绪，也牵动睡眠、免疫力、肠道健康与慢性病风险。讲座分享如何透过营养、睡眠、运动与支持系统照顾大脑与情绪。免费参与，名额有限。",
     image: eventMentalHealthCn,
     link: "https://forms.gle/v1m2VH3MB67xcbCW7",
+    agenda: [
+      "晚上8时 — 认识压力与情绪警讯",
+      "晚上8时20分 — 压力如何影响睡眠、免疫与肠道",
+      "晚上8时45分 — 营养、运动与作息的调整策略",
+      "晚上9时10分 — 建立支持系统",
+      "晚上9时20分 — 线上问答",
+    ],
   },
   {
     title: "Unlocking Potential · Series 3: ADHD, Dyslexia & Learning Challenges — Telling the Difference",
