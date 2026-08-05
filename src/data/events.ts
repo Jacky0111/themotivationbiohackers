@@ -123,6 +123,17 @@ export const allEvents: EventItem[] = [
     desc: "Series 1: Understanding Dyslexia — Beyond Reading Difficulties. With Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) on early signs, misconceptions, and when medical evaluation helps.",
     image: eventDyslexia,
     link: "https://forms.gle/SoP4nxdhX9WakfNv5",
+    agenda: [
+      "8:00 PM — Opening: what dyslexia is (and isn't)",
+      "8:15 PM — Early signs and common misconceptions",
+      "8:40 PM — The medical lens: when evaluation helps",
+      "9:05 PM — Supporting your child at home and school",
+      "9:20 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Mr Kevin", role: "Special Needs Educator" },
+      { name: "Dr Gan", role: "GP, Functional Medicine" },
+    ],
   },
   {
     title: "Your Gut Microbiome Decides How Fast You Age",
