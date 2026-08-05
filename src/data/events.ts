@@ -53,6 +53,11 @@ const whatsappRegister = (name: string, date: string, venue: string) =>
   )}`;
 
 
+export interface EventSpeaker {
+  name: string;
+  role?: string;
+}
+
 export interface EventItem {
   title: string;
   date: string;
@@ -62,7 +67,14 @@ export interface EventItem {
   desc: string;
   image: string;
   link?: string;
+  /** URL-safe identifier used by the event detail page */
+  slug?: string;
+  /** Optional run-of-show agenda items */
+  agenda?: string[];
+  /** Optional speaker line-up */
+  speakers?: EventSpeaker[];
 }
+
 
 export const allEvents: EventItem[] = [
   {
