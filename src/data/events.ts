@@ -103,6 +103,17 @@ export const allEvents: EventItem[] = [
     desc: "An online men's health talk on the silent killers — heart disease, the 'three highs' (hypertension, high blood sugar, high cholesterol), and prostate issues. Featuring Dr Ngan (Family Physician) and Liew Wei Ting (Registered Nutritionist) on early warning signs, essential screenings after 30, and risk-reversing nutrition.",
     image: eventMensHealth,
     link: "https://forms.gle/WrcjZTB6HzM18CrP8",
+    agenda: [
+      "8:00 PM — Welcome & why men skip check-ups",
+      "8:10 PM — Heart disease and the 'three highs' explained",
+      "8:35 PM — Prostate health: signs you shouldn't ignore",
+      "9:00 PM — Nutrition that reverses risk",
+      "9:20 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Dr Ngan", role: "Family Physician" },
+      { name: "Liew Wei Ting", role: "Registered Nutritionist" },
+    ],
   },
   {
     title: "Unlocking Potential: A Holistic Approach to Dyslexia, Learning & Brain Health",
