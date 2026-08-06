@@ -39,4 +39,4 @@ jobs:
         run: bun run build
 
       - name: Audit dependencies (high/critical)
-        run: bash scripts/verify.sh
+        run: bun audit --audit-level=high
