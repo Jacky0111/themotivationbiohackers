@@ -44,6 +44,8 @@ const eventDyslexiaFamilyCn = eventDyslexiaFamilyCnAsset.url;
 const eventKombucha = eventKombuchaAsset.url;
 const eventSmartNutritionEn = eventSmartNutritionEnAsset.url;
 const eventSmartNutritionCn = eventSmartNutritionCnAsset.url;
+const eventGrowthAwareness = eventGrowthAwarenessAsset.url;
+
 const eventMentalHealthCn = eventMentalHealthCnAsset.url;
 const eventAdhdDyslexia = eventAdhdDyslexiaAsset.url;
 
