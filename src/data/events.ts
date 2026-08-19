@@ -20,6 +20,8 @@ import eventDyslexiaFamilyCnAsset from "@/assets/event-dyslexia-family-cn.png.as
 import eventKombuchaAsset from "@/assets/event-kombucha.png.asset.json";
 import eventSmartNutritionEnAsset from "@/assets/event-smart-nutrition-en.png.asset.json";
 import eventSmartNutritionCnAsset from "@/assets/event-smart-nutrition-cn.png.asset.json";
+import eventGrowthAwarenessAsset from "@/assets/event-growth-awareness.png.asset.json";
+
 import eventMentalHealthCnAsset from "@/assets/event-mental-health-cn.png.asset.json";
 import eventAdhdDyslexiaAsset from "@/assets/event-adhd-dyslexia.png.asset.json";
 
@@ -44,6 +46,8 @@ const eventDyslexiaFamilyCn = eventDyslexiaFamilyCnAsset.url;
 const eventKombucha = eventKombuchaAsset.url;
 const eventSmartNutritionEn = eventSmartNutritionEnAsset.url;
 const eventSmartNutritionCn = eventSmartNutritionCnAsset.url;
+const eventGrowthAwareness = eventGrowthAwarenessAsset.url;
+
 const eventMentalHealthCn = eventMentalHealthCnAsset.url;
 const eventAdhdDyslexia = eventAdhdDyslexiaAsset.url;
 
@@ -267,7 +271,29 @@ export const allEvents: EventItem[] = [
     ],
   },
   {
+    title: "孩子健康成長，你真的了解嗎？｜Children's Growth Awareness Week",
+    date: "September 14, 2026",
+    dateISO: "2026-09-14",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "Children's Growth Awareness Week: A family webinar looking at the whole child — not just height. Dr Gan (Family Physician) and Mr Kevin (Child Educator) will explore how brain development, balanced nutrition, sleep quality, learning performance, emotional health, and hormonal development all shape a child's growth. Parents will learn to spot the warning signs that shouldn't be ignored, so children can be understood earlier and supported better. Language: Chinese. Open to parents, caregivers, and anyone who cares about children's growth.",
+    image: eventGrowthAwareness,
+    link: "https://forms.gle/1Nt5BoZgN9p5r5WEA",
+    agenda: [
+      "8:00 PM — Opening: Why growth is more than height",
+      "8:15 PM — Body and brain signals during childhood growth",
+      "8:40 PM — Nutrition, sleep, and learning performance",
+      "9:05 PM — Emotional health, stress, and screen time",
+      "9:20 PM — Warning signs parents should not ignore",
+      "9:35 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Dr Gan", role: "Family Physician / GP" },
+      { name: "Mr Kevin", role: "Child Educator" },
+    ],
+  },
+  {
     title: "降四高 · 赢健康 健康讲座",
+
     date: "July 18, 2026",
     dateISO: "2026-07-18",
     location: "R&F Mall 新山富力广场 · 10:00 AM – 8:00 PM",
