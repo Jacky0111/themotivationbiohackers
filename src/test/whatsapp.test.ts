@@ -24,24 +24,24 @@ describe("buildRegisterMessage", () => {
   it("includes event name and date on labelled lines", () => {
     const msg = buildRegisterMessage({
       eventName: "Kombucha Workshop · Brew By Root",
-      eventDate: "20 July 2026, 2:00 PM – 5:00 PM",
+      eventDate: "2026-07-20, 2:00 PM – 5:00 PM",
     });
     expect(msg).toContain("• Event: Kombucha Workshop · Brew By Root");
-    expect(msg).toContain("• Date & Time: 20 July 2026, 2:00 PM – 5:00 PM");
+    expect(msg).toContain("• Date & Time: 2026-07-20, 2:00 PM – 5:00 PM");
     expect(msg).toContain("Hello The Motivation Biohackers");
   });
 
   it("appends venue only when provided", () => {
     const withVenue = buildRegisterMessage({
       eventName: "A Dance of Awareness",
-      eventDate: "15 March 2026",
+      eventDate: "2026-03-15",
       venue: "Studio JB",
     });
     expect(withVenue).toContain("• Venue: Studio JB");
 
     const withoutVenue = buildRegisterMessage({
       eventName: "A Dance of Awareness",
-      eventDate: "15 March 2026",
+      eventDate: "2026-03-15",
     });
     expect(withoutVenue).not.toContain("Venue:");
   });
@@ -49,10 +49,10 @@ describe("buildRegisterMessage", () => {
   it("preserves unicode event names (Chinese)", () => {
     const msg = buildRegisterMessage({
       eventName: "智慧营养，聪明大脑（中文）",
-      eventDate: "2026年7月23日 下午2时",
+      eventDate: "2026-07-23 2:00 PM",
     });
     expect(msg).toContain("智慧营养，聪明大脑（中文）");
-    expect(msg).toContain("2026年7月23日 下午2时");
+    expect(msg).toContain("2026-07-23 2:00 PM");
   });
 
   it("throws on missing required fields", () => {
@@ -72,7 +72,7 @@ describe("buildWhatsAppRegisterLink", () => {
     const link = buildWhatsAppRegisterLink({
       phone,
       eventName: "Test",
-      eventDate: "1 Jan 2026",
+      eventDate: "2026-01-01",
     });
     expect(link.startsWith("https://wa.me/601121172728?text=")).toBe(true);
   });
@@ -81,13 +81,13 @@ describe("buildWhatsAppRegisterLink", () => {
     const link = buildWhatsAppRegisterLink({
       phone,
       eventName: "Kombucha Workshop · Brew By Root",
-      eventDate: "20 July 2026, 2:00 PM – 5:00 PM",
+      eventDate: "2026-07-20, 2:00 PM – 5:00 PM",
       venue: "HRDC Office @ Iskandar",
     });
     const url = new URL(link);
     const text = url.searchParams.get("text") ?? "";
     expect(text).toContain("Kombucha Workshop · Brew By Root");
-    expect(text).toContain("20 July 2026, 2:00 PM – 5:00 PM");
+    expect(text).toContain("2026-07-20, 2:00 PM – 5:00 PM");
     expect(text).toContain("HRDC Office @ Iskandar");
     // Raw URL must not contain unencoded spaces or newlines.
     expect(link).not.toMatch(/[ \n]/);
@@ -97,7 +97,7 @@ describe("buildWhatsAppRegisterLink", () => {
     const link = buildWhatsAppRegisterLink({
       phone,
       eventName: "打造阅读障碍友好家庭工作坊",
-      eventDate: "2026年7月20日 上午11时",
+      eventDate: "2026-07-20 11:00 AM",
     });
     const text = new URL(link).searchParams.get("text") ?? "";
     expect(text).toContain("打造阅读障碍友好家庭工作坊");
