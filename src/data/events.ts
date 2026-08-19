@@ -19,7 +19,9 @@ import eventDyslexiaFamilyEnAsset from "@/assets/event-dyslexia-family-en.png.as
 import eventDyslexiaFamilyCnAsset from "@/assets/event-dyslexia-family-cn.png.asset.json";
 import eventKombuchaAsset from "@/assets/event-kombucha.png.asset.json";
 import eventSmartNutritionEnAsset from "@/assets/event-smart-nutrition-en.png.asset.json";
+import eventSmartNutritionCnAsset from "@/assets/event-smart-nutrition-cn.png.asset.json";
 import eventGrowthAwarenessAsset from "@/assets/event-growth-awareness.png.asset.json";
+
 import eventMentalHealthCnAsset from "@/assets/event-mental-health-cn.png.asset.json";
 import eventAdhdDyslexiaAsset from "@/assets/event-adhd-dyslexia.png.asset.json";
 
