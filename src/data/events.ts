@@ -24,6 +24,8 @@ import eventGrowthAwarenessAsset from "@/assets/event-growth-awareness.png.asset
 
 import eventMentalHealthCnAsset from "@/assets/event-mental-health-cn.png.asset.json";
 import eventAdhdDyslexiaAsset from "@/assets/event-adhd-dyslexia.png.asset.json";
+import eventSmartChildrenStruggleAsset from "@/assets/event-smart-children-struggle.png.asset.json";
+
 
 const eventTbWebinar = eventTbWebinarAsset.url;
 const eventAwareness = eventAwarenessAsset.url;
@@ -50,6 +52,8 @@ const eventGrowthAwareness = eventGrowthAwarenessAsset.url;
 
 const eventMentalHealthCn = eventMentalHealthCnAsset.url;
 const eventAdhdDyslexia = eventAdhdDyslexiaAsset.url;
+const eventSmartChildrenStruggle = eventSmartChildrenStruggleAsset.url;
+
 
 const whatsappRegister = (name: string, date: string, venue: string) =>
   `https://wa.me/601121172728?text=${encodeURIComponent(
@@ -305,7 +309,28 @@ export const allEvents: EventItem[] = [
       { name: "Dr Gan", role: "Family Physician / GP" },
       { name: "Mr Kevin", role: "Child Educator" },
     ],
+  {
+    title: "Unlocking Potential · Series 4: Why Smart Children Struggle in School",
+    date: "2026-09-22",
+
+    dateISO: "2026-09-22",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "A bright, curious child may still struggle in school because of hidden learning challenges, processing speed, working memory, stress, or poor sleep. In Series 4, Mr Kevin (Special Needs Educator) explores hidden signs of dyslexia, processing speed, and working memory challenges; Dr Gan (GP, Functional Medicine) connects brain function and cognition, stress hormones, and the impact of sleep deprivation on learning. For parents, educators, caregivers, and anyone who wants to understand how a child's brain learns best.",
+    image: eventSmartChildrenStruggle,
+    link: "https://forms.gle/D4UdWBdDKQEhLaye9",
+    agenda: [
+      "8:00 PM — Why smart children still struggle: a reframing",
+      "8:15 PM — Hidden signs of dyslexia and processing speed",
+      "8:40 PM — Working memory challenges in the classroom",
+      "9:05 PM — Brain function, stress hormones, and sleep deprivation",
+      "9:25 PM — Live Q&A",
+    ],
+    speakers: [
+      { name: "Mr Kevin", role: "Special Needs Educator" },
+      { name: "Dr Gan", role: "GP, Functional Medicine" },
+    ],
   },
+
   {
     title: "降四高 · 赢健康 健康讲座",
 
