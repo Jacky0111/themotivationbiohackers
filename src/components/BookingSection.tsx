@@ -6,7 +6,13 @@ const BookingSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = encodeURIComponent(`Hi, I'm ${formData.name}. I'd like to book a consultation.`);
+    const lines = [
+      `Hi, I'm ${formData.name}. I'd like to book a consultation.`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      formData.message.trim() ? `Message: ${formData.message.trim()}` : "",
+    ].filter(Boolean);
+    const text = encodeURIComponent(lines.join("\n"));
     window.open(`https://wa.me/601121172728?text=${text}`, "_blank");
   };
 
@@ -46,10 +52,15 @@ const BookingSection = () => {
             { name: "phone", label: "Phone", type: "tel" },
           ].map((field) => (
             <div key={field.name}>
-              <label className="text-sm text-muted-foreground mb-1.5 block font-body">
+              <label
+                htmlFor={`booking-${field.name}`}
+                className="text-sm text-muted-foreground mb-1.5 block font-body"
+              >
                 {field.label}
               </label>
               <input
+                id={`booking-${field.name}`}
+                name={field.name}
                 type={field.type}
                 required
                 value={formData[field.name as keyof typeof formData]}
@@ -59,10 +70,15 @@ const BookingSection = () => {
             </div>
           ))}
           <div>
-            <label className="text-sm text-muted-foreground mb-1.5 block font-body">
+            <label
+              htmlFor="booking-message"
+              className="text-sm text-muted-foreground mb-1.5 block font-body"
+            >
               Message
             </label>
             <textarea
+              id="booking-message"
+              name="message"
               rows={4}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
