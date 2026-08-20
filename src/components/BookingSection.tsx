@@ -6,7 +6,13 @@ const BookingSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = encodeURIComponent(`Hi, I'm ${formData.name}. I'd like to book a consultation.`);
+    const lines = [
+      `Hi, I'm ${formData.name}. I'd like to book a consultation.`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      formData.message.trim() ? `Message: ${formData.message.trim()}` : "",
+    ].filter(Boolean);
+    const text = encodeURIComponent(lines.join("\n"));
     window.open(`https://wa.me/601121172728?text=${text}`, "_blank");
   };
 
