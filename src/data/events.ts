@@ -309,6 +309,7 @@ export const allEvents: EventItem[] = [
       { name: "Dr Gan", role: "Family Physician / GP" },
       { name: "Mr Kevin", role: "Child Educator" },
     ],
+  },
   {
     title: "Unlocking Potential · Series 4: Why Smart Children Struggle in School",
     date: "2026-09-22",
