@@ -91,7 +91,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-03-11",
     location: "Zoom Online Webinar",
-    desc: "Co-hosted with Asclepius Healthcare Clinic & KPJ Puteri Specialist Hospital. Featuring Dr See Y.Y. (Respiratory Specialist) and Pharmacist Loh Hao Bo on TB awareness, diagnosis and treatment.",
+    desc: "Co-hosted with Asclepius Healthcare Clinic & KPJ Puteri Specialist Hospital. Dr See Y.Y. (Respiratory Specialist) and Pharmacist Loh Hao Bo on TB awareness, diagnosis and treatment.",
     image: eventTbWebinar,
     link: "https://forms.gle/EtkNHqKjoNb8H97G6",
   },
@@ -101,7 +101,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-03-15",
     location: "9:00 AM – 1:00 PM",
-    desc: "Stillness · Awareness · Elevation — A transformative retreat blending the wisdom of heaven, earth, and the human body. Includes refreshments and BioAura AI energy screening (worth RM169). Fee: RM369 / pax.",
+    desc: "Stillness · Awareness · Elevation — a retreat blending the wisdom of heaven, earth and body. Includes refreshments and BioAura AI energy screening (worth RM169). RM369 / pax.",
     image: eventAwareness,
     link: whatsappRegister("A Dance of Awareness", "2026-03-15, 9:00 AM – 1:00 PM", "The Motivation Biohackers Studio, Johor Bahru"),
   },
@@ -111,7 +111,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-06-10",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "An online men's health talk on the silent killers — heart disease, the 'three highs' (hypertension, high blood sugar, high cholesterol), and prostate issues. Featuring Dr Ngan (Family Physician) and Liew Wei Ting (Registered Nutritionist) on early warning signs, essential screenings after 30, and risk-reversing nutrition.",
+    desc: "An online men's health talk on heart disease, the 'three highs' and prostate issues. Dr Ngan (Family Physician) and Liew Wei Ting (Registered Nutritionist) on early warning signs, screenings after 30, and risk-reversing nutrition.",
     image: eventMensHealth,
     link: "https://forms.gle/WrcjZTB6HzM18CrP8",
     agenda: [
@@ -132,7 +132,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-06-30",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "Series 1: Understanding Dyslexia — Beyond Reading Difficulties. With Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) on early signs, misconceptions, and when medical evaluation helps.",
+    desc: "Series 1: Understanding Dyslexia — Beyond Reading Difficulties. Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) on early signs and when medical evaluation helps.",
     image: eventDyslexia,
     link: "https://forms.gle/SoP4nxdhX9WakfNv5",
     agenda: [
@@ -153,7 +153,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-07-14",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "Why do some 60-year-olds look 40? A Food Science Master, Registered Nutritionist, and Registered Pharmacist unpack how gut health shapes ageing. Co-hosted with Asclepius Healthcare.",
+    desc: "Why do some 60-year-olds look 40? A Food Science Master, Registered Nutritionist and Registered Pharmacist unpack how gut health shapes ageing. Co-hosted with Asclepius Healthcare.",
     image: eventGutAging,
     link: "https://forms.gle/ARPhL25KoZ6wUFTi8",
     agenda: [
@@ -175,7 +175,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-07-18",
     location: "富力广场 R&F Mall, 新山 · 10:00 AM – 8:00 PM",
-    desc: "聚焦现代「四高」——高血压、高血糖、高胆固醇、高尿酸。亮点：前100名免费血脂检测、基础健康检查与咨询、专家健康讲座、AED & CPR 实操体验、BioAura AI 心理健康预筛、营养配对游戏。加 RM28 升级完整基础血液检测配套。立即报名，预留免费检测名额！",
+    desc: "聚焦现代「四高」——高血压、高血糖、高胆固醇、高尿酸。亮点：前100名免费血脂检测、基础健康检查、专家讲座、AED & CPR 实操、BioAura AI 心理预筛。加 RM28 升级完整血液检测配套。",
     image: eventFourHighs,
     link: "https://docs.google.com/forms/d/e/1FAIpQLScozLTS50eyhbU0O7H_qUBk7QIMX9AS4-utzG0TeRe-VndSfg/viewform",
   },
@@ -185,7 +185,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-07-28",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "Learning smarter, not just harder. Mr Kevin (Special Needs Educator) shares learning strategies and multi-sensory approaches for dyslexic children; Dr Gan (GP, Functional Medicine) covers brain nutrition and key nutrients — Iron, Vitamin D, B12 & Omega-3 — with evidence-based dietary recommendations. Empower children with the right strategies and the right foundation.",
+    desc: "Learning smarter, not just harder. Mr Kevin (Special Needs Educator) shares multi-sensory learning strategies for dyslexic children; Dr Gan (GP, Functional Medicine) covers brain nutrition — Iron, Vitamin D, B12 and Omega-3.",
     image: eventLearningBrain,
     link: "https://forms.gle/7CcNyeGkGAPHM5fo6",
     agenda: [
@@ -206,7 +206,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-07-20",
     location: "HRDCorp Office @ Iskandar · 9:00 AM – 10:30 AM",
-    desc: "A National Training Week 2026 family workshop. Mr Kevin (Special Needs Educator) and Ms Punithamalar Rajagopal (Clinical Psychologist) share practical ways to understand, support, and empower dyslexic children at home. Understand. Support. Empower. Together.",
+    desc: "A National Training Week 2026 family workshop. Mr Kevin (Special Needs Educator) and Ms Punithamalar Rajagopal (Clinical Psychologist) share practical ways to support dyslexic children at home. Understand. Support. Empower.",
     image: eventDyslexiaFamilyEn,
     link: whatsappRegister("Raising a Dyslexia-Friendly Family Workshop", "2026-07-20, 9:00 AM – 10:30 AM", "HRDCorp Office @ Iskandar"),
   },
@@ -216,7 +216,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-07-20",
     location: "HRDCorp 办公室 @ 依斯干达 · 11:00 AM – 12:30 PM",
-    desc: "全国培训周 2026 家庭工作坊。由 Mr Kevin（特殊教育工作者）与 Dr Gan C.E.（家庭医生）主讲，分享如何在家中理解、支持并赋能阅读障碍孩子。理解 · 支持 · 赋能 · 共创未来。",
+    desc: "全国培训周 2026 家庭工作坊。由 Mr Kevin（特殊教育工作者）与 Dr Gan C.E.（家庭医生）主讲，分享如何在家中理解、支持并赋能阅读障碍孩子。理解 · 支持 · 赋能。",
     image: eventDyslexiaFamilyCn,
     link: whatsappRegister("打造阅读障碍友好家庭工作坊", "2026-07-20 11:00 AM – 12:30 PM", "HRDCorp 办公室 @ 依斯干达"),
   },
@@ -226,7 +226,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-07-20",
     location: "HRDC Office @ Iskandar · 2:00 PM – 5:00 PM",
-    desc: "Curious about what kombucha is and how it's made? Join Junhao (Brew By Root) for a hands-on workshop covering the fundamentals of brewing your own kombucha at home. Part of National Training Week 2026.",
+    desc: "Curious about kombucha and how it's made? Join Junhao (Brew By Root) for a hands-on workshop on brewing your own kombucha at home. Part of National Training Week 2026.",
     image: eventKombucha,
     link: whatsappRegister("Kombucha Workshop · Brew By Root", "2026-07-20, 2:00 PM – 5:00 PM", "HRDC Office @ Iskandar"),
   },
@@ -236,7 +236,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-07-23",
     location: "ADTEC Senai (ILPPG Kampus Senai) · 1:00 PM – 2:00 PM",
-    desc: "A National Training Week 2026 talk by Dr Gan C.E. (General Practitioner, Founder of Asclepius Healthcare Clinic) on how everyday nutrition fuels focus, memory, and mental performance. Language: English.",
+    desc: "A National Training Week 2026 talk by Dr Gan C.E. (GP, Founder of Asclepius Healthcare Clinic) on how everyday nutrition fuels focus, memory and mental performance. Language: English.",
     image: eventSmartNutritionEn,
     link: whatsappRegister("Smart Nutrition for Smart Minds (English)", "2026-07-23, 1:00 PM – 2:00 PM", "ADTEC Senai (ILPPG Kampus Senai)"),
   },
@@ -256,7 +256,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-08-18",
     location: "Zoom 线上讲座 · 8:00 PM",
-    desc: "焦虑、失眠、难以专注、提不起劲？长期压力不只影响情绪，也牵动睡眠、免疫力、肠道健康与慢性病风险。讲座分享如何透过营养、睡眠、运动与支持系统照顾大脑与情绪。免费参与，名额有限。",
+    desc: "焦虑、失眠、难以专注？长期压力不只影响情绪，也牵动睡眠、免疫力、肠道健康与慢性病风险。讲座分享如何透过营养、睡眠与运动照顾大脑与情绪。免费参与，名额有限。",
     image: eventMentalHealthCn,
     link: "https://forms.gle/v1m2VH3MB67xcbCW7",
     agenda: [
@@ -273,7 +273,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-08-25",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "ADHD or dyslexia? Sometimes both, sometimes neither. Mr Kevin (Special Needs Educator) covers dyslexia vs ADHD, overlapping symptoms, and when to seek professional help; Dr Gan (GP, Functional Medicine) covers medical causes of poor concentration, sleep issues, nutritional deficiencies, and mental health considerations. For parents, educators, healthcare professionals, and caregivers.",
+    desc: "ADHD or dyslexia? Sometimes both. Mr Kevin (Special Needs Educator) covers overlapping symptoms and when to seek help; Dr Gan (GP, Functional Medicine) covers medical causes of poor concentration, sleep and nutrition. For parents, educators and caregivers.",
     image: eventAdhdDyslexia,
     link: "https://forms.gle/yKy71dfvhSSaNt5C6",
     agenda: [
@@ -294,7 +294,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-09-14",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "Children's Growth Awareness Week: A family webinar looking at the whole child — not just height. Dr Gan (Family Physician) and Mr Kevin (Child Educator) will explore how brain development, balanced nutrition, sleep quality, learning performance, emotional health, and hormonal development all shape a child's growth. Parents will learn to spot the warning signs that shouldn't be ignored, so children can be understood earlier and supported better. Language: Chinese. Open to parents, caregivers, and anyone who cares about children's growth.",
+    desc: "儿童成长关注周线上讲座：成长不只是身高。由 Dr Gan（家庭医生）与 Mr Kevin（儿童教育工作者）主讲，探讨大脑发育、均衡营养、睡眠品质、学习表现、情绪健康与荷尔蒙发育如何影响孩子成长，并教家长辨识不容忽视的警讯。语言：中文。",
     image: eventGrowthAwareness,
     link: "https://forms.gle/1Nt5BoZgN9p5r5WEA",
     agenda: [
@@ -316,7 +316,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-09-22",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "A bright, curious child may still struggle in school because of hidden learning challenges, processing speed, working memory, stress, or poor sleep. In Series 4, Mr Kevin (Special Needs Educator) explores hidden signs of dyslexia, processing speed, and working memory challenges; Dr Gan (GP, Functional Medicine) connects brain function and cognition, stress hormones, and the impact of sleep deprivation on learning. For parents, educators, caregivers, and anyone who wants to understand how a child's brain learns best.",
+    desc: "A bright child may still struggle because of hidden learning challenges, processing speed, working memory, stress or poor sleep. Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) explore how a child's brain learns best. For parents, educators and caregivers.",
     image: eventSmartChildrenStruggle,
     link: "https://forms.gle/D4UdWBdDKQEhLaye9",
     agenda: [
@@ -339,7 +339,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-07-18",
     location: "R&F Mall 新山富力广场 · 10:00 AM – 8:00 PM",
-    desc: "你以为四高是老年人的问题？根据大马卫生部 NHMS 2023：每3位成年人就有1位高胆固醇、每10位就有3位高血压、每6位就有1位糖尿病。讲座由友德医务所创办人 Dr Gan 主讲，结合医学专业与临床经验，深入浅出讲解四高的成因、预防与管理，分享科学、实用且容易执行的健康管理方法。免费参与，给自己一小时，换未来几十年的健康。",
+    desc: "你以为四高是老年人的问题？NHMS 2023 显示：每3位成年人1位高胆固醇、每10位3位高血压、每6位1位糖尿病。由友德医务所创办人 Dr Gan 主讲，讲解四高的成因、预防与管理，分享实用的健康管理方法。免费参与。",
     image: eventFourHighsTalk,
     link: "https://docs.google.com/forms/d/e/1FAIpQLScozLTS50eyhbU0O7H_qUBk7QIMX9AS4-utzG0TeRe-VndSfg/viewform",
   },
@@ -348,7 +348,7 @@ export const allEvents: EventItem[] = [
     date: "TBC",
     dateISO: "2026-12-31",
     location: "Johor Bahru",
-    desc: "Experience cutting-edge biohacking technology, free health screenings, epigenetic testing demos, and live wellness consultations at our upcoming health expo.",
+    desc: "Experience cutting-edge biohacking technology, free health screenings, epigenetic testing demos and live wellness consultations.",
     image: eventImg,
   },
   // Past events
@@ -358,7 +358,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2025-03-23",
     location: "Sutera Mall, Johor Bahru",
-    desc: "A two-day health expo focused on gut health and overall wellness, featuring health screenings, educational talks, and wellness consultations.",
+    desc: "A two-day health expo focused on gut health and overall wellness, with health screenings, educational talks and consultations.",
     image: eventImg,
   },
   {
@@ -367,7 +367,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2025-03-07",
     location: "Columbia Asia Hospital – Tebrau, Johor Bahru",
-    desc: "A vibrant health and wellness market hosted at Columbia Asia Hospital Tebrau, featuring green living products, health screenings, and wellness consultations.",
+    desc: "A health and wellness market at Columbia Asia Hospital Tebrau, featuring green living products, health screenings and wellness consultations.",
     image: eventImg,
   },
   {
@@ -376,7 +376,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2025-06-16",
     location: "Johor Bahru",
-    desc: "A collaborative health talk in partnership with GS Health Consultancy, Guangzhou University of Chinese Medicine Jinshazhou Hospital, and Asclepius Health Care Clinic — exploring the intersection of technology and integrative oncology.",
+    desc: "A health talk with GS Health Consultancy, Guangzhou University of Chinese Medicine Jinshazhou Hospital and Asclepius Health Care Clinic — technology meets integrative oncology.",
     image: eventImg,
   },
   {
@@ -385,7 +385,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2025-07-19",
     location: "Dewanraya Jalan Rawa, Taman Perling, Johor Bahru",
-    desc: "A community-driven health expo bringing together wellness practitioners, health screenings, and educational talks to empower individuals on their health journey.",
+    desc: "A community health expo bringing together wellness practitioners, health screenings and educational talks to empower individuals on their health journey.",
     image: eventImg,
   },
   {
@@ -394,7 +394,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-05-12",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "A Women's Health Month special webinar led by a Family Physician and a Breast Cancer Integrative Care Case Manager. Covers personal breast cancer risk assessment, screening options, lifestyle and stress-based prevention, and the difference between early detection and preventive medicine.",
+    desc: "A Women's Health Month webinar led by a Family Physician and a Breast Cancer Integrative Care Case Manager, covering personal risk assessment, screening options, and lifestyle-based prevention.",
     image: eventBreastHealth,
   },
   {
@@ -403,7 +403,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2025-11-30",
     location: "City Pickle @ One City, Selangor",
-    desc: "The inaugural Malaysia China-alumni pickleball team tournament. Organised by the Malaysia China Graduates Association. Co-organised by the Zhejiang University Malaysia Alumni Association.",
+    desc: "The inaugural Malaysia China-alumni pickleball team tournament, organised by the Malaysia China Graduates Association and co-organised by the Zhejiang University Malaysia Alumni Association.",
     image: eventLiuHuaCup,
   },
   {
@@ -412,7 +412,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-04-19",
     location: "9:00 AM – 1:00 PM",
-    desc: "Stillness · Awareness · Elevation — A transformative retreat blending the wisdom of heaven, earth, and the human body. Includes refreshments and BioAura AI energy screening (worth RM169). Fee: RM369 / pax.",
+    desc: "Stillness · Awareness · Elevation — a retreat blending the wisdom of heaven, earth and body. Includes refreshments and BioAura AI energy screening (worth RM169). RM369 / pax.",
     image: eventAwarenessApril,
     link: "https://forms.gle/rHXBd2NtjxCEKNNA7",
   },
@@ -422,7 +422,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-01-11",
     location: "Sutera Mall, Johor Bahru",
-    desc: "A wellness expo combining health education, biohacking demonstrations, and personalised health consultations to help attendees decode their path to optimal wellness.",
+    desc: "A wellness expo combining health education, biohacking demonstrations and personalised consultations to help attendees decode their path to optimal wellness.",
     image: eventDecodeHealth,
   },
   {
@@ -431,7 +431,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-05-09",
     location: "Atrium C, Sutera Mall, Johor Bahru · 4:30 PM",
-    desc: "A free public health talk by Dr Gan CE (MBBS NCL, MC-SPMED UniMelb) on the nutrition fundamentals behind children's growth — why 'eating well' is not the same as 'absorbing well', and how absorption shapes focus, immunity, and energy. Open to all parents.",
+    desc: "A free public health talk by Dr Gan CE (MBBS NCL, MC-SPMED UniMelb) on children's growth nutrition — why 'eating well' is not 'absorbing well', and how absorption shapes focus, immunity and energy.",
     image: eventNutritionKids,
   },
   {
@@ -440,7 +440,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2025-11-22",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "A Movember men's health webinar decoding the prostate crisis through three expert lenses — clinical medicine, cancer genomics, and nutritional intervention. Learn the three health alarms behind nocturia, the prostate-protecting heroes and villains on your plate, and how to reverse risk at the epigenetic level. Co-hosted with Asclepius Healthcare and OLAB.",
+    desc: "A Movember men's health webinar decoding the prostate crisis through clinical medicine, cancer genomics and nutrition. Learn the alarms behind nocturia and how to reverse risk. Co-hosted with Asclepius Healthcare and OLAB.",
     image: eventProstateHealth,
   },
   {
@@ -449,7 +449,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-01-24",
     location: "Zoom Online Webinar · 2:00 PM",
-    desc: "A Lunar New Year health webinar unpacking the real science of weight loss — why obesity is driven by insulin 'fat-locking' and inflammation, and why keto, low-carb, and OMAD often backfire. Learn how low-GI eating and magnesium support steady fat loss for postpartum mums, PCOS, perimenopause, and stubborn belly fat. Led by a practising family physician and a registered nutritionist. Co-hosted with OLAB and Asclepius Healthcare.",
+    desc: "A Lunar New Year webinar on the real science of weight loss — insulin 'fat-locking' and inflammation, and why keto, low-carb and OMAD often backfire. Low-GI eating and magnesium for postpartum, PCOS and perimenopause. Co-hosted with OLAB and Asclepius Healthcare.",
     image: eventCnySlimming,
   },
   {
@@ -458,7 +458,7 @@ export const allEvents: EventItem[] = [
 
     dateISO: "2026-04-07",
     location: "Zoom Online Webinar · 8:00 PM",
-    desc: "A World Health Day special talk with a practising physician and a food science specialist on why chronic conditions like hypertension, diabetes, gut issues, and fatigue rarely improve with medication alone. Explores the role of diet, metabolism, inflammation, and lifestyle in shifting from symptom control to genuine recovery. Co-hosted with Asclepius Healthcare.",
+    desc: "A World Health Day talk with a physician and a food science specialist on why hypertension, diabetes, gut issues and fatigue rarely improve with medication alone — and the role of diet, metabolism and inflammation in real recovery.",
     image: eventWorldHealthDay,
   },
 ];
