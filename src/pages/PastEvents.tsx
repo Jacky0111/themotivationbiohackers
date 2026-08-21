@@ -68,7 +68,21 @@ const PastEvents = () => {
           style={{ backgroundImage: `url(${silkTexture})` }}
         />
         <div className="absolute inset-0 bg-black/55" />
-        <div className="relative z-10 text-center px-6 max-w-site mx-auto">
+        <div className="relative z-10 px-6 max-w-site mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="mb-6"
+          >
+            <Link
+              to="/#events"
+              className="inline-flex items-center gap-2 text-sm font-body text-white/80 hover:text-white transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Events
+            </Link>
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,6 +101,7 @@ const PastEvents = () => {
           </motion.p>
         </div>
       </section>
+
 
       {/* Past events grid */}
       <section className="py-20 px-6 bg-background">
@@ -143,22 +158,6 @@ const PastEvents = () => {
             ))}
           </div>
 
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground rounded-full text-sm font-body hover:bg-muted transition-colors duration-300"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-            <Link
-              to="/#events"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm font-body hover:bg-accent transition-colors duration-300"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Events
-            </Link>
-          </div>
         </div>
       </section>
 
