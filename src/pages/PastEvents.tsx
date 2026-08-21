@@ -61,6 +61,26 @@ const PastEvents = () => {
       </Helmet>
       <Navbar />
 
+      {/* Back navigation */}
+      <section className="py-6 px-6 bg-background border-b border-border">
+        <div className="max-w-site mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground rounded-full text-sm font-body hover:bg-muted transition-colors duration-300"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Home
+          </Link>
+          <Link
+            to="/#events"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm font-body hover:bg-accent transition-colors duration-300"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Events
+          </Link>
+        </div>
+      </section>
+
       {/* Hero banner */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div
