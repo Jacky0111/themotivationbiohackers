@@ -106,26 +106,7 @@ const PastEvents = () => {
       {/* Past events grid */}
       <section className="py-20 px-6 bg-background">
         <div className="max-w-site mx-auto">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10">
-            <h2 className="font-heading text-3xl md:text-4xl text-foreground">Our Journey</h2>
-            <div className="flex items-center gap-3">
-              <Link
-                to="/"
-                className="inline-flex items-center gap-1.5 text-sm font-body text-foreground hover:text-primary transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Home
-              </Link>
-              <span className="text-border">|</span>
-              <Link
-                to="/#events"
-                className="inline-flex items-center gap-1.5 text-sm font-body text-primary hover:text-accent transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Events
-              </Link>
-            </div>
-          </div>
+          <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-10 text-center">Our Journey</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {pastEvents.map((e, i) => (
               <motion.div
