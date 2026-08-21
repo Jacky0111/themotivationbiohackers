@@ -143,13 +143,7 @@ const PastEvents = () => {
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-12 text-center"
-          >
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/"
               className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground rounded-full text-sm font-body hover:bg-muted transition-colors duration-300"
@@ -157,7 +151,14 @@ const PastEvents = () => {
               <ArrowLeft className="w-4 h-4" />
               Back to Home
             </Link>
-          </motion.div>
+            <Link
+              to="/#events"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm font-body hover:bg-accent transition-colors duration-300"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Events
+            </Link>
+          </div>
         </div>
       </section>
 
