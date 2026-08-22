@@ -68,16 +68,16 @@ const PastEvents = () => {
           style={{ backgroundImage: `url(${silkTexture})` }}
         />
         <div className="absolute inset-0 bg-black/55" />
-        <div className="relative z-10 px-6 max-w-site mx-auto">
+        <div className="relative z-10 text-center px-6 max-w-site mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="mb-6"
+            className="mb-8"
           >
             <Link
               to="/#events"
-              className="inline-flex items-center gap-2 text-sm font-body text-white/80 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 text-white text-sm font-body font-medium hover:bg-white/25 transition-colors backdrop-blur-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Events
