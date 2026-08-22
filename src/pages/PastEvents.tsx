@@ -68,7 +68,7 @@ const PastEvents = () => {
           style={{ backgroundImage: `url(${silkTexture})` }}
         />
         <div className="absolute inset-0 bg-black/55" />
-        <div className="relative z-10 px-6 max-w-site mx-auto">
+        <div className="relative z-10 text-center px-6 max-w-site mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
