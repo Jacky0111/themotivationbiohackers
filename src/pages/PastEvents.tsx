@@ -25,6 +25,16 @@ const scrollToEvents = () => {
 const PastEvents = () => {
   const pastEvents = getPastEvents();
   const [posterEvent, setPosterEvent] = useState<typeof pastEvents[number] | null>(null);
+  const navigate = useNavigate();
+
+  const handleBackToEvents = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate("/");
+    // Allow the home page to render before scrolling
+    requestAnimationFrame(() => {
+      scrollToEvents();
+    });
+  };
 
   return (
     <PageTransition>
