@@ -93,13 +93,14 @@ const PastEvents = () => {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <Link
-              to="/#events"
+            <a
+              href="/#events"
+              onClick={handleBackToEvents}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 text-white text-sm font-body font-medium hover:bg-white/25 transition-colors backdrop-blur-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Events
-            </Link>
+            </a>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
