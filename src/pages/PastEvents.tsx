@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Expand } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
@@ -14,9 +14,27 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/compone
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import silkTexture from "@/assets/silk-texture.jpg";
 
+const scrollToEvents = () => {
+  const element = document.getElementById("events");
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
+
 const PastEvents = () => {
   const pastEvents = getPastEvents();
   const [posterEvent, setPosterEvent] = useState<typeof pastEvents[number] | null>(null);
+  const navigate = useNavigate();
+
+  const handleBackToEvents = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate("/");
+    // Allow the home page to render before scrolling
+    requestAnimationFrame(() => {
+      scrollToEvents();
+    });
+  };
 
   return (
     <PageTransition>
@@ -75,13 +93,14 @@ const PastEvents = () => {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <Link
-              to="/#events"
+            <a
+              href="/#events"
+              onClick={handleBackToEvents}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 text-white text-sm font-body font-medium hover:bg-white/25 transition-colors backdrop-blur-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Events
-            </Link>
+            </a>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
