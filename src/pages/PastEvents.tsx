@@ -117,9 +117,9 @@ const PastEvents = () => {
             <a
               href="/#events"
               onClick={handleBackToEvents}
-              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 text-white text-sm font-body font-medium hover:bg-white/25 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] backdrop-blur-sm"
+              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 text-white text-sm font-body font-medium hover:bg-white/25 transition-all duration-500 ease-out-quint backdrop-blur-sm"
             >
-              <ArrowLeft className="w-4 h-4 transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:-translate-x-0.5" />
+              <ArrowLeft className="w-4 h-4 transition-transform duration-500 ease-out-quint group-hover:-translate-x-0.5" />
               Back to Events
             </a>
           </motion.div>
