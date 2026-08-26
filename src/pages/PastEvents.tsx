@@ -14,10 +14,31 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/compone
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import silkTexture from "@/assets/silk-texture.jpg";
 
+const easeOutQuint = (t: number) => 1 - Math.pow(1 - t, 5);
+
+const smoothScrollToElement = (element: HTMLElement, duration = 800) => {
+  const startY = window.scrollY;
+  const targetY = element.getBoundingClientRect().top + startY;
+  const distance = targetY - startY;
+  const startTime = performance.now();
+
+  const step = (currentTime: number) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOutQuint(progress);
+    window.scrollTo(0, startY + distance * eased);
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  };
+
+  requestAnimationFrame(step);
+};
+
 const scrollToEvents = () => {
   const element = document.getElementById("events");
   if (element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
+    smoothScrollToElement(element, 800);
   }
 };
 
@@ -31,9 +52,9 @@ const PastEvents = () => {
     e.preventDefault();
     navigate("/");
     // Allow the home page to render before scrolling
-    requestAnimationFrame(() => {
+    setTimeout(() => {
       scrollToEvents();
-    });
+    }, 100);
   };
 
   return (
@@ -96,9 +117,9 @@ const PastEvents = () => {
             <a
               href="/#events"
               onClick={handleBackToEvents}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 text-white text-sm font-body font-medium hover:bg-white/25 transition-colors backdrop-blur-sm"
+              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 text-white text-sm font-body font-medium hover:bg-white/25 transition-all duration-500 ease-out-quint backdrop-blur-sm"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4 transition-transform duration-500 ease-out-quint group-hover:-translate-x-0.5" />
               Back to Events
             </a>
           </motion.div>
