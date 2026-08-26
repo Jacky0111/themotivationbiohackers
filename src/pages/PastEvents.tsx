@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Expand } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
@@ -13,6 +13,14 @@ import { getPastEvents } from "@/data/events";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import silkTexture from "@/assets/silk-texture.jpg";
+
+const scrollToEvents = () => {
+  const element = document.getElementById("events");
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
 
 const PastEvents = () => {
   const pastEvents = getPastEvents();
