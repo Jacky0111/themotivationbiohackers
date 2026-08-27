@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, CalendarDays, MapPin, Users, ListChecks } from "lucide-react";
+import { ArrowLeft, CalendarDays, MapPin, Users } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
@@ -137,24 +137,6 @@ const EventDetail = () => {
                 {event.desc}
               </p>
 
-              {event.agenda?.length ? (
-                <div className="mt-12">
-                  <h2 className="font-heading text-2xl text-foreground mb-4 flex items-center gap-2">
-                    <ListChecks className="w-5 h-5 text-primary" />
-                    Agenda
-                  </h2>
-                  <ol className="space-y-3">
-                    {event.agenda.map((item) => (
-                      <li
-                        key={item}
-                        className="flex gap-3 bg-secondary rounded-lg p-4 border-l-4 border-primary text-sm font-body text-muted-foreground"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-              ) : null}
 
               {event.speakers?.length ? (
                 <div className="mt-12">
