@@ -77,8 +77,6 @@ export interface EventItem {
   link?: string;
   /** URL-safe identifier used by the event detail page */
   slug?: string;
-  /** Optional run-of-show agenda items */
-  agenda?: string[];
   /** Optional speaker line-up */
   speakers?: EventSpeaker[];
 }
@@ -114,13 +112,6 @@ export const allEvents: EventItem[] = [
     desc: "An online men's health talk on heart disease, the 'three highs' and prostate issues. Dr Ngan (Family Physician) and Liew Wei Ting (Registered Nutritionist) on early warning signs, screenings after 30, and risk-reversing nutrition.",
     image: eventMensHealth,
     link: "https://forms.gle/WrcjZTB6HzM18CrP8",
-    agenda: [
-      "8:00 PM — Welcome & why men skip check-ups",
-      "8:10 PM — Heart disease and the 'three highs' explained",
-      "8:35 PM — Prostate health: signs you shouldn't ignore",
-      "9:00 PM — Nutrition that reverses risk",
-      "9:20 PM — Live Q&A",
-    ],
     speakers: [
       { name: "Dr Ngan", role: "Family Physician" },
       { name: "Liew Wei Ting", role: "Registered Nutritionist" },
@@ -135,13 +126,6 @@ export const allEvents: EventItem[] = [
     desc: "Series 1: Understanding Dyslexia — Beyond Reading Difficulties. Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) on early signs and when medical evaluation helps.",
     image: eventDyslexia,
     link: "https://forms.gle/SoP4nxdhX9WakfNv5",
-    agenda: [
-      "8:00 PM — Opening: what dyslexia is (and isn't)",
-      "8:15 PM — Early signs and common misconceptions",
-      "8:40 PM — The medical lens: when evaluation helps",
-      "9:05 PM — Supporting your child at home and school",
-      "9:20 PM — Live Q&A",
-    ],
     speakers: [
       { name: "Mr Kevin", role: "Special Needs Educator" },
       { name: "Dr Gan", role: "GP, Functional Medicine" },
@@ -156,13 +140,6 @@ export const allEvents: EventItem[] = [
     desc: "Why do some 60-year-olds look 40? A Food Science Master, Registered Nutritionist and Registered Pharmacist unpack how gut health shapes ageing. Co-hosted with Asclepius Healthcare.",
     image: eventGutAging,
     link: "https://forms.gle/ARPhL25KoZ6wUFTi8",
-    agenda: [
-      "8:00 PM — Why biological age differs from your birthday",
-      "8:15 PM — The gut microbiome and inflammageing",
-      "8:40 PM — Foods, fibre and fermentation that slow ageing",
-      "9:05 PM — Supplements: what actually has evidence",
-      "9:20 PM — Live Q&A",
-    ],
     speakers: [
       { name: "Ms Gan W.S", role: "Master of Food Science & Technology" },
       { name: "Registered Nutritionist", role: "Asclepius Healthcare" },
@@ -188,13 +165,6 @@ export const allEvents: EventItem[] = [
     desc: "Learning smarter, not just harder. Mr Kevin (Special Needs Educator) shares multi-sensory learning strategies for dyslexic children; Dr Gan (GP, Functional Medicine) covers brain nutrition — Iron, Vitamin D, B12 and Omega-3.",
     image: eventLearningBrain,
     link: "https://forms.gle/7CcNyeGkGAPHM5fo6",
-    agenda: [
-      "8:00 PM — Learning smarter, not harder: the framing",
-      "8:15 PM — Multi-sensory strategies for dyslexic learners",
-      "8:45 PM — Brain nutrition: Iron, Vitamin D, B12 & Omega-3",
-      "9:10 PM — Practical meal and study routines",
-      "9:20 PM — Live Q&A",
-    ],
     speakers: [
       { name: "Mr Kevin", role: "Special Needs Educator" },
       { name: "Dr Gan", role: "GP, Functional Medicine" },
@@ -259,13 +229,6 @@ export const allEvents: EventItem[] = [
     desc: "焦虑、失眠、难以专注？长期压力不只影响情绪，也牵动睡眠、免疫力、肠道健康与慢性病风险。讲座分享如何透过营养、睡眠与运动照顾大脑与情绪。免费参与，名额有限。",
     image: eventMentalHealthCn,
     link: "https://forms.gle/v1m2VH3MB67xcbCW7",
-    agenda: [
-      "8:00 PM — 认识压力与情绪警讯",
-      "8:20 PM — 压力如何影响睡眠、免疫与肠道",
-      "8:45 PM — 营养、运动与作息的调整策略",
-      "9:10 PM — 建立支持系统",
-      "9:20 PM — 线上问答",
-    ],
   },
   {
     title: "Unlocking Potential · Series 3: ADHD, Dyslexia & Learning Challenges — Telling the Difference",
@@ -276,13 +239,6 @@ export const allEvents: EventItem[] = [
     desc: "ADHD or dyslexia? Sometimes both. Mr Kevin (Special Needs Educator) covers overlapping symptoms and when to seek help; Dr Gan (GP, Functional Medicine) covers medical causes of poor concentration, sleep and nutrition. For parents, educators and caregivers.",
     image: eventAdhdDyslexia,
     link: "https://forms.gle/yKy71dfvhSSaNt5C6",
-    agenda: [
-      "8:00 PM — ADHD vs dyslexia: defining the difference",
-      "8:20 PM — Overlapping symptoms and when both co-occur",
-      "8:45 PM — Medical causes of poor concentration",
-      "9:05 PM — Sleep, nutrition and mental health factors",
-      "9:20 PM — Live Q&A",
-    ],
     speakers: [
       { name: "Mr Kevin", role: "Special Needs Educator" },
       { name: "Dr Gan", role: "GP, Functional Medicine" },
@@ -297,14 +253,6 @@ export const allEvents: EventItem[] = [
     desc: "儿童成长关注周线上讲座：成长不只是身高。由 Dr Gan（家庭医生）与 Mr Kevin（儿童教育工作者）主讲，探讨大脑发育、均衡营养、睡眠品质、学习表现、情绪健康与荷尔蒙发育如何影响孩子成长，并教家长辨识不容忽视的警讯。语言：中文。",
     image: eventGrowthAwareness,
     link: "https://forms.gle/1Nt5BoZgN9p5r5WEA",
-    agenda: [
-      "8:00 PM — Opening: Why growth is more than height",
-      "8:15 PM — Body and brain signals during childhood growth",
-      "8:40 PM — Nutrition, sleep, and learning performance",
-      "9:05 PM — Emotional health, stress, and screen time",
-      "9:20 PM — Warning signs parents should not ignore",
-      "9:35 PM — Live Q&A",
-    ],
     speakers: [
       { name: "Dr Gan", role: "Family Physician / GP" },
       { name: "Mr Kevin", role: "Child Educator" },
@@ -319,13 +267,6 @@ export const allEvents: EventItem[] = [
     desc: "A bright child may still struggle because of hidden learning challenges, processing speed, working memory, stress or poor sleep. Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) explore how a child's brain learns best. For parents, educators and caregivers.",
     image: eventSmartChildrenStruggle,
     link: "https://forms.gle/D4UdWBdDKQEhLaye9",
-    agenda: [
-      "8:00 PM — Why smart children still struggle: a reframing",
-      "8:15 PM — Hidden signs of dyslexia and processing speed",
-      "8:40 PM — Working memory challenges in the classroom",
-      "9:05 PM — Brain function, stress hormones, and sleep deprivation",
-      "9:25 PM — Live Q&A",
-    ],
     speakers: [
       { name: "Mr Kevin", role: "Special Needs Educator" },
       { name: "Dr Gan", role: "GP, Functional Medicine" },
