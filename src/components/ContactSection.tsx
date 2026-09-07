@@ -15,7 +15,7 @@ const ContactSection = () => {
           Get In Touch
         </motion.h2>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {[
             {
               icon: Phone,
@@ -51,11 +51,11 @@ const ContactSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-250 text-center"
+              className="group bg-white/60 backdrop-blur-sm rounded-xl p-5 sm:p-6 lg:p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-250 text-center min-w-0"
             >
               <item.icon className="w-6 h-6 text-primary mx-auto mb-4" />
               <p className="text-xs text-muted-foreground mb-1 font-body">{item.label}</p>
-              <p className="text-foreground text-sm font-body group-hover:text-primary transition-colors">{item.value}</p>
+              <p className="text-foreground text-xs sm:text-sm font-body group-hover:text-primary transition-colors break-words">{item.value}</p>
             </motion.a>
           ))}
         </div>
