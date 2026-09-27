@@ -260,9 +260,9 @@ export const allEvents: EventItem[] = [
   },
   {
     title: "Unlocking Potential · Series 4: Why Smart Children Struggle in School",
-    date: "2026-09-22",
+    date: "2026-09-28",
 
-    dateISO: "2026-09-22",
+    dateISO: "2026-09-28",
     location: "Zoom Online Webinar · 8:00 PM",
     desc: "A bright child may still struggle because of hidden learning challenges, processing speed, working memory, stress or poor sleep. Mr Kevin (Special Needs Educator) and Dr Gan (GP, Functional Medicine) explore how a child's brain learns best. For parents, educators and caregivers.",
     image: eventSmartChildrenStruggle,
