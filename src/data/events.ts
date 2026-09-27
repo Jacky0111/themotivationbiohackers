@@ -25,6 +25,7 @@ import eventGrowthAwarenessAsset from "@/assets/event-growth-awareness.png.asset
 import eventMentalHealthCnAsset from "@/assets/event-mental-health-cn.png.asset.json";
 import eventAdhdDyslexiaAsset from "@/assets/event-adhd-dyslexia.png.asset.json";
 import eventSmartChildrenStruggleAsset from "@/assets/event-smart-children-struggle.png.asset.json";
+import eventBreastRecoveryAsset from "@/assets/event-breast-recovery.png.asset.json";
 
 
 const eventTbWebinar = eventTbWebinarAsset.url;
@@ -53,6 +54,7 @@ const eventGrowthAwareness = eventGrowthAwarenessAsset.url;
 const eventMentalHealthCn = eventMentalHealthCnAsset.url;
 const eventAdhdDyslexia = eventAdhdDyslexiaAsset.url;
 const eventSmartChildrenStruggle = eventSmartChildrenStruggleAsset.url;
+const eventBreastRecovery = eventBreastRecoveryAsset.url;
 
 
 const whatsappRegister = (name: string, date: string, venue: string) =>
@@ -256,6 +258,20 @@ export const allEvents: EventItem[] = [
     speakers: [
       { name: "Dr Gan", role: "Family Physician / GP" },
       { name: "Mr Kevin", role: "Child Educator" },
+    ],
+  },
+  {
+    title: "破茧粉红，重塑光芒 · 乳腺癌围手术期护理与科学饮食实战课",
+    date: "2026-10-23",
+
+    dateISO: "2026-10-23",
+    location: "Zoom 线上直播 · 8:00 PM",
+    desc: "从术后物理治疗、化疗前后的专业护理，到科学饮食与长期保健，每一步都关乎康复品质。讲座涵盖伤口愈合、淋巴水肿预防、副作用应对与分阶段精准营养，破除「发物」迷思。面向乳腺癌患者、家属及关注术后康复的人士。",
+    image: eventBreastRecovery,
+    link: "https://forms.gle/jvb3GzA8RvY5SnuR8",
+    speakers: [
+      { name: "注册营养师", role: "精准营养 · 助力康复" },
+      { name: "肿瘤专科护士", role: "专业护理 · 全程守护" },
     ],
   },
   {
