@@ -54,6 +54,7 @@ const eventGrowthAwareness = eventGrowthAwarenessAsset.url;
 const eventMentalHealthCn = eventMentalHealthCnAsset.url;
 const eventAdhdDyslexia = eventAdhdDyslexiaAsset.url;
 const eventSmartChildrenStruggle = eventSmartChildrenStruggleAsset.url;
+const eventBreastRecovery = eventBreastRecoveryAsset.url;
 
 
 const whatsappRegister = (name: string, date: string, venue: string) =>
