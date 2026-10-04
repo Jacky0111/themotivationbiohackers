@@ -55,6 +55,7 @@ const eventGrowthAwareness = eventGrowthAwarenessAsset.url;
 const eventMentalHealthCn = eventMentalHealthCnAsset.url;
 const eventAdhdDyslexia = eventAdhdDyslexiaAsset.url;
 const eventSmartChildrenStruggle = eventSmartChildrenStruggleAsset.url;
+const eventDyslexiaSeries5 = eventDyslexiaSeries5Asset.url;
 const eventBreastRecovery = eventBreastRecoveryAsset.url;
 
 
