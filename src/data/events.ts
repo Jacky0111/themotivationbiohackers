@@ -25,6 +25,7 @@ import eventGrowthAwarenessAsset from "@/assets/event-growth-awareness.png.asset
 import eventMentalHealthCnAsset from "@/assets/event-mental-health-cn.png.asset.json";
 import eventAdhdDyslexiaAsset from "@/assets/event-adhd-dyslexia.png.asset.json";
 import eventSmartChildrenStruggleAsset from "@/assets/event-smart-children-struggle.png.asset.json";
+import eventDyslexiaSeries5Asset from "@/assets/event-dyslexia-series5.png.asset.json";
 import eventBreastRecoveryAsset from "@/assets/event-breast-recovery.png.asset.json";
 
 
@@ -54,6 +55,7 @@ const eventGrowthAwareness = eventGrowthAwarenessAsset.url;
 const eventMentalHealthCn = eventMentalHealthCnAsset.url;
 const eventAdhdDyslexia = eventAdhdDyslexiaAsset.url;
 const eventSmartChildrenStruggle = eventSmartChildrenStruggleAsset.url;
+const eventDyslexiaSeries5 = eventDyslexiaSeries5Asset.url;
 const eventBreastRecovery = eventBreastRecoveryAsset.url;
 
 
@@ -285,6 +287,21 @@ export const allEvents: EventItem[] = [
     link: "https://forms.gle/D4UdWBdDKQEhLaye9",
     speakers: [
       { name: "Mr Kevin", role: "Special Needs Educator" },
+      { name: "Dr Gan", role: "GP, Functional Medicine" },
+    ],
+  },
+
+  {
+    title: "Unlocking Potential · Series 5: Emotional Health & Self-Esteem in Children with Dyslexia",
+    date: "2026-10-26",
+
+    dateISO: "2026-10-26",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "Behind every learning struggle there may be an emotional struggle too. Mr Kevin (Special Needs Educator) covers frustration, anxiety, school avoidance and building resilience; Dr Gan (GP, Functional Medicine) covers stress physiology, sleep, mood and family support. For parents, educators and caregivers.",
+    image: eventDyslexiaSeries5,
+    link: "https://forms.gle/GL21frPJprWaeinz5",
+    speakers: [
+      { name: "Mr Kevin", role: "Special Need Educator" },
       { name: "Dr Gan", role: "GP, Functional Medicine" },
     ],
   },
