@@ -292,6 +292,21 @@ export const allEvents: EventItem[] = [
   },
 
   {
+    title: "Unlocking Potential · Series 5: Emotional Health & Self-Esteem in Children with Dyslexia",
+    date: "2026-10-26",
+
+    dateISO: "2026-10-26",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "Behind every learning struggle there may be an emotional struggle too. Mr Kevin (Special Needs Educator) covers frustration, anxiety, school avoidance and building resilience; Dr Gan (GP, Functional Medicine) covers stress physiology, sleep, mood and family support. For parents, educators and caregivers.",
+    image: eventDyslexiaSeries5,
+    link: "https://forms.gle/GL21frPJprWaeinz5",
+    speakers: [
+      { name: "Mr Kevin", role: "Special Need Educator" },
+      { name: "Dr Gan", role: "GP, Functional Medicine" },
+    ],
+  },
+
+  {
     title: "降四高 · 赢健康 健康讲座",
 
     date: "2026-07-18",
