@@ -25,6 +25,7 @@ import eventGrowthAwarenessAsset from "@/assets/event-growth-awareness.png.asset
 import eventMentalHealthCnAsset from "@/assets/event-mental-health-cn.png.asset.json";
 import eventAdhdDyslexiaAsset from "@/assets/event-adhd-dyslexia.png.asset.json";
 import eventSmartChildrenStruggleAsset from "@/assets/event-smart-children-struggle.png.asset.json";
+import eventDyslexiaSeries5Asset from "@/assets/event-dyslexia-series5.png.asset.json";
 import eventBreastRecoveryAsset from "@/assets/event-breast-recovery.png.asset.json";
 
 
