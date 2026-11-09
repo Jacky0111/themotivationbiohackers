@@ -27,6 +27,7 @@ import eventAdhdDyslexiaAsset from "@/assets/event-adhd-dyslexia.png.asset.json"
 import eventSmartChildrenStruggleAsset from "@/assets/event-smart-children-struggle.png.asset.json";
 import eventDyslexiaSeries5Asset from "@/assets/event-dyslexia-series5.png.asset.json";
 import eventBreastRecoveryAsset from "@/assets/event-breast-recovery.png.asset.json";
+import eventDiabetesPanelAsset from "@/assets/event-diabetes-panel.png.asset.json";
 
 
 const eventTbWebinar = eventTbWebinarAsset.url;
@@ -57,6 +58,7 @@ const eventAdhdDyslexia = eventAdhdDyslexiaAsset.url;
 const eventSmartChildrenStruggle = eventSmartChildrenStruggleAsset.url;
 const eventDyslexiaSeries5 = eventDyslexiaSeries5Asset.url;
 const eventBreastRecovery = eventBreastRecoveryAsset.url;
+const eventDiabetesPanel = eventDiabetesPanelAsset.url;
 
 
 const whatsappRegister = (name: string, date: string, venue: string) =>
@@ -306,6 +308,20 @@ export const allEvents: EventItem[] = [
     ],
   },
 
+  {
+    title: "控糖新维度：血糖达标，心肾就安全吗？",
+    date: "2026-11-17",
+
+    dateISO: "2026-11-17",
+    location: "Zoom 线上讲座 · 8:00 PM",
+    desc: "世界糖尿病月双专家对谈：即使血糖达标，心肾仍有风险。从医学、心肾保护到营养基因组学，探讨为何规律服药血糖仍不理想，以及个体化营养如何辅助控糖。适合大众、糖尿病高风险人士、患者及家属。",
+    image: eventDiabetesPanel,
+    link: "https://forms.gle/mqcLQHPyNr7EHtfs9",
+    speakers: [
+      { name: "Dr Kim Heng Shee", role: "介入心脏科及内科专科医生" },
+      { name: "Ms Gan W.S.", role: "营养基因组学教育者" },
+    ],
+  },
   {
     title: "降四高 · 赢健康 健康讲座",
 
