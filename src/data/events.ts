@@ -28,6 +28,7 @@ import eventSmartChildrenStruggleAsset from "@/assets/event-smart-children-strug
 import eventDyslexiaSeries5Asset from "@/assets/event-dyslexia-series5.png.asset.json";
 import eventBreastRecoveryAsset from "@/assets/event-breast-recovery.png.asset.json";
 import eventDiabetesPanelAsset from "@/assets/event-diabetes-panel.png.asset.json";
+import eventGutBrainAsset from "@/assets/event-gut-brain.png.asset.json";
 
 
 const eventTbWebinar = eventTbWebinarAsset.url;
@@ -59,6 +60,7 @@ const eventSmartChildrenStruggle = eventSmartChildrenStruggleAsset.url;
 const eventDyslexiaSeries5 = eventDyslexiaSeries5Asset.url;
 const eventBreastRecovery = eventBreastRecoveryAsset.url;
 const eventDiabetesPanel = eventDiabetesPanelAsset.url;
+const eventGutBrain = eventGutBrainAsset.url;
 
 
 const whatsappRegister = (name: string, date: string, venue: string) =>
@@ -320,6 +322,20 @@ export const allEvents: EventItem[] = [
     speakers: [
       { name: "Dr Kim Heng Shee", role: "介入心脏科及内科专科医生" },
       { name: "Ms Gan W.S.", role: "营养基因组学教育者" },
+    ],
+  },
+  {
+    title: "Unlocking Potential · Series 6: The Gut-Brain Connection — The Hidden Link to Learning",
+    date: "2026-11-30",
+
+    dateISO: "2026-11-30",
+    location: "Zoom Online Webinar · 8:00 PM",
+    desc: "The final 2026 series. Mr Kevin covers the hidden discomfort children struggling to learn may not tell us; Dr Gan explores whether gut bacteria can influence how children learn. For parents, educators and caregivers.",
+    image: eventGutBrain,
+    link: "https://forms.gle/p9rLDGBrjno9A8Pj7",
+    speakers: [
+      { name: "Mr Kevin", role: "Special Need Educator" },
+      { name: "Dr Gan", role: "GP, Functional Medicine" },
     ],
   },
   {
