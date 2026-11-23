@@ -4,6 +4,8 @@ import { ArrowRight, Expand } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { getUpcomingEvents } from "@/data/events";
+import { buildEventJsonLd } from "@/lib/eventSchema";
+import { SITE_URL } from "@/lib/site";
 import { trackRegisterClick } from "@/lib/analytics";
 import EventCountdown from "./EventCountdown";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -16,40 +18,9 @@ const EventsSection = () => {
   return (
     <section id="events" className="py-20 md:py-[80px] px-6 bg-secondary">
       <Helmet>
-        <script type="application/ld+json">{JSON.stringify(
-          events.map((e) => {
-            const isOnline = e.location.toLowerCase().includes("zoom") || e.location.toLowerCase().includes("online");
-            const absImage = e.image?.startsWith("http")
-              ? e.image
-              : `https://themotivationbiohackers.lovable.app${e.image}`;
-            return {
-              "@context": "https://schema.org",
-              "@type": "Event",
-              name: e.title,
-              startDate: e.dateISO,
-              endDate: e.dateISO,
-              eventStatus: "https://schema.org/EventScheduled",
-              eventAttendanceMode: isOnline
-                ? "https://schema.org/OnlineEventAttendanceMode"
-                : "https://schema.org/OfflineEventAttendanceMode",
-              location: isOnline
-                ? { "@type": "VirtualLocation", url: e.link || "https://themotivationbiohackers.lovable.app/" }
-                : { "@type": "Place", name: e.location, address: { "@type": "PostalAddress", addressCountry: "MY" } },
-              image: [absImage],
-              description: e.desc,
-              organizer: { "@type": "Organization", name: "The Motivation Biohackers", url: "https://themotivationbiohackers.lovable.app" },
-              performer: { "@type": "Organization", name: "The Motivation Biohackers" },
-              offers: {
-                "@type": "Offer",
-                url: e.link || "https://themotivationbiohackers.lovable.app/#events",
-                price: "0",
-                priceCurrency: "MYR",
-                availability: "https://schema.org/InStock",
-                validFrom: e.dateISO,
-              },
-            };
-          })
-        )}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(events.map((e) => buildEventJsonLd(e, `${SITE_URL}/#events`, true)))}
+        </script>
       </Helmet>
       <div className="max-w-site mx-auto">
         <motion.h2
@@ -65,7 +36,7 @@ const EventsSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((e, i) => (
             <motion.div
-              key={e.title}
+              key={e.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -81,6 +52,8 @@ const EventsSection = () => {
                 <img
                   src={e.image}
                   alt={e.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-body font-semibold px-3 py-1.5 rounded-full">

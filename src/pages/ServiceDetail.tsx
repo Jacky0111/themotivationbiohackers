@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageTransition from "@/components/PageTransition";
 import { getServiceBySlug } from "@/data/services";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -40,11 +41,11 @@ const ServiceDetail = () => {
           serviceType: service.title,
           provider: {
             "@type": "Organization",
-            name: "The Motivation Biohackers",
-            url: "https://themotivationbiohackers.lovable.app",
+            name: SITE_NAME,
+            url: SITE_URL,
           },
           areaServed: { "@type": "Country", name: "Malaysia" },
-          url: `https://themotivationbiohackers.lovable.app/services/${slug}`,
+          url: `${SITE_URL}/services/${slug}`,
         })}</script>
       </Helmet>
       <BreadcrumbJsonLd

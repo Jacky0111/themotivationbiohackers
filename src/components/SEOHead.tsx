@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 interface SEOHeadProps {
   title?: string;
@@ -6,16 +7,13 @@ interface SEOHeadProps {
   path?: string;
 }
 
-const SITE_NAME = "The Motivation Biohackers";
-const BASE_URL = "https://themotivationbiohackers.lovable.app";
-
 const SEOHead = ({
   title,
   description = "Science-based longevity and functional wellness programs in Malaysia — functional medicine, regenerative therapies, and biohacking.",
   path = "/",
 }: SEOHeadProps) => {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Wellness Center Malaysia`;
-  const url = `${BASE_URL}${path}`;
+  const url = `${SITE_URL}${path}`;
 
   return (
     <Helmet>

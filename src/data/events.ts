@@ -1,4 +1,6 @@
 import eventImg from "@/assets/event-longevity.jpg";
+import { buildWhatsAppRegisterLink } from "@/lib/whatsapp";
+import { WHATSAPP_NUMBER } from "@/lib/site";
 import eventTbWebinarAsset from "@/assets/event-tb-webinar.png.asset.json";
 import eventAwarenessAsset from "@/assets/event-awareness.png.asset.json";
 import eventBreastHealthAsset from "@/assets/event-breast-health.png.asset.json";
@@ -63,10 +65,8 @@ const eventDiabetesPanel = eventDiabetesPanelAsset.url;
 const eventGutBrain = eventGutBrainAsset.url;
 
 
-const whatsappRegister = (name: string, date: string, venue: string) =>
-  `https://wa.me/601121172728?text=${encodeURIComponent(
-    `Hello The Motivation Biohackers 👋\n\nI would like to register for the following event:\n\n• Event: ${name}\n• Date & Time: ${date}\n• Venue: ${venue}\n\nCould you please confirm my seat and share the next steps (payment, confirmation, or any preparation needed)?\n\nThank you!`
-  )}`;
+const whatsappRegister = (eventName: string, eventDate: string, venue: string) =>
+  buildWhatsAppRegisterLink({ phone: WHATSAPP_NUMBER, eventName, eventDate, venue });
 
 
 export interface EventSpeaker {
@@ -87,6 +87,8 @@ export interface EventItem {
   slug?: string;
   /** Optional speaker line-up */
   speakers?: EventSpeaker[];
+  /** Ticket price in MYR per person. Omit for free events. */
+  price?: number;
 }
 
 
@@ -110,6 +112,7 @@ export const allEvents: EventItem[] = [
     desc: "Stillness · Awareness · Elevation — a retreat blending the wisdom of heaven, earth and body. Includes refreshments and BioAura AI energy screening (worth RM169). RM369 / pax.",
     image: eventAwareness,
     link: whatsappRegister("A Dance of Awareness", "2026-03-15, 9:00 AM – 1:00 PM", "The Motivation Biohackers Studio, Johor Bahru"),
+    price: 369,
   },
   {
     title: "The Silent Killers in Men: What You Don't Check Is the Most Dangerous",
@@ -421,6 +424,7 @@ export const allEvents: EventItem[] = [
     desc: "Stillness · Awareness · Elevation — a retreat blending the wisdom of heaven, earth and body. Includes refreshments and BioAura AI energy screening (worth RM169). RM369 / pax.",
     image: eventAwarenessApril,
     link: "https://forms.gle/rHXBd2NtjxCEKNNA7",
+    price: 369,
   },
   {
     title: "Decode Your Health, Prosper in Wellness",
@@ -494,28 +498,19 @@ allEvents.forEach((e) => {
 export const getEventBySlug = (slug: string): EventItem | undefined =>
   allEvents.find((e) => e.slug === slug);
 
+/** Today's date (YYYY-MM-DD) in the site's timezone, so events roll over at Malaysian midnight. */
+export const todayISO = (now: number = Date.now()): string =>
+  new Date(now + 8 * 3600_000).toISOString().slice(0, 10);
+
 /** True when the event date has not passed yet. */
-export const isUpcoming = (e: EventItem): boolean =>
-  e.dateISO >= new Date().toISOString().slice(0, 10);
-
-
-
-
+export const isUpcoming = (e: EventItem): boolean => e.dateISO >= todayISO();
 
 /**
  * Returns upcoming events (event date >= today).
- * Events with date on the actual day still show as upcoming; moves to past the next day.
+ * Events on the actual day still show as upcoming; they move to past the next day.
  */
-export const getUpcomingEvents = (): EventItem[] => {
-  const today = new Date().toISOString().slice(0, 10);
-  return allEvents
-    .filter((e) => e.dateISO >= today)
-    .sort((a, b) => a.dateISO.localeCompare(b.dateISO));
-};
+export const getUpcomingEvents = (): EventItem[] =>
+  allEvents.filter(isUpcoming).sort((a, b) => a.dateISO.localeCompare(b.dateISO));
 
-export const getPastEvents = (): EventItem[] => {
-  const today = new Date().toISOString().slice(0, 10);
-  return allEvents
-    .filter((e) => e.dateISO < today)
-    .sort((a, b) => b.dateISO.localeCompare(a.dateISO));
-};
+export const getPastEvents = (): EventItem[] =>
+  allEvents.filter((e) => !isUpcoming(e)).sort((a, b) => b.dateISO.localeCompare(a.dateISO));

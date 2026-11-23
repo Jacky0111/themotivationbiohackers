@@ -11,8 +11,8 @@ import PageTransition from "@/components/PageTransition";
 import EventCountdown from "@/components/EventCountdown";
 import { getEventBySlug, isUpcoming } from "@/data/events";
 import { trackRegisterClick } from "@/lib/analytics";
-
-const BASE_URL = "https://themotivationbiohackers.lovable.app";
+import { buildEventJsonLd } from "@/lib/eventSchema";
+import { SITE_URL } from "@/lib/site";
 
 const EventDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -34,12 +34,6 @@ const EventDetail = () => {
   }
 
   const upcoming = isUpcoming(event);
-  const isOnline =
-    event.location.toLowerCase().includes("zoom") ||
-    event.location.toLowerCase().includes("online") ||
-    event.location.includes("线上");
-  const absImage = event.image?.startsWith("http") ? event.image : `${BASE_URL}${event.image}`;
-
   return (
     <PageTransition>
       <div className="bg-background min-h-screen">
@@ -57,38 +51,7 @@ const EventDetail = () => {
         />
         <Helmet>
           <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Event",
-              name: event.title,
-              startDate: event.dateISO,
-              endDate: event.dateISO,
-              eventStatus: "https://schema.org/EventScheduled",
-              eventAttendanceMode: isOnline
-                ? "https://schema.org/OnlineEventAttendanceMode"
-                : "https://schema.org/OfflineEventAttendanceMode",
-              location: isOnline
-                ? { "@type": "VirtualLocation", url: event.link || `${BASE_URL}/events/${event.slug}` }
-                : {
-                    "@type": "Place",
-                    name: event.location,
-                    address: { "@type": "PostalAddress", addressCountry: "MY" },
-                  },
-              image: [absImage],
-              description: event.desc,
-              organizer: { "@type": "Organization", name: "The Motivation Biohackers", url: BASE_URL },
-              performer: event.speakers?.length
-                ? event.speakers.map((s) => ({ "@type": "Person", name: s.name }))
-                : { "@type": "Organization", name: "The Motivation Biohackers" },
-              offers: {
-                "@type": "Offer",
-                url: event.link || `${BASE_URL}/events/${event.slug}`,
-                price: "0",
-                priceCurrency: "MYR",
-                availability: upcoming ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
-                validFrom: event.dateISO,
-              },
-            })}
+            {JSON.stringify(buildEventJsonLd(event, `${SITE_URL}/events/${event.slug}`, upcoming))}
           </script>
         </Helmet>
 
@@ -176,7 +139,9 @@ const EventDetail = () => {
                 </p>
                 <p className="text-sm font-body text-muted-foreground mb-5">
                   {upcoming
-                    ? "Free to attend · limited places available."
+                    ? event.price
+                      ? `RM${event.price} per person · limited places available.`
+                      : "Free to attend · limited places available."
                     : "Explore our upcoming events and past highlights."}
                 </p>
 

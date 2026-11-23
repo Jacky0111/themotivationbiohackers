@@ -1,602 +1,81 @@
-# TM Biohackers Website
+# The Motivation Biohackers
 
-🌐 WEBSITE CREATION MASTER PROMPT
+Website for **The Motivation Biohackers**, a wellness centre in Johor Bahru, Malaysia offering functional wellness, regenerative therapies and longevity programmes, plus community health talks and events.
 
-Brand Name: The Motivation Biohackers
+**Live site:** https://themotivationbiohackers.lovable.app
 
-Industry: Functional Medicine · Regenerative Health · Longevity Science
+> The Motivation Biohackers is a wellness centre, not a medical clinic. Site copy must not make medical claims — see the in-site [Disclaimer](src/pages/Disclaimer.tsx).
 
-Location: Malaysia
+## What's on the site
 
-Target Audience: Health-conscious professionals, entrepreneurs, corporate leaders, biohackers, aging population 30–65 with purchasing power
+| Route | Page |
+| --- | --- |
+| `/` | Home: hero, services, perspectives, upcoming events, booking form, contact |
+| `/about` | Team and approach |
+| `/services/:slug` | Service details (PEMF, BioAura AI, epigenetic screening, nutrition, ReCognize, …) |
+| `/events/:slug` | Event details with countdown and registration link |
+| `/past-events` | Archive of past events |
+| `/disclaimer` | Disclaimer & terms |
 
-1️⃣ BRAND POSITIONING
+Booking and event registration open WhatsApp (`wa.me`) or a Google Form; there is no backend and no data is stored by the site.
 
-Create a luxury, science-driven, premium biohacking clinic website that feels:
+## Tech stack
 
+React 18 · TypeScript · Vite · Tailwind CSS · shadcn/ui (Radix) · Framer Motion · React Router · react-helmet-async (SEO / structured data) · Vitest + Testing Library
 
+## Getting started
 
-Minimal
-
-Elegant
-
-Dark-mode dominant
-
-Intelligent
-
-Clinical but warm
-
-Trustworthy
-
-High-end wellness institute
-
-Not “beauty salon”
-
-Not “traditional TCM”
-
-Not “hospital corporate cold”
-
-Think:
-
-Apple × Longevity Clinic × Private Members Health Club
-
-
-
-
-
-
-
-2️⃣ VISUAL STYLE GUIDE
-
-
-
-
-
-
-
-🎨 Color Palette
-
-
-
-
-
-Primary: Deep matte black (#0B0B0B)
-
-Secondary: Warm bronze / muted gold
-
-Accent: Soft ivory / off-white text
-
-Optional subtle gradient glow (dark charcoal to warm brown)
-
-
-
-
-
-
-
-🖋 Typography
-
-
-
-
-
-Heading: Elegant serif (Playfair Display / Canela-style)
-
-Body: Clean sans serif (Inter / Helvetica Now style)
-
-Large cinematic hero typography
-
-
-
-
-
-
-
-🖼 Imagery Style
-
-
-
-
-
-Silk textures
-
-Abstract cellular visuals
-
-Subtle anatomical overlays
-
-Slow motion lifestyle visuals
-
-Not stocky
-
-Not overly medical
-
-
-
-
-
-
-
-
-
-3️⃣ WEBSITE STRUCTURE
-
-
-
-
-
-
-
-🔹 1. Hero Section (Full Screen)
-
-
-
-
-
-Headline:
-
-
-
-Elevate Your Well-Being Through Science & Holistic Care
-
-
-
-Subheading:
-
-
-
-Functional · Regenerative · Longevity
-
-
-
-CTA Buttons:
-
-
-
-Book Consultation
-
-Explore Services
-
-
-
-
-
-Background:
-
-
-
-Minimal black OR textured bronze silk
-
-Subtle animated grain
-
-Soft fade transitions
-
-
-
-
-
-
-
-
-
-🔹 2. About Section
-
-
-
-
-
-Title:
-
-
-
-About The Motivation Biohackers
-
-
-
-Content direction:
-
-
-
-Harmony of mind & body
-
-Evidence-based approach
-
-Non-invasive solutions
-
-Personalised longevity strategy
-
-Sustainable health
-
-
-
-
-
-Tone:
-
-Confident. Intelligent. Calm authority.
-
-
-
-
-
-
-
-🔹 3. Core Pillars Section
-
-
-
-
-
-Three columns:
-
-
-
-Functional Medicine
-
-Regenerative Therapies
-
-Longevity Optimization
-
-
-
-
-
-Each with:
-
-
-
-Short 2-line explanation
-
-Minimal icon
-
-Hover animation
-
-
-
-
-
-
-
-
-
-🔹 4. Signature Services Section
-
-
-
-
-
-Grid layout. Examples:
-
-
-
-Advanced Health Screening
-
-PEMF Therapy
-
-Cellular Detox Programs
-
-Hormonal Optimization
-
-Preventive Longevity Programs
-
-
-
-
-
-Each card:
-
-
-
-Subtle glow hover
-
-Short summary
-
-“Learn More” modal
-
-
-
-
-
-
-
-
-
-🔹 5. Why Choose Us Section
-
-
-
-
-
-Bullet advantages:
-
-
-
-Data-driven diagnostics
-
-Personalised treatment plans
-
-Non-invasive technologies
-
-Medical-grade supplementation
-
-Continuous monitoring
-
-
-
-
-
-Use sleek horizontal layout.
-
-
-
-
-
-
-
-🔹 6. Testimonials Section
-
-
-
-
-
-Luxury carousel slider.
-
-Minimal. No clutter.
-
-
-
-Quote style:
-
-Large italic serif.
-
-
-
-
-
-
-
-🔹 7. Booking Section
-
-
-
-
-
-Headline:
-
-
-
-Begin Your Longevity Journey
-
-
-
-Integrated:
-
-
-
-Calendly or booking system
-
-WhatsApp CTA
-
-Clean form
-
-
-
-
-
-
-
-
-
-🔹 8. Footer
-
-
-
-
-
-Include:
-
-
-
-Contact info
-
-Social links
-
-Privacy policy
-
-Minimal logo watermark
-
-
-
-
-
-
-
-
-
-4️⃣ USER EXPERIENCE REQUIREMENTS
-
-
-
-
-
-Smooth scroll animations
-
-Fade-in sections
-
-Parallax background effect (subtle)
-
-Mobile responsive
-
-Fast loading
-
-SEO optimized for:
-
-
-
-Functional Medicine Malaysia
-
-Longevity Clinic Malaysia
-
-Regenerative Therapy Malaysia
-
-
-
-
-
-
-
-
-
-
-
-5️⃣ TECH STACK SUGGESTION (Optional)
-
-
-
-
-
-If suggesting platform:
-
-
-
-Webflow (for luxury design control)
-
-Framer (for modern animations)
-
-WordPress + Elementor Pro (if blog heavy)
-
-Integrated CRM
-
-WhatsApp API
-
-Meta Pixel
-
-Google Analytics
-
-
-
-
-
-
-
-
-
-6️⃣ BRAND VOICE
-
-
-
-
-
-Tone of writing:
-
-
-
-Intelligent but understandable
-
-Calm authority
-
-Not salesy
-
-Not exaggerated claims
-
-Not alternative-medicine sounding
-
-Not overly scientific jargon
-
-
-
-
-
-Use phrases like:
-
-
-
-Evidence-based
-
-Sustainable vitality
-
-Cellular health
-
-System optimisation
-
-Preventive approach
-
-Performance longevity
-
-
-
-
-
-
-
-
-
-7️⃣ FUTURE EXPANSION FEATURES
-
-
-
-
-
-Prepare structure for:
-
-
-
-Blog (Biohacking Insights)
-
-Events page (Health Talks, Expo)
-
-Members-only portal
-
-Online supplement store
-
-Corporate wellness program page
-
-
-
-
-
-
-
-
-
-8️⃣ EMOTIONAL IMPACT GOAL
-
-
-
-
-
-Visitor should feel:
-
-
-
-“This is premium.”
-
-“They know what they’re doing.”
-
-“I trust this place.”
-
-“I want to book.”
-
-“This is not normal clinic.”
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://themotivationbiohackers.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b911b272-ffbc-4f22-8e0c-8b6e72b8e0b2).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requires Node.js 20.19+ (or 22.12+) and [Bun](https://bun.sh) (the package manager used by the lockfile and CI).
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install
+bun run dev        # http://localhost:8080
 ```
+
+### Scripts
+
+| Command | What it does |
+| --- | --- |
+| `bun run dev` | Start the dev server |
+| `bun run build` | Production build into `dist/` |
+| `bun run preview` | Serve the production build locally |
+| `bun run lint` | ESLint |
+| `bun run typecheck` | TypeScript check (no emit) |
+| `bun run test` | Run the unit tests once (`test:watch` to watch) |
+| `bun run verify` | Everything CI runs: install, lint, typecheck, test, build, dependency audit |
+
+## Updating content
+
+- **Events** — edit `src/data/events.ts`. Add one object to `allEvents` with `title`, `date`, `dateISO` (`YYYY-MM-DD`), `location` (include the time, e.g. `Zoom Online Webinar · 8:00 PM`, so the countdown is accurate), `desc`, `image` and optionally `link`, `speakers` and `price` (RM per person; leave out for free events). Events move from *Upcoming* to *Past* automatically at midnight Malaysian time (UTC+8). Detail-page URLs (slugs) are generated from the title.
+- **Services** — edit `src/data/services.ts`.
+- **Domain, WhatsApp number** — `src/lib/site.ts`. The domain also appears in `index.html`, `public/sitemap.xml`, `public/robots.txt` and `public/llms.txt`; update those if the domain changes.
+- **Sitemap** — `public/sitemap.xml` is maintained by hand and lists the main pages and services, not individual events.
+
+## Deployment
+
+`bun run build` produces a static site in `dist/`. Any static host works, but it must be configured to serve `index.html` for unknown paths (a "single-page app" fallback); otherwise direct visits to `/about` or `/events/...` return a 404.
+
+The project is connected to [Lovable](https://lovable.dev/projects/b911b272-ffbc-4f22-8e0c-8b6e72b8e0b2): changes pushed to `main` sync into Lovable, and Lovable edits are committed back here.
+
+> **Note on event posters:** most event poster images live in Lovable's asset storage. The `src/assets/*.asset.json` files point to them via `/__l5e/assets-v1/...` URLs, which only resolve when the site is served by Lovable. To host elsewhere, download those images, add them to the repo (or any CDN) and update the `image` fields in `src/data/events.ts`.
+
+## Quality checks
+
+GitHub Actions (`.github/workflows/ci.yml`) runs lint, type check, tests, build and a dependency audit (`bun audit`, failing on high/critical findings) on every pull request and push to `main`. Dependabot opens weekly dependency update PRs.
+
+## Project layout
+
+```
+src/
+  components/   Page sections and shared UI (components/ui = shadcn/ui primitives)
+  data/         Events and services content
+  lib/          Helpers: site constants, WhatsApp links, analytics, event structured data
+  pages/        Route components
+  test/         Vitest tests
+public/         Static files: robots.txt, sitemap.xml, llms.txt, favicon, social image
+.lovable/       Lovable project metadata (managed by Lovable; keep)
+```
+
+## Analytics
+
+`src/lib/analytics.ts` sends a `register_click` event to whichever analytics tool is on the page (Google Analytics/GTM, Plausible, PostHog or Umami) and does nothing if none is installed.
