@@ -35,18 +35,17 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               {[
                 { label: "About Us", href: "/about" },
-                { label: "Services", href: "#services" },
-                { label: "Events", href: "#events" },
-                { label: "Testimonials", href: "#testimonials" },
-                { label: "Contact", href: "#contact" },
+                { label: "Services", href: "/#services" },
+                { label: "Events", href: "/#events" },
+                { label: "Contact", href: "/#contact" },
               ].map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.href}
                   className="text-footer-text/70 text-sm font-body hover:text-primary transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

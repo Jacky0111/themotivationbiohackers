@@ -29,7 +29,6 @@ export function trackEvent(name: string, props: EventProps = {}) {
     window.umami?.track(name, props);
 
     if (import.meta.env.DEV) {
-      // eslint-disable-next-line no-console
       console.debug("[analytics]", name, props);
     }
   } catch {

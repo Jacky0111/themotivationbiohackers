@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
-
-const BASE_URL = "https://themotivationbiohackers.lovable.app";
+import { SITE_URL } from "@/lib/site";
 
 export interface BreadcrumbItem {
   name: string;
@@ -15,7 +14,7 @@ const BreadcrumbJsonLd = ({ items }: { items: BreadcrumbItem[] }) => {
       "@type": "ListItem",
       position: i + 1,
       name: it.name,
-      item: `${BASE_URL}${it.path}`,
+      item: `${SITE_URL}${it.path}`,
     })),
   };
 
