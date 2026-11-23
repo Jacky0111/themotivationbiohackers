@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { WHATSAPP_URL } from "@/lib/site";
 
 const BookingSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
@@ -13,7 +14,7 @@ const BookingSection = () => {
       formData.message.trim() ? `Message: ${formData.message.trim()}` : "",
     ].filter(Boolean);
     const text = encodeURIComponent(lines.join("\n"));
-    window.open(`https://wa.me/601121172728?text=${text}`, "_blank");
+    window.open(`${WHATSAPP_URL}?text=${text}`, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -95,7 +96,7 @@ const BookingSection = () => {
 
         <div className="mt-6">
           <a
-            href="https://wa.me/601121172728"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-primary hover:text-accent transition-colors font-body"

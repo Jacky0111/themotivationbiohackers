@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Expand } from "lucide-react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
@@ -10,52 +10,15 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageTransition from "@/components/PageTransition";
 import { getPastEvents } from "@/data/events";
+import { buildEventJsonLd } from "@/lib/eventSchema";
+import { SITE_URL } from "@/lib/site";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import silkTexture from "@/assets/silk-texture.jpg";
 
-const easeOutQuint = (t: number) => 1 - Math.pow(1 - t, 5);
-
-const smoothScrollToElement = (element: HTMLElement, duration = 800) => {
-  const startY = window.scrollY;
-  const targetY = element.getBoundingClientRect().top + startY;
-  const distance = targetY - startY;
-  const startTime = performance.now();
-
-  const step = (currentTime: number) => {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = easeOutQuint(progress);
-    window.scrollTo(0, startY + distance * eased);
-    if (progress < 1) {
-      requestAnimationFrame(step);
-    }
-  };
-
-  requestAnimationFrame(step);
-};
-
-const scrollToEvents = () => {
-  const element = document.getElementById("events");
-  if (element) {
-    smoothScrollToElement(element, 800);
-  }
-};
-
-
 const PastEvents = () => {
   const pastEvents = getPastEvents();
   const [posterEvent, setPosterEvent] = useState<typeof pastEvents[number] | null>(null);
-  const navigate = useNavigate();
-
-  const handleBackToEvents = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    navigate("/");
-    // Allow the home page to render before scrolling
-    setTimeout(() => {
-      scrollToEvents();
-    }, 100);
-  };
 
   return (
     <PageTransition>
@@ -63,40 +26,9 @@ const PastEvents = () => {
       <SEOHead title="Past Events" description="A look back at our community events and health initiatives." path="/past-events" />
       <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Past Events", path: "/past-events" }]} />
       <Helmet>
-        <script type="application/ld+json">{JSON.stringify(
-          pastEvents.map((e) => {
-            const isOnline = e.location.toLowerCase().includes("zoom") || e.location.toLowerCase().includes("online");
-            const absImage = e.image?.startsWith("http")
-              ? e.image
-              : `https://themotivationbiohackers.lovable.app${e.image}`;
-            return {
-              "@context": "https://schema.org",
-              "@type": "Event",
-              name: e.title,
-              startDate: e.dateISO,
-              endDate: e.dateISO,
-              eventStatus: "https://schema.org/EventScheduled",
-              eventAttendanceMode: isOnline
-                ? "https://schema.org/OnlineEventAttendanceMode"
-                : "https://schema.org/OfflineEventAttendanceMode",
-              location: isOnline
-                ? { "@type": "VirtualLocation", url: "https://themotivationbiohackers.lovable.app/past-events" }
-                : { "@type": "Place", name: e.location, address: { "@type": "PostalAddress", addressCountry: "MY" } },
-              image: [absImage],
-              description: e.desc,
-              organizer: { "@type": "Organization", name: "The Motivation Biohackers", url: "https://themotivationbiohackers.lovable.app" },
-              performer: { "@type": "Organization", name: "The Motivation Biohackers" },
-              offers: {
-                "@type": "Offer",
-                url: "https://themotivationbiohackers.lovable.app/past-events",
-                price: "0",
-                priceCurrency: "MYR",
-                availability: "https://schema.org/SoldOut",
-                validFrom: e.dateISO,
-              },
-            };
-          })
-        )}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(pastEvents.map((e) => buildEventJsonLd(e, `${SITE_URL}/past-events`, false)))}
+        </script>
       </Helmet>
       <Navbar />
 
@@ -114,14 +46,13 @@ const PastEvents = () => {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <a
-              href="/#events"
-              onClick={handleBackToEvents}
+            <Link
+              to="/#events"
               className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 text-white text-sm font-body font-medium hover:bg-white/25 transition-all duration-500 ease-out-quint backdrop-blur-sm"
             >
               <ArrowLeft className="w-4 h-4 transition-transform duration-500 ease-out-quint group-hover:-translate-x-0.5" />
               Back to Events
-            </a>
+            </Link>
           </motion.div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-site mx-auto">
@@ -152,7 +83,7 @@ const PastEvents = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {pastEvents.map((e, i) => (
               <motion.div
-                key={e.title}
+                key={e.slug}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -168,6 +99,8 @@ const PastEvents = () => {
                   <img
                     src={e.image}
                     alt={e.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-500"
                   />
                   <div className="absolute top-4 left-4 bg-muted text-muted-foreground text-xs font-body font-semibold px-3 py-1.5 rounded-full">

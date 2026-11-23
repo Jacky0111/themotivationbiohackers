@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MessageCircle } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/site";
 
 const ContactSection = () => {
   return (
@@ -33,7 +34,7 @@ const ContactSection = () => {
               icon: MessageCircle,
               label: "WhatsApp",
               value: "+60 11-2117 2728",
-              href: "https://wa.me/601121172728",
+              href: WHATSAPP_URL,
             },
             {
               icon: MessageCircle,

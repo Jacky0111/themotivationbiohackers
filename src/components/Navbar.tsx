@@ -6,7 +6,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 const navLinks = [
   { label: "Services", href: "/#services" },
   { label: "Events", href: "/#events" },
-  { label: "Testimonials", href: "/#testimonials" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/#contact" },
 ];
@@ -27,29 +26,13 @@ const Navbar = () => {
     e.preventDefault();
     setMobileOpen(false);
 
-    if (href.startsWith("/#")) {
-      const sectionId = href.slice(2);
-      if (location.pathname === "/") {
-        const el = document.getElementById(sectionId);
-        el?.scrollIntoView({ behavior: "smooth" });
-      } else {
-        navigate("/", { state: { scrollTo: sectionId } });
-      }
+    if (href.startsWith("/#") && location.pathname === "/") {
+      document.getElementById(href.slice(2))?.scrollIntoView({ behavior: "smooth" });
     } else {
+      // ScrollManager scrolls to the #section once the destination page has rendered.
       navigate(href);
     }
   };
-
-  useEffect(() => {
-    const state = location.state as { scrollTo?: string } | null;
-    if (state?.scrollTo && location.pathname === "/") {
-      setTimeout(() => {
-        const el = document.getElementById(state.scrollTo!);
-        el?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-      window.history.replaceState({}, document.title);
-    }
-  }, [location]);
 
   return (
     <motion.nav

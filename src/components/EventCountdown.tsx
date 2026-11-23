@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Clock } from "lucide-react";
+import { SITE_TIMEZONE_OFFSET } from "@/lib/site";
 
 interface EventCountdownProps {
   /** ISO date YYYY-MM-DD */
@@ -21,10 +22,12 @@ const parseTime = (s?: string): [number, number] | null => {
   return [h, min];
 };
 
+/** Event start as a timestamp. Times are Malaysian time, whatever timezone the visitor is in. */
 const getTarget = (dateISO: string, timeHint?: string): number => {
-  const t = parseTime(timeHint) ?? [9, 0];
-  const [y, mo, d] = dateISO.split("-").map(Number);
-  return new Date(y, (mo ?? 1) - 1, d ?? 1, t[0], t[1], 0, 0).getTime();
+  const [h, m] = parseTime(timeHint) ?? [9, 0];
+  const hh = String(h).padStart(2, "0");
+  const mm = String(m).padStart(2, "0");
+  return Date.parse(`${dateISO}T${hh}:${mm}:00${SITE_TIMEZONE_OFFSET}`);
 };
 
 const EventCountdown = ({ dateISO, timeHint }: EventCountdownProps) => {
@@ -42,7 +45,7 @@ const EventCountdown = ({ dateISO, timeHint }: EventCountdownProps) => {
     return (
       <div className="flex items-center gap-2 text-xs font-body text-accent">
         <Clock className="w-3.5 h-3.5" />
-        <span>Webinar in progress / Started</span>
+        <span>Started / in progress</span>
       </div>
     );
   }
