@@ -1,73 +1,602 @@
-# Welcome to your Lovable project
+# TM Biohackers Website
 
-## Project info
+🌐 WEBSITE CREATION MASTER PROMPT
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Brand Name: The Motivation Biohackers
 
-## How can I edit this code?
+Industry: Functional Medicine · Regenerative Health · Longevity Science
 
-There are several ways of editing your application.
+Location: Malaysia
 
-**Use Lovable**
+Target Audience: Health-conscious professionals, entrepreneurs, corporate leaders, biohackers, aging population 30–65 with purchasing power
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+1️⃣ BRAND POSITIONING
 
-Changes made via Lovable will be committed automatically to this repo.
+Create a luxury, science-driven, premium biohacking clinic website that feels:
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Minimal
 
-Follow these steps:
+Elegant
+
+Dark-mode dominant
+
+Intelligent
+
+Clinical but warm
+
+Trustworthy
+
+High-end wellness institute
+
+Not “beauty salon”
+
+Not “traditional TCM”
+
+Not “hospital corporate cold”
+
+Think:
+
+Apple × Longevity Clinic × Private Members Health Club
+
+
+
+
+
+
+
+2️⃣ VISUAL STYLE GUIDE
+
+
+
+
+
+
+
+🎨 Color Palette
+
+
+
+
+
+Primary: Deep matte black (#0B0B0B)
+
+Secondary: Warm bronze / muted gold
+
+Accent: Soft ivory / off-white text
+
+Optional subtle gradient glow (dark charcoal to warm brown)
+
+
+
+
+
+
+
+🖋 Typography
+
+
+
+
+
+Heading: Elegant serif (Playfair Display / Canela-style)
+
+Body: Clean sans serif (Inter / Helvetica Now style)
+
+Large cinematic hero typography
+
+
+
+
+
+
+
+🖼 Imagery Style
+
+
+
+
+
+Silk textures
+
+Abstract cellular visuals
+
+Subtle anatomical overlays
+
+Slow motion lifestyle visuals
+
+Not stocky
+
+Not overly medical
+
+
+
+
+
+
+
+
+
+3️⃣ WEBSITE STRUCTURE
+
+
+
+
+
+
+
+🔹 1. Hero Section (Full Screen)
+
+
+
+
+
+Headline:
+
+
+
+Elevate Your Well-Being Through Science & Holistic Care
+
+
+
+Subheading:
+
+
+
+Functional · Regenerative · Longevity
+
+
+
+CTA Buttons:
+
+
+
+Book Consultation
+
+Explore Services
+
+
+
+
+
+Background:
+
+
+
+Minimal black OR textured bronze silk
+
+Subtle animated grain
+
+Soft fade transitions
+
+
+
+
+
+
+
+
+
+🔹 2. About Section
+
+
+
+
+
+Title:
+
+
+
+About The Motivation Biohackers
+
+
+
+Content direction:
+
+
+
+Harmony of mind & body
+
+Evidence-based approach
+
+Non-invasive solutions
+
+Personalised longevity strategy
+
+Sustainable health
+
+
+
+
+
+Tone:
+
+Confident. Intelligent. Calm authority.
+
+
+
+
+
+
+
+🔹 3. Core Pillars Section
+
+
+
+
+
+Three columns:
+
+
+
+Functional Medicine
+
+Regenerative Therapies
+
+Longevity Optimization
+
+
+
+
+
+Each with:
+
+
+
+Short 2-line explanation
+
+Minimal icon
+
+Hover animation
+
+
+
+
+
+
+
+
+
+🔹 4. Signature Services Section
+
+
+
+
+
+Grid layout. Examples:
+
+
+
+Advanced Health Screening
+
+PEMF Therapy
+
+Cellular Detox Programs
+
+Hormonal Optimization
+
+Preventive Longevity Programs
+
+
+
+
+
+Each card:
+
+
+
+Subtle glow hover
+
+Short summary
+
+“Learn More” modal
+
+
+
+
+
+
+
+
+
+🔹 5. Why Choose Us Section
+
+
+
+
+
+Bullet advantages:
+
+
+
+Data-driven diagnostics
+
+Personalised treatment plans
+
+Non-invasive technologies
+
+Medical-grade supplementation
+
+Continuous monitoring
+
+
+
+
+
+Use sleek horizontal layout.
+
+
+
+
+
+
+
+🔹 6. Testimonials Section
+
+
+
+
+
+Luxury carousel slider.
+
+Minimal. No clutter.
+
+
+
+Quote style:
+
+Large italic serif.
+
+
+
+
+
+
+
+🔹 7. Booking Section
+
+
+
+
+
+Headline:
+
+
+
+Begin Your Longevity Journey
+
+
+
+Integrated:
+
+
+
+Calendly or booking system
+
+WhatsApp CTA
+
+Clean form
+
+
+
+
+
+
+
+
+
+🔹 8. Footer
+
+
+
+
+
+Include:
+
+
+
+Contact info
+
+Social links
+
+Privacy policy
+
+Minimal logo watermark
+
+
+
+
+
+
+
+
+
+4️⃣ USER EXPERIENCE REQUIREMENTS
+
+
+
+
+
+Smooth scroll animations
+
+Fade-in sections
+
+Parallax background effect (subtle)
+
+Mobile responsive
+
+Fast loading
+
+SEO optimized for:
+
+
+
+Functional Medicine Malaysia
+
+Longevity Clinic Malaysia
+
+Regenerative Therapy Malaysia
+
+
+
+
+
+
+
+
+
+
+
+5️⃣ TECH STACK SUGGESTION (Optional)
+
+
+
+
+
+If suggesting platform:
+
+
+
+Webflow (for luxury design control)
+
+Framer (for modern animations)
+
+WordPress + Elementor Pro (if blog heavy)
+
+Integrated CRM
+
+WhatsApp API
+
+Meta Pixel
+
+Google Analytics
+
+
+
+
+
+
+
+
+
+6️⃣ BRAND VOICE
+
+
+
+
+
+Tone of writing:
+
+
+
+Intelligent but understandable
+
+Calm authority
+
+Not salesy
+
+Not exaggerated claims
+
+Not alternative-medicine sounding
+
+Not overly scientific jargon
+
+
+
+
+
+Use phrases like:
+
+
+
+Evidence-based
+
+Sustainable vitality
+
+Cellular health
+
+System optimisation
+
+Preventive approach
+
+Performance longevity
+
+
+
+
+
+
+
+
+
+7️⃣ FUTURE EXPANSION FEATURES
+
+
+
+
+
+Prepare structure for:
+
+
+
+Blog (Biohacking Insights)
+
+Events page (Health Talks, Expo)
+
+Members-only portal
+
+Online supplement store
+
+Corporate wellness program page
+
+
+
+
+
+
+
+
+
+8️⃣ EMOTIONAL IMPACT GOAL
+
+
+
+
+
+Visitor should feel:
+
+
+
+“This is premium.”
+
+“They know what they’re doing.”
+
+“I trust this place.”
+
+“I want to book.”
+
+“This is not normal clinic.”
+
+This project was built with [Lovable](https://lovable.dev).
+
+**Live app**: https://themotivationbiohackers.lovable.app
+
+## Build with Lovable
+
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b911b272-ffbc-4f22-8e0c-8b6e72b8e0b2).
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+git clone <this-repository-url>
+cd <repository-name>
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
